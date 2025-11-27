@@ -1,0 +1,430 @@
+{
+  "game_id": 9304,
+  "title": "J! Archive - Show #9427, aired 2025-11-04",
+  "url": "https://j-archive.com/showgame.php?game_id=9304",
+  "jeopardy_round": [
+    {
+      "category": "PUT IT ON",
+      "value": "$200",
+      "clue": "Why not wear this Mexican hat with a name from Spanish?",
+      "answer": "a sombrero",
+      "daily_double": false
+    },
+    {
+      "category": "ANCIENT NAMES",
+      "value": "$200",
+      "clue": "Before serving as court physician to the Roman emperor, Galen was chief physician to a group of these trained fighters",
+      "answer": "gladiators",
+      "daily_double": false
+    },
+    {
+      "category": "THAT'S CRICKETS",
+      "value": "$200",
+      "clue": "In the movies he sings, \"Always let your conscience be your guide\"",
+      "answer": "Jiminy Cricket",
+      "daily_double": false
+    },
+    {
+      "category": "8-LETTER WORDS",
+      "value": "$200",
+      "clue": "It can mean a left-handed boxer, like Marvin Hagler",
+      "answer": "southpaw",
+      "daily_double": false
+    },
+    {
+      "category": "IN THE BOOK",
+      "value": "$200",
+      "clue": "\"You should be ashamed of yourself, comparing a fine man like Ashley Wilkes to a scoundrel like Captain Butler!\"",
+      "answer": "Gone with the Wind",
+      "daily_double": false
+    },
+    {
+      "category": "AARON SORKIN",
+      "value": "$200",
+      "clue": "This baseball picture garnered Oscar nominations for stars Brad Pitt & Jonah Hill, as well as co-writer Sorkin",
+      "answer": "Moneyball",
+      "daily_double": false
+    },
+    {
+      "category": "PUT IT ON",
+      "value": "$400",
+      "clue": "The cap named for Davy Crockett featured the fur & tail of this type of animal",
+      "answer": "a raccoon",
+      "daily_double": false
+    },
+    {
+      "category": "ANCIENT NAMES",
+      "value": "$400",
+      "clue": "Plutarch wrote that this queen's beauty was \"not altogether incomparable\", but to converse \"with her had an irresistible charm\"",
+      "answer": "Cleopatra",
+      "daily_double": false
+    },
+    {
+      "category": "THAT'S CRICKETS",
+      "value": "$400",
+      "clue": "Fried crickets are a delicacy in this country but I'll just stick with pad see ew",
+      "answer": "Thailand",
+      "daily_double": false
+    },
+    {
+      "category": "8-LETTER WORDS",
+      "value": "$400",
+      "clue": "Common in newborn babies, it causes yellowing of the skin & in the whites of the eyes",
+      "answer": "jaundice",
+      "daily_double": false
+    },
+    {
+      "category": "IN THE BOOK",
+      "value": "$400",
+      "clue": "The first in a series: journalist Mikael Blomkvist solves a mystery with the aid of a female computer hacker",
+      "answer": "The Girl with the Dragon Tattoo",
+      "daily_double": false
+    },
+    {
+      "category": "AARON SORKIN",
+      "value": "$400",
+      "clue": "A 2023 revival of this beloved Broadway musical featured a rewritten book by Aaron Sorkin & starred Phillipa Soo as Guenevere",
+      "answer": "Camelot",
+      "daily_double": false
+    },
+    {
+      "category": "PUT IT ON",
+      "value": "$600",
+      "clue": "Put on the short-sleeved shirt named for this sport; Ralph Lauren is famous for them, but they date to the 1920s",
+      "answer": "a polo",
+      "daily_double": false
+    },
+    {
+      "category": "ANCIENT NAMES",
+      "value": "$600",
+      "clue": "Considered China's greatest sage, he's gotten new endorsement from Xi Jinping, who spoke on his 2,565th birthday in 2014",
+      "answer": "Confucius",
+      "daily_double": false
+    },
+    {
+      "category": "THAT'S CRICKETS",
+      "value": "$600",
+      "clue": "He led the band called The Crickets until his untimely death in 1959",
+      "answer": "Buddy Holly",
+      "daily_double": false
+    },
+    {
+      "category": "8-LETTER WORDS",
+      "value": "$600",
+      "clue": "This word for someone who's on the lam was in a TV & movie title",
+      "answer": "fugitive",
+      "daily_double": false
+    },
+    {
+      "category": "IN THE BOOK",
+      "value": "$600",
+      "clue": "A girl absconds with a copy of \"The Grave Digger's Handbook\", marking \"the beginning of an illustrious career\"",
+      "answer": "The Book Thief",
+      "daily_double": false
+    },
+    {
+      "category": "AARON SORKIN",
+      "value": "$600",
+      "clue": "(Aaron Sorkin presents the clue.) I'm not a journalist, so I take dramatic license to capture the sentiment of a scene, like having this character say, \"You can't write code, you're not an engineer, so how come ten times a day I read Steve Jobs is a genius--what do you do?\"",
+      "answer": "Steve Wozniak",
+      "daily_double": false
+    },
+    {
+      "category": "PUT IT ON",
+      "value": "$800",
+      "clue": "A girl in the Buster Brown comic strip gave her name to this style of shoe",
+      "answer": "Mary Jane",
+      "daily_double": false
+    },
+    {
+      "category": "ANCIENT NAMES",
+      "value": "$800",
+      "clue": "After this Roman emperor's death in 117, it's said his ashes were placed in his column",
+      "answer": "Trajan",
+      "daily_double": false
+    },
+    {
+      "category": "THAT'S CRICKETS",
+      "value": "$800",
+      "clue": "The sport of cricket gave us this 2-word phrase for a difficult or awkward situation",
+      "answer": "sticky wicket",
+      "daily_double": false
+    },
+    {
+      "category": "8-LETTER WORDS",
+      "value": "$800",
+      "clue": "A popular meme shows Jean-Luc Picard doing this gesture of exasperation",
+      "answer": "facepalm",
+      "daily_double": false
+    },
+    {
+      "category": "IN THE BOOK",
+      "value": "$800",
+      "clue": "Boys in Afghanistan battle to see who can cut the strings of their opponents' toys",
+      "answer": "The Kite Runner",
+      "daily_double": true
+    },
+    {
+      "category": "AARON SORKIN",
+      "value": "$800",
+      "clue": "(Aaron Sorkin presents the clue.) I was working as a bartender in New York City in the 1980s while I was writing this play & even wrote some of it on cocktail napkins during my shift; I was 28 when it came out on Broadway, & I got to write the screenplay for the film too",
+      "answer": "A Few Good Men",
+      "daily_double": false
+    },
+    {
+      "category": "PUT IT ON",
+      "value": "$1000",
+      "clue": "The Spanish word for guava may be the origin of the name of this Cuban shirt with 4 pockets",
+      "answer": "the guayabera",
+      "daily_double": false
+    },
+    {
+      "category": "ANCIENT NAMES",
+      "value": "$1000",
+      "clue": "Fearing its rise again after the Second Punic war, Cato the Elder ended speeches with this city \"must be destroyed\"",
+      "answer": "Carthage",
+      "daily_double": false
+    },
+    {
+      "category": "THAT'S CRICKETS",
+      "value": "$1000",
+      "clue": "Mormon crickets, which are actually katydids, threatened crops in Utah in 1848 until a flock of these birds saved the day & ate them",
+      "answer": "(sea)gulls",
+      "daily_double": false
+    },
+    {
+      "category": "8-LETTER WORDS",
+      "value": "$1000",
+      "clue": "It's a small pepper from a variety of Capsicum chinense that's named for a place in the Caribbean",
+      "answer": "habanero",
+      "daily_double": false
+    },
+    {
+      "category": "IN THE BOOK",
+      "value": "$1000",
+      "clue": "Dally Winston, leader of the Greasers, & Cherry Valance, a Soc cheerleader",
+      "answer": "The Outsiders",
+      "daily_double": false
+    },
+    {
+      "category": "AARON SORKIN",
+      "value": "$1000",
+      "clue": "(Aaron Sorkin presents the clue.) I wrote \"Charlie Wilson's War\", which was the last film directed by this Hollywood legend, the most talented man I've ever met; he made directing look simple--it's not",
+      "answer": "Mike Nichols",
+      "daily_double": false
+    }
+  ],
+  "double_jeopardy_round": [
+    {
+      "category": "PUT IT OFF",
+      "value": "$200",
+      "clue": "Kate Bosworth was accepted to Princeton but did this to act instead, until Princeton said forget it",
+      "answer": "deferred",
+      "daily_double": false
+    },
+    {
+      "category": "A WATERY BORDER",
+      "value": "$200",
+      "clue": "One of the world's most heavily used shipping lanes, this man-made waterway marks a border between Africa & Asia",
+      "answer": "the Suez Canal",
+      "daily_double": false
+    },
+    {
+      "category": "OLD TV SHOW, NEW AUDIENCE",
+      "value": "$200",
+      "clue": "Are you a Blanche or a Dorothy? Like its characters, this Miami-set sitcom has shown impressive longevity in the streaming era",
+      "answer": "The Golden Girls",
+      "daily_double": false
+    },
+    {
+      "category": "THEY GOT MARRIED",
+      "value": "$200",
+      "clue": "Moving between art  science, Picasso's ex, Françoise Gilot, married this polio conqueror",
+      "answer": "Salk",
+      "daily_double": false
+    },
+    {
+      "category": "ADULT BEVERAGES",
+      "value": "$200",
+      "clue": "After a dinner of \"rock lobster\", serve this layered shooter of Kahlúa, Baileys & Grand Marnier",
+      "answer": "a B-52",
+      "daily_double": false
+    },
+    {
+      "category": "NOT THEIR MAIN MUSICAL INSTRUMENT",
+      "value": "$200",
+      "clue": "Though he played clarinet first, Sidney Bechet is in jazz history as the first master of the soprano one of these",
+      "answer": "saxophone (sax)",
+      "daily_double": false
+    },
+    {
+      "category": "PUT IT OFF",
+      "value": "$400",
+      "clue": "In the NFL it's the infraction of not snapping the ball within the 40 seconds allotted",
+      "answer": "delay of game",
+      "daily_double": false
+    },
+    {
+      "category": "A WATERY BORDER",
+      "value": "$400",
+      "clue": "The Niagara River forms a border between this U.S. state & this Canadian province",
+      "answer": "New York & Ontario",
+      "daily_double": false
+    },
+    {
+      "category": "OLD TV SHOW, NEW AUDIENCE",
+      "value": "$400",
+      "clue": "Pluto TV has a channel devoted to the '80s sitcom \"Family Ties\", with this actor as a Reagan-obsessed young capitalist",
+      "answer": "Michael J. Fox",
+      "daily_double": false
+    },
+    {
+      "category": "THEY GOT MARRIED",
+      "value": "$400",
+      "clue": "Architects Denise Scott Brown & Robert Venturi wrote the book on Postmodernism with learning from this city of weddings, but not theirs",
+      "answer": "Las Vegas",
+      "daily_double": false
+    },
+    {
+      "category": "ADULT BEVERAGES",
+      "value": "$400",
+      "clue": "The Reposado type of this liquor is aged from 2 months to one year, while the Añejo type is one to 3 years",
+      "answer": "tequila",
+      "daily_double": false
+    },
+    {
+      "category": "NOT THEIR MAIN MUSICAL INSTRUMENT",
+      "value": "$400",
+      "clue": "Keyboard whiz Stevie Wonder showed his virtuosity on this instrument with solos on \"Isn't She Lovely\" & \"For Once In My Life\"",
+      "answer": "the harmonica",
+      "daily_double": false
+    },
+    {
+      "category": "PUT IT OFF",
+      "value": "$600",
+      "clue": "This court order can put off the sale of a property as well as someone being put to death",
+      "answer": "a stay",
+      "daily_double": false
+    },
+    {
+      "category": "A WATERY BORDER",
+      "value": "$600",
+      "clue": "Occupying an old glacier basin, Lake Constance sits between Germany, Austria & this nation",
+      "answer": "Switzerland",
+      "daily_double": false
+    },
+    {
+      "category": "OLD TV SHOW, NEW AUDIENCE",
+      "value": "$600",
+      "clue": "Color-coded teen superheroes! A giant Megazord! Thanks to streaming, new fans are keeping this '90s kids show alive & (karate) kicking",
+      "answer": "the (Mighty Morphin)Power Rangers",
+      "daily_double": false
+    },
+    {
+      "category": "THEY GOT MARRIED",
+      "value": "$600",
+      "clue": "While on crusade in 1191, this English king married Berengaria; some say Beardengaria would be more fitting, but that's not certain",
+      "answer": "Richard the Lionheart",
+      "daily_double": false
+    },
+    {
+      "category": "ADULT BEVERAGES",
+      "value": "$600",
+      "clue": "In 2021 the New York Times wrote about the resurgence of this caffeinated coffee cocktail, a favorite on \"Below Deck\"",
+      "answer": "an espresso martini",
+      "daily_double": false
+    },
+    {
+      "category": "NOT THEIR MAIN MUSICAL INSTRUMENT",
+      "value": "$600",
+      "clue": "Pepe Romero plays a mean classical guitar but is also good on this type, lighter & often with a golpeador or tap plate",
+      "answer": "flamenco guitar",
+      "daily_double": true
+    },
+    {
+      "category": "PUT IT OFF",
+      "value": "$800",
+      "clue": "At university it can be a \"cooperative\" service helping farmers or a desired putting-off of turning in an assignment",
+      "answer": "an extension",
+      "daily_double": false
+    },
+    {
+      "category": "A WATERY BORDER",
+      "value": "$800",
+      "clue": "For 1,250 & 24 miles, these 2 rivers form parts of the border between the U.S. & Mexico",
+      "answer": "the Rio Grande & the Colorado",
+      "daily_double": true
+    },
+    {
+      "category": "OLD TV SHOW, NEW AUDIENCE",
+      "value": "$800",
+      "clue": "15 years after Christian explained, \"Everything that's ever happened to you is real\" in the finale, this drama has new fans",
+      "answer": "Lost",
+      "daily_double": false
+    },
+    {
+      "category": "THEY GOT MARRIED",
+      "value": "$800",
+      "clue": "In 2025, this former news anchor went to space on a Blue Origin flight, then became Mrs. Jeff Bezos",
+      "answer": "(Lauren) Sánchez",
+      "daily_double": false
+    },
+    {
+      "category": "ADULT BEVERAGES",
+      "value": "$800",
+      "clue": "It was a this type of night, so I made myself the same-named cocktail of rum, ginger beer & fresh lime juice",
+      "answer": "a dark & stormy",
+      "daily_double": false
+    },
+    {
+      "category": "NOT THEIR MAIN MUSICAL INSTRUMENT",
+      "value": "$800",
+      "clue": "In 2023 piano virtuoso Sir Andras Schiff made his first record on this period instrument, from Latin for \"key\" & \"string\"",
+      "answer": "a clavichord",
+      "daily_double": false
+    },
+    {
+      "category": "PUT IT OFF",
+      "value": "$1000",
+      "clue": "The third word in the inscription here means \"tomorrow\" & gave us this word for \"to put off until tomorrow\"\"hodie mihi cras tibi\"",
+      "answer": "procrastinate",
+      "daily_double": false
+    },
+    {
+      "category": "A WATERY BORDER",
+      "value": "$1000",
+      "clue": "Mainland Australia is separated from Papua New Guinea by this strait named for a Spanish sailor who passed through it in 1606",
+      "answer": "the Torres Strait",
+      "daily_double": false
+    },
+    {
+      "category": "OLD TV SHOW, NEW AUDIENCE",
+      "value": "$1000",
+      "clue": "This sitcom set at fictional Hillman College hooked new fans in 2024 when its cast reunited for a tour in support of HBCUs",
+      "answer": "A Different World",
+      "daily_double": false
+    },
+    {
+      "category": "THEY GOT MARRIED",
+      "value": "$1000",
+      "clue": "In Harlem Renaissance social notes, poet Countee Cullen wed Yolande, daughter of this sociologist/ author/activist",
+      "answer": "Du Bois",
+      "daily_double": false
+    },
+    {
+      "category": "ADULT BEVERAGES",
+      "value": "$1000",
+      "clue": "A department in France's Normandy region gives its name to this apple brandy that's sometimes made from pears as well",
+      "answer": "Calvados",
+      "daily_double": false
+    },
+    {
+      "category": "NOT THEIR MAIN MUSICAL INSTRUMENT",
+      "value": "$1000",
+      "clue": "Nat Adderley played trumpet before gaining fame on this smaller horn with a warmer sound",
+      "answer": "a cornet",
+      "daily_double": false
+    }
+  ],
+  "final_jeopardy": null
+}

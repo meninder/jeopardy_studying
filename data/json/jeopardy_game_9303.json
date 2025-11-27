@@ -1,0 +1,430 @@
+{
+  "game_id": 9303,
+  "title": "J! Archive - Show #9426, aired 2025-11-03",
+  "url": "https://j-archive.com/showgame.php?game_id=9303",
+  "jeopardy_round": [
+    {
+      "category": "SPORTS THAT DON'T INVOLVE RUNNING",
+      "value": "$200",
+      "clue": "No running near the pool! Save your energy for this swimming stroke with an insect name; you'll need your legs to dolphin kick",
+      "answer": "the butterfly",
+      "daily_double": false
+    },
+    {
+      "category": "WHAT'S THE NAME?",
+      "value": "$200",
+      "clue": "Like a cheeseburger, but with onions & on rye bread:____ melt",
+      "answer": "patty",
+      "daily_double": false
+    },
+    {
+      "category": "GOING THE EXTRA MILE",
+      "value": "$200",
+      "clue": "Make it to Camp III at 23,600 feet on the Lhotse face & you've got about another mile of elevation to go to reach this summit",
+      "answer": "Everest",
+      "daily_double": false
+    },
+    {
+      "category": "COMPOUND WORDS",
+      "value": "$200",
+      "clue": "It can mean an overwhelming election victory, or an avalanche",
+      "answer": "a landslide",
+      "daily_double": false
+    },
+    {
+      "category": "TO EARN THE SCOUTING MERIT BADGE...",
+      "value": "$200",
+      "clue": "\"Discuss the differences between the opening, the middle game, & the endgame... explain the 4 rules for castling\"",
+      "answer": "chess",
+      "daily_double": false
+    },
+    {
+      "category": "GOOD MORNING AMERICA: 50 YEARS OF NEWS",
+      "value": "$200",
+      "clue": "(Robin Roberts presents the clue.) In 1996, the craze for this \"Sesame Street\" toy was in full swing, with a Tyco publicist saying, \"By 10 a.m. on Black Friday, every one of them was gone\"",
+      "answer": "Tickle Me Elmo",
+      "daily_double": false
+    },
+    {
+      "category": "SPORTS THAT DON'T INVOLVE RUNNING",
+      "value": "$400",
+      "clue": "A rare archery feat in which one arrow splits another that's already lodged in the target is named after this storied outlaw",
+      "answer": "Robin Hood",
+      "daily_double": false
+    },
+    {
+      "category": "WHAT'S THE NAME?",
+      "value": "$400",
+      "clue": "Ready to go:____ on the spot",
+      "answer": "Johnny",
+      "daily_double": false
+    },
+    {
+      "category": "GOING THE EXTRA MILE",
+      "value": "$400",
+      "clue": "Attention in the cabin! We've just crossed this river & will be landing at Orly in about a mile",
+      "answer": "the Seine",
+      "daily_double": false
+    },
+    {
+      "category": "COMPOUND WORDS",
+      "value": "$400",
+      "clue": "Comic Sans or Times New Roman, for example",
+      "answer": "a typeface",
+      "daily_double": false
+    },
+    {
+      "category": "TO EARN THE SCOUTING MERIT BADGE...",
+      "value": "$400",
+      "clue": "\"Explain what a family tree is & what information would be kept there\"",
+      "answer": "genealogy",
+      "daily_double": false
+    },
+    {
+      "category": "GOOD MORNING AMERICA: 50 YEARS OF NEWS",
+      "value": "$400",
+      "clue": "(Michael Strahan presents the clue.) On a chilly February morning on February in 2012, I was a guest of honor at this Super Bowl winning team's New York City ticker-tape parade; I'd been there before as a member of the same team in 2008",
+      "answer": "the New York Football Giants",
+      "daily_double": false
+    },
+    {
+      "category": "SPORTS THAT DON'T INVOLVE RUNNING",
+      "value": "$600",
+      "clue": "olympics.com describes this sport as \"formerly the world's major form of long-distance trade and transport\"",
+      "answer": "sailing",
+      "daily_double": true
+    },
+    {
+      "category": "WHAT'S THE NAME?",
+      "value": "$600",
+      "clue": "Act the clown:____foolery",
+      "answer": "tom",
+      "daily_double": false
+    },
+    {
+      "category": "GOING THE EXTRA MILE",
+      "value": "$600",
+      "clue": "The 1869 sketch seen here shows European & Asian laborers working to complete the last mile of this",
+      "answer": "the transcontinental railroad",
+      "daily_double": false
+    },
+    {
+      "category": "COMPOUND WORDS",
+      "value": "$600",
+      "clue": "From their uniforms, British soldiers during the Revolutionary War were called these",
+      "answer": "Redcoats",
+      "daily_double": false
+    },
+    {
+      "category": "TO EARN THE SCOUTING MERIT BADGE...",
+      "value": "$600",
+      "clue": "\"Prepare a 3- to 5-minute talk on a topic of your choice that incorporates body language & visual aids\"",
+      "answer": "public speaking",
+      "daily_double": false
+    },
+    {
+      "category": "GOOD MORNING AMERICA: 50 YEARS OF NEWS",
+      "value": "$600",
+      "clue": "(Robin Roberts presents the clue.) A 1984 ad that exemplified the Reagan re-election campaign said it's this 4-word phrase that we gotta love at GMA since two of the words are in our show's name",
+      "answer": "morning again in America",
+      "daily_double": false
+    },
+    {
+      "category": "SPORTS THAT DON'T INVOLVE RUNNING",
+      "value": "$800",
+      "clue": "Smaller than half a square inch, the triple 20 is the highest-value subsection of the board in this sport",
+      "answer": "darts",
+      "daily_double": false
+    },
+    {
+      "category": "WHAT'S THE NAME?",
+      "value": "$800",
+      "clue": "Totally excellent:____ -dandy",
+      "answer": "Jim",
+      "daily_double": false
+    },
+    {
+      "category": "GOING THE EXTRA MILE",
+      "value": "$800",
+      "clue": "\"The Royal Mile\" winds from Holyroodhouse through this city's Old Town to its elevated castle",
+      "answer": "Edinburgh",
+      "daily_double": false
+    },
+    {
+      "category": "COMPOUND WORDS",
+      "value": "$800",
+      "clue": "In 2 Kings 2, it's what takes Elijah up to heaven",
+      "answer": "a whirlwind",
+      "daily_double": false
+    },
+    {
+      "category": "TO EARN THE SCOUTING MERIT BADGE...",
+      "value": "$800",
+      "clue": "Using a vessel \"with an open cockpit, a sit-on-top\" or an \"inflatable\" model, \"safely capsize & perform a wet exit\"",
+      "answer": "kayaking",
+      "daily_double": false
+    },
+    {
+      "category": "GOOD MORNING AMERICA: 50 YEARS OF NEWS",
+      "value": "$800",
+      "clue": "(George Stephanopoulos presents the clue.) On the morning of June 29, 1995, the world was in awe as this alphabetically first space shuttle began its docking procedure with the Mir Space Station",
+      "answer": "theAtlantis",
+      "daily_double": false
+    },
+    {
+      "category": "SPORTS THAT DON'T INVOLVE RUNNING",
+      "value": "$1000",
+      "clue": "2024 Olympics fans went nuts for Yusuf Dikeç, a silver medalist in shooting from this country",
+      "answer": "Turkey",
+      "daily_double": false
+    },
+    {
+      "category": "WHAT'S THE NAME?",
+      "value": "$1000",
+      "clue": "It hangs from a plumb line:plumb ____",
+      "answer": "bob",
+      "daily_double": false
+    },
+    {
+      "category": "GOING THE EXTRA MILE",
+      "value": "$1000",
+      "clue": "In the 1920s, Chicago began building the soaring stretch of Michigan Avenue known by this grandiloquent & alliterative name",
+      "answer": "the Magnificent Mile",
+      "daily_double": false
+    },
+    {
+      "category": "COMPOUND WORDS",
+      "value": "$1000",
+      "clue": "Something very small or a word modifying \"accuracy\"; as 2 words, it's the Georgia hamlet where Clarence Thomas was born",
+      "answer": "pinpoint",
+      "daily_double": false
+    },
+    {
+      "category": "TO EARN THE SCOUTING MERIT BADGE...",
+      "value": "$1000",
+      "clue": "\"Find & examine 3 stumps, logs, or core samples that show variations in the growth rate of their ring patterns\"",
+      "answer": "forestry",
+      "daily_double": false
+    },
+    {
+      "category": "GOOD MORNING AMERICA: 50 YEARS OF NEWS",
+      "value": "$1000",
+      "clue": "(George Stephanopoulos presents the clue.) In the early hours of August 31, 1997, Diana, Princess of Wales, died in a car crash in Paris along with this man, the son of the owner of Harrods department stores",
+      "answer": "Dodi Al-Fayed",
+      "daily_double": false
+    }
+  ],
+  "double_jeopardy_round": [
+    {
+      "category": "17th CENTURY HAPPENINGS",
+      "value": "$200",
+      "clue": "At age four, this Sun King took the throne",
+      "answer": "Louis XIV",
+      "daily_double": false
+    },
+    {
+      "category": "\"M.W.\"",
+      "value": "$200",
+      "clue": "The federal one is currently $7.25 an hour",
+      "answer": "minimum wage",
+      "daily_double": false
+    },
+    {
+      "category": "AMERICAN AUTHORS",
+      "value": "$200",
+      "clue": "Appearing in The New Yorker in 1946, his \"Slight Rebellion Off Madison\" featured an early appearance by Holden Caulfield",
+      "answer": "Salinger",
+      "daily_double": false
+    },
+    {
+      "category": "MARTIAL ARTS",
+      "value": "$200",
+      "clue": "A Japanese style of fencing, kendo derives from the two-handed fighting methods of these warriors",
+      "answer": "the samurai",
+      "daily_double": false
+    },
+    {
+      "category": "GREAT SONGS",
+      "value": "$200",
+      "clue": "Goodness gracious! Right out of the \"Great\" American songbook comes this 1957 hit for Jerry Lee Lewis",
+      "answer": "\"Great Balls Of Fire\"",
+      "daily_double": false
+    },
+    {
+      "category": "THE ANIMAL KINGDOM",
+      "value": "$200",
+      "clue": "Moms of this North American species with many a quill can hardly chill--they can spend 7 months preggo & 4 months nursing",
+      "answer": "porcupine",
+      "daily_double": false
+    },
+    {
+      "category": "17th CENTURY HAPPENINGS",
+      "value": "$400",
+      "clue": "This founding document was published in \"Mourt's Relation\", an account of the Plymouth settlement",
+      "answer": "the Mayflower Compact",
+      "daily_double": false
+    },
+    {
+      "category": "\"M.W.\"",
+      "value": "$400",
+      "clue": "This Kraft brand distinguishes itself from mere mayo with the taste of a \"tangy dressing\"",
+      "answer": "Miracle Whip",
+      "daily_double": false
+    },
+    {
+      "category": "AMERICAN AUTHORS",
+      "value": "$400",
+      "clue": "Saying he was robbed earlier of the Pulitzer, he famously declined that honor for \"Arrowsmith\"",
+      "answer": "Sinclair Lewis",
+      "daily_double": false
+    },
+    {
+      "category": "MARTIAL ARTS",
+      "value": "$400",
+      "clue": "A style of this martial art goes back to China's Shaolin Temple, where monks used it to complement meditation",
+      "answer": "kung fu",
+      "daily_double": false
+    },
+    {
+      "category": "GREAT SONGS",
+      "value": "$400",
+      "clue": "Called \"a mini-suite of bangers\" by E.W., this No. 1 single by Travis Scott features 3 movements & Drake",
+      "answer": "\"Sicko Mode\"",
+      "daily_double": false
+    },
+    {
+      "category": "THE ANIMAL KINGDOM",
+      "value": "$400",
+      "clue": "A smack is a group of these invertebrate sea creatures, like the lion's mane or Pacific sea nettle",
+      "answer": "jellyfish",
+      "daily_double": false
+    },
+    {
+      "category": "17th CENTURY HAPPENINGS",
+      "value": "$600",
+      "clue": "Paolo Foscarini mysteriously died soon after the banning of his book defending this Pole's astronomical ideas",
+      "answer": "Copernicus",
+      "daily_double": false
+    },
+    {
+      "category": "\"M.W.\"",
+      "value": "$600",
+      "clue": "This dictionary brand has been a subsidiary of Encyclopedia Britannica since 1964",
+      "answer": "Merriam-Webster",
+      "daily_double": false
+    },
+    {
+      "category": "AMERICAN AUTHORS",
+      "value": "$600",
+      "clue": "On the passing of this \"Blood Meridian\" author, Stephen King called him \"maybe the greatest American novelist of my time\"",
+      "answer": "Cormac McCarthy",
+      "daily_double": false
+    },
+    {
+      "category": "MARTIAL ARTS",
+      "value": "$600",
+      "clue": "Fighting techniques employed in mixed martial arts include both Japanese & Brazilian styles of this",
+      "answer": "jujitsu",
+      "daily_double": false
+    },
+    {
+      "category": "GREAT SONGS",
+      "value": "$600",
+      "clue": "Robert Plant was said to have read \"The Magic Arts in Celtic Britain\" before penning this song that mentions the May Queen",
+      "answer": "\"Stairway To Heaven\"",
+      "daily_double": false
+    },
+    {
+      "category": "THE ANIMAL KINGDOM",
+      "value": "$600",
+      "clue": "The loudest of all monkeys, this primate makes itself known in the forests of Central & South America",
+      "answer": "the howler monkey",
+      "daily_double": true
+    },
+    {
+      "category": "17th CENTURY HAPPENINGS",
+      "value": "$800",
+      "clue": "When I find myself in Smutnoye Vremya--this 3-word era--Boris Godunov comes to me, czaring just before it, let it be",
+      "answer": "times of trouble (time of troubles)",
+      "daily_double": false
+    },
+    {
+      "category": "\"M.W.\"",
+      "value": "$800",
+      "clue": "Sharps, needles & items contaminated by blood or other bodily fluids are what makes up this; it needs to be disposed of properly",
+      "answer": "medical waste",
+      "daily_double": false
+    },
+    {
+      "category": "AMERICAN AUTHORS",
+      "value": "$800",
+      "clue": "She began writing \"The Secret History\" set at a fictional Vermont college while attending Vermont's Bennington College",
+      "answer": "Donna Tartt",
+      "daily_double": false
+    },
+    {
+      "category": "MARTIAL ARTS",
+      "value": "$800",
+      "clue": "This Korean martial art became an Olympic medal sport at the 2000 Games in Sydney",
+      "answer": "taekwondo",
+      "daily_double": true
+    },
+    {
+      "category": "GREAT SONGS",
+      "value": "$800",
+      "clue": "She really \"had it up to here!\"--Gwen Stefani wrote this hit after her dad got mad at her for staying out late",
+      "answer": "\"Just A Girl\"",
+      "daily_double": false
+    },
+    {
+      "category": "THE ANIMAL KINGDOM",
+      "value": "$800",
+      "clue": "Named for its tough skin, it's the largest sea turtle in the world; adults can be more than six feet long",
+      "answer": "the leatherback",
+      "daily_double": false
+    },
+    {
+      "category": "17th CENTURY HAPPENINGS",
+      "value": "$1000",
+      "clue": "This English philosopher & statesman published his most celebrated work, the \"Novum Organum\" on nature & knowledge",
+      "answer": "Francis Bacon",
+      "daily_double": false
+    },
+    {
+      "category": "\"M.W.\"",
+      "value": "$1000",
+      "clue": "The 341st this is headquartered at Malmstrom Air Force Base in Montana; it's ready to defend the U.S. with ICBSs",
+      "answer": "Missile Wing",
+      "daily_double": false
+    },
+    {
+      "category": "AMERICAN AUTHORS",
+      "value": "$1000",
+      "clue": "Her short stories include \"Where Is Here?\", \"Where Are You Going, Where Have You Been?\" & \"Where I Lived, and What I Lived For\"",
+      "answer": "Joyce Carol Oates",
+      "daily_double": false
+    },
+    {
+      "category": "MARTIAL ARTS",
+      "value": "$1000",
+      "clue": "The enslaved community of Brazil disguised this martial art as a dance, but it was truly a means of self-defense",
+      "answer": "capoeira",
+      "daily_double": false
+    },
+    {
+      "category": "GREAT SONGS",
+      "value": "$1000",
+      "clue": "We're not sure if Marvin Gaye was talking to a doctor when he sang, \"I can't wait for you to operate\" on this song",
+      "answer": "\"Sexual Healing\"",
+      "daily_double": false
+    },
+    {
+      "category": "THE ANIMAL KINGDOM",
+      "value": "$1000",
+      "clue": "You might say \"Do I detect vanilla with hints of oak?\" near mound deposits laced with whiffs of castoreum from this mammal",
+      "answer": "the beaver",
+      "daily_double": false
+    }
+  ],
+  "final_jeopardy": null
+}

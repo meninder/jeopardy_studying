@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+"""
+Flask API to serve Jeopardy clues from SQLite database
+"""
+
+from flask import Flask, jsonify, send_from_directory
+from flask_cors import CORS
+import sys
+from pathlib import Path
+
+# Add parent directory to path to import scraper module
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from scraper.database import JeopardyDatabase
+
+app = Flask(__name__, static_folder='public')
+CORS(app)  # Enable CORS for development
+
+# Database path
+DB_PATH = Path(__file__).parent.parent / "data" / "jeopardy.db"
+
+
+@app.route('/')
+def serve_app():
+    """Serve the quiz application"""
+    return send_from_directory('public', 'index.html')
+
+
+@app.route('/api/clue/random', methods=['GET'])
+def get_random_clue():
+    """Get a random clue from the database"""
+    try:
+        with JeopardyDatabase(str(DB_PATH)) as db:
+            clue = db.get_random_clue(exclude_final=True)
+
+            if clue is None:
+                return jsonify({'error': 'No clues found in database'}), 404
+
+            return jsonify(clue)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/stats', methods=['GET'])
+def get_stats():
+    """Get database statistics"""
+    try:
+        with JeopardyDatabase(str(DB_PATH)) as db:
+            stats = db.get_stats()
+            return jsonify(stats)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/health', methods=['GET'])
+def health_check():
+    """Health check endpoint"""
+    return jsonify({'status': 'ok', 'database': str(DB_PATH)})
+
+
+if __name__ == '__main__':
+    print("=" * 80)
+    print("JEOPARDY QUIZ APP - Starting Server")
+    print("=" * 80)
+    print(f"Database: {DB_PATH}")
+    print(f"Quiz app: http://localhost:5000")
+    print(f"API: http://localhost:5000/api")
+    print("=" * 80)
+
+    # Check if database exists
+    if not DB_PATH.exists():
+        print(f"\nWARNING: Database not found at {DB_PATH}")
+        print("Run the scraper first to populate the database:")
+        print("  python scraper/run_scraper.py 9302")
+        print()
+
+    app.run(debug=True, port=5000)

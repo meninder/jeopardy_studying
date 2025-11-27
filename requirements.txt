@@ -1,0 +1,11 @@
+# Jeopardy Scraper and Quiz App - Python Dependencies
+
+# Web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Web API
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# Database (SQLite is built into Python)

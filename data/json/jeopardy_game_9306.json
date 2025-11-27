@@ -1,0 +1,430 @@
+{
+  "game_id": 9306,
+  "title": "J! Archive - Show #9429, aired 2025-11-06",
+  "url": "https://j-archive.com/showgame.php?game_id=9306",
+  "jeopardy_round": [
+    {
+      "category": "WHAT A PLEASURE",
+      "value": "$200",
+      "clue": "The Swedish type of this employs kneading movements called petrissage",
+      "answer": "massage",
+      "daily_double": false
+    },
+    {
+      "category": "TV CHARACTERS",
+      "value": "$200",
+      "clue": "In 2025 Ellen Pompeo marked 20 years of playing this doctor & starred on \"Good American Family\" as a suburban mom",
+      "answer": "Meredith Grey",
+      "daily_double": false
+    },
+    {
+      "category": "SUITING YOU TO A MIDDLE T",
+      "value": "$200",
+      "clue": "Proverbial place you don't want to be left at on your wedding day",
+      "answer": "the altar",
+      "daily_double": false
+    },
+    {
+      "category": "TRAVELS BY TWAIN",
+      "value": "$200",
+      "clue": "At the Church of the Holy Sepulchre's supposed burial site of this Genesis 1-4 guy, MT said it was touching to find the grave of a relative",
+      "answer": "Adam",
+      "daily_double": false
+    },
+    {
+      "category": "FOLLOWING THE EQUATOR",
+      "value": "$200",
+      "clue": "This Asian place made more popular by \"Crazy Rich Asians\" is at about 1 degree north latitude, 90 miles from the equator",
+      "answer": "Singapore",
+      "daily_double": false
+    },
+    {
+      "category": "ROUGHING IT",
+      "value": "$200",
+      "clue": "Saying bye to YouTube in 2025, Luke of the Outdoor Boys showed us how to avoid freezing to death in this state that has hit -80",
+      "answer": "Alaska",
+      "daily_double": false
+    },
+    {
+      "category": "WHAT A PLEASURE",
+      "value": "$400",
+      "clue": "If you enjoy Senior's Run on Palmyra Peak at Telluride, you're into this--& really good, & crazy",
+      "answer": "skiing",
+      "daily_double": false
+    },
+    {
+      "category": "TV CHARACTERS",
+      "value": "$400",
+      "clue": "She's tormented by infertility & ends up adopting",
+      "answer": "Betty Rubble",
+      "daily_double": false
+    },
+    {
+      "category": "SUITING YOU TO A MIDDLE T",
+      "value": "$400",
+      "clue": "Nationality of one from Port-au-Prince",
+      "answer": "Haitian",
+      "daily_double": false
+    },
+    {
+      "category": "TRAVELS BY TWAIN",
+      "value": "$400",
+      "clue": "In Honolulu, Twain saw what he had \"so longed to\"--this \"dance that was wont to set the passions of men ablaze in the old heathen days\"",
+      "answer": "the hula",
+      "daily_double": false
+    },
+    {
+      "category": "FOLLOWING THE EQUATOR",
+      "value": "$400",
+      "clue": "Being close to the equator makes Kiribati an ideal spot for launching these via rocket, as the company Sea Launch once did",
+      "answer": "satellites",
+      "daily_double": false
+    },
+    {
+      "category": "ROUGHING IT",
+      "value": "$400",
+      "clue": "Roughin' it in Glacier Natl. Park? Be sure to pack a can of this 2-word repellent; Griz Guard sells one with capsaicin",
+      "answer": "bear spray",
+      "daily_double": false
+    },
+    {
+      "category": "WHAT A PLEASURE",
+      "value": "$600",
+      "clue": "As the name suggests, evaporated milk, condensed milk & whole milk go into this Latin American treat",
+      "answer": "tres leches cake",
+      "daily_double": false
+    },
+    {
+      "category": "TV CHARACTERS",
+      "value": "$600",
+      "clue": "'60s character with many memorable lines like \"I'm trying to thank you, you pointed-eared hobgoblin!\"",
+      "answer": "Dr. McCoy",
+      "daily_double": false
+    },
+    {
+      "category": "SUITING YOU TO A MIDDLE T",
+      "value": "$600",
+      "clue": "A house of ill repute also goes by this shorter synonym",
+      "answer": "a brothel",
+      "daily_double": false
+    },
+    {
+      "category": "TRAVELS BY TWAIN",
+      "value": "$600",
+      "clue": "An Italian chapter wonders what people \"see in\" them, the honored painters of centuries past--\"all the horses look like bladders on legs\"",
+      "answer": "the Old Masters",
+      "daily_double": false
+    },
+    {
+      "category": "FOLLOWING THE EQUATOR",
+      "value": "$600",
+      "clue": "Uhuru is the summit of this peak that's about 200 miles south of the equator",
+      "answer": "Kilimanjaro",
+      "daily_double": true
+    },
+    {
+      "category": "ROUGHING IT",
+      "value": "$600",
+      "clue": "For overnight hikes, take along one of these, MREs for short; Sure-Pak sells vegetarian options",
+      "answer": "meals ready to eat",
+      "daily_double": false
+    },
+    {
+      "category": "WHAT A PLEASURE",
+      "value": "$800",
+      "clue": "Pure perfume (or parfum) contains up to 40% scented ingredients; EDP, this, contains 15-20%",
+      "answer": "eau de parfum",
+      "daily_double": false
+    },
+    {
+      "category": "TV CHARACTERS",
+      "value": "$800",
+      "clue": "Sister Knight, played by Regina King, was a masked hero on this HBO show",
+      "answer": "Watchmen",
+      "daily_double": false
+    },
+    {
+      "category": "SUITING YOU TO A MIDDLE T",
+      "value": "$800",
+      "clue": "It's the lowest rank of a British police officer",
+      "answer": "constable",
+      "daily_double": false
+    },
+    {
+      "category": "TRAVELS BY TWAIN",
+      "value": "$800",
+      "clue": "Twain saw \"Lohengrin\" in Germany & wrote of a woman saying you must get to know this composer's work; no sale",
+      "answer": "Wagner",
+      "daily_double": false
+    },
+    {
+      "category": "FOLLOWING THE EQUATOR",
+      "value": "$800",
+      "clue": "Similar to the Magellanic, the Galapagos type of this bird is one of the rarest & the one living nearest the equator",
+      "answer": "the penguin",
+      "daily_double": false
+    },
+    {
+      "category": "ROUGHING IT",
+      "value": "$800",
+      "clue": "A nonprofit org. dedicated to this 3-word practice includes as one of its core principles \"dispose of waste properly\"",
+      "answer": "leave no trace",
+      "daily_double": false
+    },
+    {
+      "category": "WHAT A PLEASURE",
+      "value": "$1000",
+      "clue": "Classical music fans enjoy the sound of the oboe relative called the cor anglais or this",
+      "answer": "the English horn",
+      "daily_double": false
+    },
+    {
+      "category": "TV CHARACTERS",
+      "value": "$1000",
+      "clue": "William Stewart Halsted, a great surgeon who battled addiction, inspired the main character of this series about a New York city hospital",
+      "answer": "The Knick",
+      "daily_double": false
+    },
+    {
+      "category": "SUITING YOU TO A MIDDLE T",
+      "value": "$1000",
+      "clue": "A wolf?! Where?! It's the delusion of one who believes they're a wolf",
+      "answer": "lycanthropy",
+      "daily_double": false
+    },
+    {
+      "category": "TRAVELS BY TWAIN",
+      "value": "$1000",
+      "clue": "The forts & mosques at Delhi are great, but pale beside this, \"the most celebrated construction in the earth\"",
+      "answer": "the Taj Mahal",
+      "daily_double": false
+    },
+    {
+      "category": "FOLLOWING THE EQUATOR",
+      "value": "$1000",
+      "clue": "The names of the 2 main islands that make up this equatorial nation mean \"St. Thomas & Prince\"",
+      "answer": "São Tomé and Príncipe",
+      "daily_double": false
+    },
+    {
+      "category": "ROUGHING IT",
+      "value": "$1000",
+      "clue": "You can park & sleep up to 14 days in most designated public areas run by the BLM, short for this agency",
+      "answer": "the Bureau of Land Management",
+      "daily_double": false
+    }
+  ],
+  "double_jeopardy_round": [
+    {
+      "category": "GREAT BRITS",
+      "value": "$200",
+      "clue": "He had high praise for Eddie Redmayne's portrayal of him, saying, \"At times, I thought he was me\"",
+      "answer": "Stephen Hawking",
+      "daily_double": false
+    },
+    {
+      "category": "1940s LITERATURE",
+      "value": "$200",
+      "clue": "This inquisitive primate who debuted early in the decade \"Takes a Job\" in a later book, from cleaning windows to acting in a movie",
+      "answer": "Curious George",
+      "daily_double": false
+    },
+    {
+      "category": "YOU'RE RUINING THE RUINS",
+      "value": "$200",
+      "clue": "Stop complaining about the heat on our walking tour of Pompeii; just be glad temps are lower than in 79 A.D. when this volcano blew",
+      "answer": "Vesuvius",
+      "daily_double": false
+    },
+    {
+      "category": "GO FOR \"GOLD\"",
+      "value": "$200",
+      "clue": "\"The Ballad Of Jed Clampett\" offers this synonym for \"Texas tea\" that fits the category",
+      "answer": "black gold",
+      "daily_double": false
+    },
+    {
+      "category": "STORIES BEHIND THE SONGS",
+      "value": "$200",
+      "clue": "This song by Jay-Z about having nearly 100 complications took the title & hook from an Ice-T song",
+      "answer": "\"99 Problems\"",
+      "daily_double": false
+    },
+    {
+      "category": "A LITTLE ALLITERATION",
+      "value": "$200",
+      "clue": "Mutual ill will, or a Taylor Swift chart-topper",
+      "answer": "bad blood",
+      "daily_double": false
+    },
+    {
+      "category": "GREAT BRITS",
+      "value": "$400",
+      "clue": "At Oxford in the 1940s, this future prime minister studied chemistry under future Nobel Prize winner Dorothy Hodgkin",
+      "answer": "Thatcher",
+      "daily_double": false
+    },
+    {
+      "category": "1940s LITERATURE",
+      "value": "$400",
+      "clue": "C.S. Lewis tried \"reconciling human suffering with... a god who loves\" in the alliteratively titled \"The Problem of\" this",
+      "answer": "Pain",
+      "daily_double": false
+    },
+    {
+      "category": "YOU'RE RUINING THE RUINS",
+      "value": "$400",
+      "clue": "Reaching the end of the Inca Trail at this ancient site is tough enough without you complaining about all the stairs",
+      "answer": "Machu Picchu",
+      "daily_double": false
+    },
+    {
+      "category": "GO FOR \"GOLD\"",
+      "value": "$400",
+      "clue": "He's the Phoenix native who ran for president against LBJ in 1964",
+      "answer": "Goldwater",
+      "daily_double": false
+    },
+    {
+      "category": "STORIES BEHIND THE SONGS",
+      "value": "$400",
+      "clue": "Who knew? The Hanson Brothers explained that this nonsense title reflects the inexorable passing of time",
+      "answer": "\"MMMBop\"",
+      "daily_double": false
+    },
+    {
+      "category": "A LITTLE ALLITERATION",
+      "value": "$400",
+      "clue": "Ability bestowed on the eloquent & persuasive",
+      "answer": "the gift of gab",
+      "daily_double": false
+    },
+    {
+      "category": "GREAT BRITS",
+      "value": "$600",
+      "clue": "Watching the ceremony from London via TV, this 88-year-old was made an honorary U.S. citizen in 1963",
+      "answer": "Winston Churchill",
+      "daily_double": true
+    },
+    {
+      "category": "1940s LITERATURE",
+      "value": "$600",
+      "clue": "This folk singer & activist's \"Bound For Glory\" was a portrait of the Depression years seen through his eyes",
+      "answer": "Woody Guthrie",
+      "daily_double": false
+    },
+    {
+      "category": "YOU'RE RUINING THE RUINS",
+      "value": "$600",
+      "clue": "Stop insisting that this country's Antonine Wall, once the Roman Empire's northern border, is jankier than Hadrian's Wall",
+      "answer": "Scotland",
+      "daily_double": false
+    },
+    {
+      "category": "GO FOR \"GOLD\"",
+      "value": "$600",
+      "clue": "Despite a myth that it is a major culprit in hay fever, it's the state flower of Nebraska & Kentucky",
+      "answer": "goldenrod",
+      "daily_double": false
+    },
+    {
+      "category": "STORIES BEHIND THE SONGS",
+      "value": "$600",
+      "clue": "This song came about after a pal of Sean Lennon told Billy Joel that the 1950s were a boring time to grow up",
+      "answer": "\"We Didn't Start The Fire\"",
+      "daily_double": false
+    },
+    {
+      "category": "A LITTLE ALLITERATION",
+      "value": "$600",
+      "clue": "Perfectly transparent, like some varieties of quartz",
+      "answer": "crystal clear",
+      "daily_double": false
+    },
+    {
+      "category": "GREAT BRITS",
+      "value": "$800",
+      "clue": "In 1913, polar explorers Roald Amunsen, Robert Peary & this Brit were honored at a reception in Philadelphia",
+      "answer": "Shackleton",
+      "daily_double": false
+    },
+    {
+      "category": "1940s LITERATURE",
+      "value": "$800",
+      "clue": "The title of this Mexico-set Malcolm Lowry novel refers to both Popocatépetl & Iztaccihuatl",
+      "answer": "Under the Volcano",
+      "daily_double": true
+    },
+    {
+      "category": "YOU'RE RUINING THE RUINS",
+      "value": "$800",
+      "clue": "We might have beaten the crowds to this ancient Maya city near Pisté, Mexico, home to the pyramid El Castillo, had you not slept until noon",
+      "answer": "Chichén Itzá",
+      "daily_double": false
+    },
+    {
+      "category": "GO FOR \"GOLD\"",
+      "value": "$800",
+      "clue": "The spot where the Earth is, just right for liquid water to exist, is called the habitable or this zone",
+      "answer": "the Goldilocks zone",
+      "daily_double": false
+    },
+    {
+      "category": "STORIES BEHIND THE SONGS",
+      "value": "$800",
+      "clue": "This hit was written for a British singer & originally had lyrics like \"hopped off the plane at LAX / with my tea & my cardigan\"",
+      "answer": "\"Party In The U.S.A.\"",
+      "daily_double": false
+    },
+    {
+      "category": "A LITTLE ALLITERATION",
+      "value": "$800",
+      "clue": "Fashionable term for a synthetic version of a controlled substance with an altered molecular structure",
+      "answer": "a designer drug",
+      "daily_double": false
+    },
+    {
+      "category": "GREAT BRITS",
+      "value": "$1000",
+      "clue": "In 1820 he helped found the Royal Astronomical Society but didn't have it use the calculating machine he designed",
+      "answer": "Babbage",
+      "daily_double": false
+    },
+    {
+      "category": "1940s LITERATURE",
+      "value": "$1000",
+      "clue": "A tale of love & independence in Paris, \"Gigi\" by this French novelist eventually came to the big screen with Leslie Caron",
+      "answer": "Colette",
+      "daily_double": false
+    },
+    {
+      "category": "YOU'RE RUINING THE RUINS",
+      "value": "$1000",
+      "clue": "I know this ancient monastic settlement off Ireland's Kerry coast was in \"Star Wars\", but selfies with a light saber was a little extra",
+      "answer": "Skellig Michael",
+      "daily_double": false
+    },
+    {
+      "category": "GO FOR \"GOLD\"",
+      "value": "$1000",
+      "clue": "In 1964 ornithologist James Bond met Ian Fleming at this Jamaican estate possibly named for Ian's WWII spy operation",
+      "answer": "GoldenEye",
+      "daily_double": false
+    },
+    {
+      "category": "STORIES BEHIND THE SONGS",
+      "value": "$1000",
+      "clue": "He only had a mattress & a piano in his house when he began working on the viral hit \"Beautiful Things\"",
+      "answer": "Benson Boone",
+      "daily_double": false
+    },
+    {
+      "category": "A LITTLE ALLITERATION",
+      "value": "$1000",
+      "clue": "Something purchased without inspection, like a swine in an old-time sack",
+      "answer": "a pig in a poke",
+      "daily_double": false
+    }
+  ],
+  "final_jeopardy": null
+}
