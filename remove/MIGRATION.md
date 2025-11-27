@@ -133,7 +133,7 @@ python scraper/database.py
 python quiz-app/api.py
 
 # Then open browser to:
-# http://localhost:5000
+# http://localhost:8001
 ```
 
 ### Programmatic Access

@@ -28,7 +28,7 @@ fi
 
 echo ""
 echo "Starting quiz app..."
-echo "Open your browser to: http://localhost:5000"
+echo "Open your browser to: http://localhost:8001"
 echo ""
 echo "Press Ctrl+C to stop the server"
 echo ""

@@ -62,8 +62,8 @@ if __name__ == '__main__':
     print("JEOPARDY QUIZ APP - Starting Server")
     print("=" * 80)
     print(f"Database: {DB_PATH}")
-    print(f"Quiz app: http://localhost:5000")
-    print(f"API: http://localhost:5000/api")
+    print(f"Quiz app: http://localhost:8001")
+    print(f"API: http://localhost:8001/api")
     print("=" * 80)
 
     # Check if database exists
@@ -73,4 +73,4 @@ if __name__ == '__main__':
         print("  python scraper/run_scraper.py 9302")
         print()
 
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=8001)

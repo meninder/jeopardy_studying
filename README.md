@@ -71,7 +71,7 @@ python quiz-app/api.py
 
 Then open your browser to:
 ```
-http://localhost:5000
+http://localhost:8001
 ```
 
 ## Features

@@ -34,7 +34,7 @@ python scraper/run_scraper.py 9310-9320 --stats
 python quiz-app/api.py
 ```
 
-Then open your browser to: **http://localhost:5000**
+Then open your browser to: **http://localhost:8001**
 
 ---
 
@@ -70,7 +70,7 @@ python scraper/run_scraper.py 9302 --stats
 ### Using the Quiz
 
 1. Start the server: `python quiz-app/api.py`
-2. Open browser to: `http://localhost:5000`
+2. Open browser to: `http://localhost:8001`
 3. Click anywhere on the card to reveal the answer
 4. Click "Next Question" for a new random clue
 
