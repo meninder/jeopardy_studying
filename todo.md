@@ -1,3 +1,4 @@
-1. remove/* files  - still need?
-2. when running front end: Error loading clue, failed to fetch.  add some error logging to see where it fails.
-3. filters?
+1. add git ignore and update.
+2. filters?
+3. host this 
+4. study guide - claude read db then create a study guide.
