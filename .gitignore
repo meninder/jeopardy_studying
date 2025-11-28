@@ -67,5 +67,6 @@ logs/
 # Project specific
 data/*.json
 data/*.csv
+data/json/*
 # Keep data directory structure
 !data/.gitkeep
