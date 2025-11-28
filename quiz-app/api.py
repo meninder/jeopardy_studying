@@ -51,6 +51,25 @@ def get_stats():
         return jsonify({'error': str(e)}), 500
 
 
+@app.route('/api/show/<int:show_number>', methods=['GET'])
+def get_show_clues(show_number):
+    """Get all clues from a specific show number"""
+    try:
+        with JeopardyDatabase(str(DB_PATH)) as db:
+            clues = db.get_clues_by_show_number(show_number)
+
+            if not clues:
+                return jsonify({'error': f'Show #{show_number} not found in database'}), 404
+
+            return jsonify({
+                'show_number': show_number,
+                'clue_count': len(clues),
+                'clues': clues
+            })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""

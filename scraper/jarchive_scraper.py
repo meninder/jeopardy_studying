@@ -32,8 +32,15 @@ def scrape_jarchive_game(game_id: int) -> Dict:
     # Extract game metadata
     game_title = soup.find('title').text.strip() if soup.find('title') else "Unknown Game"
 
+    # Extract show number from title (e.g., "J! Archive - Show #9426, aired 2025-11-03")
+    show_number = None
+    show_match = re.search(r'Show #(\d+)', game_title)
+    if show_match:
+        show_number = int(show_match.group(1))
+
     game_data = {
         'game_id': game_id,
+        'show_number': show_number,
         'title': game_title,
         'url': url,
         'jeopardy_round': [],

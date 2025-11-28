@@ -40,12 +40,21 @@ class JeopardyDatabase:
         self.cursor.execute("""
             CREATE TABLE IF NOT EXISTS games (
                 game_id INTEGER PRIMARY KEY,
+                show_number INTEGER,
                 title TEXT NOT NULL,
                 url TEXT NOT NULL,
                 air_date TEXT,
                 scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
+
+        # Add show_number column if it doesn't exist (for existing databases)
+        try:
+            self.cursor.execute("SELECT show_number FROM games LIMIT 1")
+        except sqlite3.OperationalError:
+            print("Adding show_number column to existing database...")
+            self.cursor.execute("ALTER TABLE games ADD COLUMN show_number INTEGER")
+            self.conn.commit()
 
         # Clues table
         self.cursor.execute("""
@@ -78,6 +87,11 @@ class JeopardyDatabase:
             ON clues(category)
         """)
 
+        self.cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_games_show_number
+            ON games(show_number)
+        """)
+
         self.conn.commit()
 
     def game_exists(self, game_id: int) -> bool:
@@ -107,10 +121,11 @@ class JeopardyDatabase:
 
         # Insert game metadata
         self.cursor.execute("""
-            INSERT INTO games (game_id, title, url)
-            VALUES (?, ?, ?)
+            INSERT INTO games (game_id, show_number, title, url)
+            VALUES (?, ?, ?, ?)
         """, (
             game_id,
+            game_data.get('show_number'),
             game_data['title'],
             game_data['url']
         ))
@@ -160,6 +175,7 @@ class JeopardyDatabase:
             SELECT
                 c.id,
                 c.game_id,
+                g.show_number,
                 c.round,
                 c.category,
                 c.value,
@@ -189,6 +205,7 @@ class JeopardyDatabase:
             SELECT
                 c.id,
                 c.game_id,
+                g.show_number,
                 c.round,
                 c.category,
                 c.value,
@@ -205,6 +222,36 @@ class JeopardyDatabase:
 
         return [dict(row) for row in self.cursor.fetchall()]
 
+    def get_clues_by_show_number(self, show_number: int) -> List[Dict]:
+        """
+        Get all clues from a specific show number
+
+        Args:
+            show_number: The Jeopardy show number (e.g., 9426)
+
+        Returns:
+            List of clue dictionaries, or empty list if show not found
+        """
+        self.cursor.execute("""
+            SELECT
+                c.id,
+                c.game_id,
+                g.show_number,
+                c.round,
+                c.category,
+                c.value,
+                c.clue,
+                c.answer,
+                c.daily_double,
+                g.title as game_title
+            FROM clues c
+            JOIN games g ON c.game_id = g.game_id
+            WHERE g.show_number = ?
+            ORDER BY c.round, c.category
+        """, (show_number,))
+
+        return [dict(row) for row in self.cursor.fetchall()]
+
     def get_stats(self) -> Dict:
         """Get database statistics"""
         self.cursor.execute("SELECT COUNT(*) FROM games")
@@ -216,10 +263,17 @@ class JeopardyDatabase:
         self.cursor.execute("SELECT COUNT(DISTINCT category) FROM clues")
         category_count = self.cursor.fetchone()[0]
 
+        self.cursor.execute("SELECT MIN(show_number), MAX(show_number) FROM games WHERE show_number IS NOT NULL")
+        show_range = self.cursor.fetchone()
+
         return {
             'total_games': game_count,
             'total_clues': clue_count,
-            'unique_categories': category_count
+            'unique_categories': category_count,
+            'show_number_range': {
+                'min': show_range[0],
+                'max': show_range[1]
+            } if show_range[0] else None
         }
 
     def close(self):
