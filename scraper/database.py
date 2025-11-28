@@ -121,13 +121,14 @@ class JeopardyDatabase:
 
         # Insert game metadata
         self.cursor.execute("""
-            INSERT INTO games (game_id, show_number, title, url)
-            VALUES (?, ?, ?, ?)
+            INSERT INTO games (game_id, show_number, title, url, air_date)
+            VALUES (?, ?, ?, ?, ?)
         """, (
             game_id,
             game_data.get('show_number'),
             game_data['title'],
-            game_data['url']
+            game_data['url'],
+            game_data.get('air_date')
         ))
 
         # Insert Jeopardy Round clues
@@ -176,6 +177,7 @@ class JeopardyDatabase:
                 c.id,
                 c.game_id,
                 g.show_number,
+                g.air_date,
                 c.round,
                 c.category,
                 c.value,
@@ -206,6 +208,7 @@ class JeopardyDatabase:
                 c.id,
                 c.game_id,
                 g.show_number,
+                g.air_date,
                 c.round,
                 c.category,
                 c.value,
@@ -237,6 +240,7 @@ class JeopardyDatabase:
                 c.id,
                 c.game_id,
                 g.show_number,
+                g.air_date,
                 c.round,
                 c.category,
                 c.value,
@@ -252,6 +256,57 @@ class JeopardyDatabase:
 
         return [dict(row) for row in self.cursor.fetchall()]
 
+    def get_random_clue_by_date(self, start_date: str = None, end_date: str = None, exclude_final: bool = True) -> Optional[Dict]:
+        """
+        Get a random clue from the database filtered by date range
+
+        Args:
+            start_date: Start date in YYYY-MM-DD format (inclusive)
+            end_date: End date in YYYY-MM-DD format (inclusive)
+            exclude_final: If True, exclude Final Jeopardy clues
+
+        Returns:
+            Dictionary with clue data or None if no clues found
+        """
+        query = """
+            SELECT
+                c.id,
+                c.game_id,
+                g.show_number,
+                g.air_date,
+                c.round,
+                c.category,
+                c.value,
+                c.clue,
+                c.answer,
+                c.daily_double,
+                g.title as game_title
+            FROM clues c
+            JOIN games g ON c.game_id = g.game_id
+            WHERE 1=1
+        """
+        params = []
+
+        if start_date:
+            query += " AND g.air_date >= ?"
+            params.append(start_date)
+
+        if end_date:
+            query += " AND g.air_date <= ?"
+            params.append(end_date)
+
+        if exclude_final:
+            query += " AND c.round != 'Final Jeopardy'"
+
+        query += " ORDER BY RANDOM() LIMIT 1"
+
+        self.cursor.execute(query, params)
+        row = self.cursor.fetchone()
+
+        if row:
+            return dict(row)
+        return None
+
     def get_stats(self) -> Dict:
         """Get database statistics"""
         self.cursor.execute("SELECT COUNT(*) FROM games")
@@ -266,6 +321,9 @@ class JeopardyDatabase:
         self.cursor.execute("SELECT MIN(show_number), MAX(show_number) FROM games WHERE show_number IS NOT NULL")
         show_range = self.cursor.fetchone()
 
+        self.cursor.execute("SELECT MIN(air_date), MAX(air_date) FROM games WHERE air_date IS NOT NULL")
+        date_range = self.cursor.fetchone()
+
         return {
             'total_games': game_count,
             'total_clues': clue_count,
@@ -273,7 +331,11 @@ class JeopardyDatabase:
             'show_number_range': {
                 'min': show_range[0],
                 'max': show_range[1]
-            } if show_range[0] else None
+            } if show_range[0] else None,
+            'date_range': {
+                'min': date_range[0],
+                'max': date_range[1]
+            } if date_range[0] else None
         }
 
     def close(self):

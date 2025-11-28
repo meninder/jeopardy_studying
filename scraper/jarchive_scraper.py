@@ -38,11 +38,18 @@ def scrape_jarchive_game(game_id: int) -> Dict:
     if show_match:
         show_number = int(show_match.group(1))
 
+    # Extract air date from title (e.g., "aired 2025-11-03")
+    air_date = None
+    date_match = re.search(r'aired (\d{4}-\d{2}-\d{2})', game_title)
+    if date_match:
+        air_date = date_match.group(1)
+
     game_data = {
         'game_id': game_id,
         'show_number': show_number,
         'title': game_title,
         'url': url,
+        'air_date': air_date,
         'jeopardy_round': [],
         'double_jeopardy_round': [],
         'final_jeopardy': None

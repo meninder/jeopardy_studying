@@ -198,6 +198,131 @@
             padding-top: 15px;
             border-top: 1px solid #eee;
         }
+
+        .filter-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .filter-header h3 {
+            color: #0c1445;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .filter-toggle {
+            background: #0c1445;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .filter-toggle:hover {
+            background: #1a237e;
+        }
+
+        .filter-content {
+            display: none;
+        }
+
+        .filter-content.active {
+            display: block;
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .filter-group label {
+            display: block;
+            color: #0c1445;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .filter-group input[type="date"] {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .filter-group input[type="date"]:focus {
+            outline: none;
+            border-color: #0c1445;
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-filter {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-filter:hover {
+            background: #45a049;
+            transform: translateY(-1px);
+        }
+
+        .btn-clear {
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-clear:hover {
+            background: #da190b;
+            transform: translateY(-1px);
+        }
+
+        .filter-status {
+            color: #4CAF50;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -209,6 +334,30 @@
             </div>
         </div>
 
+        <div class="filter-panel">
+            <div class="filter-header">
+                <h3>Date Filter</h3>
+                <button class="filter-toggle" onclick="toggleFilter()">Show Filters</button>
+            </div>
+            <div class="filter-content" id="filter-content">
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label for="start-date">Start Date</label>
+                        <input type="date" id="start-date" />
+                    </div>
+                    <div class="filter-group">
+                        <label for="end-date">End Date</label>
+                        <input type="date" id="end-date" />
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn-filter" onclick="applyFilter()">Apply Filter</button>
+                    <button class="btn-clear" onclick="clearFilter()">Clear Filter</button>
+                </div>
+                <div class="filter-status" id="filter-status"></div>
+            </div>
+        </div>
+
         <div id="app"></div>
     </div>
 
@@ -217,17 +366,75 @@
 
         let currentClue = null;
         let showingAnswer = false;
+        let dateFilter = {
+            startDate: null,
+            endDate: null
+        };
+
+        // Toggle filter panel
+        function toggleFilter() {
+            const content = document.getElementById('filter-content');
+            const button = document.querySelector('.filter-toggle');
+
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                button.textContent = 'Show Filters';
+            } else {
+                content.classList.add('active');
+                button.textContent = 'Hide Filters';
+            }
+        }
+
+        // Apply date filter
+        function applyFilter() {
+            const startDate = document.getElementById('start-date').value;
+            const endDate = document.getElementById('end-date').value;
+
+            dateFilter.startDate = startDate || null;
+            dateFilter.endDate = endDate || null;
+
+            let statusText = 'Filter applied';
+            if (startDate && endDate) {
+                statusText = `Showing clues from ${startDate} to ${endDate}`;
+            } else if (startDate) {
+                statusText = `Showing clues from ${startDate} onwards`;
+            } else if (endDate) {
+                statusText = `Showing clues up to ${endDate}`;
+            } else {
+                statusText = 'No date filter applied';
+            }
+
+            document.getElementById('filter-status').textContent = statusText;
+            loadClue();
+        }
+
+        // Clear date filter
+        function clearFilter() {
+            document.getElementById('start-date').value = '';
+            document.getElementById('end-date').value = '';
+            dateFilter.startDate = null;
+            dateFilter.endDate = null;
+            document.getElementById('filter-status').textContent = '';
+            loadClue();
+        }
 
         // Load stats
         async function loadStats() {
             try {
                 const response = await fetch(`${API_URL}/stats`);
                 const stats = await response.json();
-                document.getElementById('stats-display').innerHTML = `
+
+                let statsHtml = `
                     <span>${stats.total_games} Games</span>
                     <span>${stats.total_clues} Clues</span>
                     <span>${stats.unique_categories} Categories</span>
                 `;
+
+                if (stats.date_range && stats.date_range.min && stats.date_range.max) {
+                    statsHtml += `<span>${stats.date_range.min} to ${stats.date_range.max}</span>`;
+                }
+
+                document.getElementById('stats-display').innerHTML = statsHtml;
             } catch (error) {
                 console.error('Failed to load stats:', error);
             }
@@ -240,7 +447,22 @@
             app.innerHTML = '<div class="loading">Loading clue...</div>';
 
             try {
-                const response = await fetch(`${API_URL}/clue/random`);
+                // Build URL with date filters if present
+                let url = `${API_URL}/clue/random`;
+                const params = new URLSearchParams();
+
+                if (dateFilter.startDate) {
+                    params.append('start_date', dateFilter.startDate);
+                }
+                if (dateFilter.endDate) {
+                    params.append('end_date', dateFilter.endDate);
+                }
+
+                if (params.toString()) {
+                    url += '?' + params.toString();
+                }
+
+                const response = await fetch(url);
                 const data = await response.json();
 
                 if (data.error) {
@@ -294,7 +516,7 @@
                             </button>
                         </div>
                         <div class="game-info">
-                            ${currentClue.round} • ${currentClue.game_title}
+                            ${currentClue.round} • ${currentClue.game_title}${currentClue.air_date ? ` • Aired: ${currentClue.air_date}` : ''}
                         </div>
                     </div>
                 </div>

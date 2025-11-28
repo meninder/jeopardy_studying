@@ -3,7 +3,7 @@
 Flask API to serve Jeopardy clues from SQLite database
 """
 
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, request
 from flask_cors import CORS
 import sys
 from pathlib import Path
@@ -27,10 +27,22 @@ def serve_app():
 
 @app.route('/api/clue/random', methods=['GET'])
 def get_random_clue():
-    """Get a random clue from the database"""
+    """Get a random clue from the database, optionally filtered by date"""
     try:
+        # Get optional date filter parameters from query string
+        start_date = request.args.get('start_date')
+        end_date = request.args.get('end_date')
+
         with JeopardyDatabase(str(DB_PATH)) as db:
-            clue = db.get_random_clue(exclude_final=True)
+            # If date filters provided, use date-filtered method
+            if start_date or end_date:
+                clue = db.get_random_clue_by_date(
+                    start_date=start_date,
+                    end_date=end_date,
+                    exclude_final=True
+                )
+            else:
+                clue = db.get_random_clue(exclude_final=True)
 
             if clue is None:
                 return jsonify({'error': 'No clues found in database'}), 404
