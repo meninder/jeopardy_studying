@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy Study Flashcards - Enhanced Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Jeopardy Study Flashcards</h1>
+            <h3 style="font-weight: 400; opacity: 0.9;">Enhanced Edition - 206 Cards</h3>
+            <div class="stats">
+                <span id="progress">Card <span id="current">1</span> of <span id="total">0</span></span>
+                <span id="category-name">Category</span>
+            </div>
+        </header>
+
+        <div class="category-selector">
+            <label for="category-select">Choose a category:</label>
+            <select id="category-select">
+                <option value="all">All Categories (Mixed)</option>
+            </select>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <div class="card-content">
+                            <p id="question">Loading...</p>
+                        </div>
+                        <div class="hint">Click card to reveal answer</div>
+                    </div>
+                    <div class="flashcard-back">
+                        <div class="card-content">
+                            <div id="answer">Answer</div>
+                        </div>
+                        <div class="hint">Click card to see question</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev-btn" class="btn btn-secondary">← Previous</button>
+            <button id="shuffle-btn" class="btn btn-accent">🔀 Shuffle</button>
+            <button id="next-btn" class="btn btn-primary">Next →</button>
+        </div>
+
+        <div class="keyboard-hint">
+            Use ← → arrow keys to navigate • Space to flip card
+        </div>
+    </div>
+
+    <!-- Enhanced version with enriched answers -->
+    <script src="app-enhanced.js"></script>
+</body>
+</html>

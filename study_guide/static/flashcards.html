@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy Study Flashcards - Enhanced Edition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .category-selector {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-selector label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        #category-select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        #category-select:hover,
+        #category-select:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        .flashcard-container {
+            perspective: 1000px;
+            margin-bottom: 30px;
+        }
+
+        .flashcard {
+            background: transparent;
+            width: 100%;
+            height: 500px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-front,
+        .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .flashcard-front {
+            background: white;
+            color: #333;
+        }
+
+        .flashcard-back {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .card-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .card-content p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            max-width: 100%;
+        }
+
+        .answer-line {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .bullet-point {
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: left;
+            margin: 8px 0;
+            padding-left: 10px;
+        }
+
+        #answer {
+            overflow-y: auto;
+            max-height: 380px;
+            padding-right: 10px;
+        }
+
+        #answer::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #answer::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        #answer::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 3px;
+        }
+
+        #answer::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .hint {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #764ba2;
+            color: white;
+        }
+
+        .btn-accent {
+            background: #f5576c;
+            color: white;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn:disabled:hover {
+            transform: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .keyboard-hint {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .flashcard {
+                height: 450px;
+            }
+
+            .card-content p {
+                font-size: 1.2rem;
+            }
+
+            .controls {
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Jeopardy Study Flashcards</h1>
+            <h3 style="font-weight: 400; opacity: 0.9;">Enhanced Edition - 206 Cards</h3>
+            <div class="stats">
+                <span id="progress">Card <span id="current">1</span> of <span id="total">0</span></span>
+                <span id="category-name">Category</span>
+            </div>
+        </header>
+
+        <div class="category-selector">
+            <label for="category-select">Choose a category:</label>
+            <select id="category-select">
+                <option value="all">All Categories (Mixed)</option>
+            </select>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <div class="card-content">
+                            <p id="question">Loading...</p>
+                        </div>
+                        <div class="hint">Click card to reveal answer</div>
+                    </div>
+                    <div class="flashcard-back">
+                        <div class="card-content">
+                            <div id="answer">Answer</div>
+                        </div>
+                        <div class="hint">Click card to see question</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev-btn" class="btn btn-secondary">← Previous</button>
+            <button id="shuffle-btn" class="btn btn-accent">🔀 Shuffle</button>
+            <button id="next-btn" class="btn btn-primary">Next →</button>
+        </div>
+
+        <div class="keyboard-hint">
+            Use ← → arrow keys to navigate • Space to flip card
+        </div>
+    </div>
+
+    <script src="flashcards-data.js"></script>
+    <script src="app-standalone.js"></script>
+</body>
+</html>
