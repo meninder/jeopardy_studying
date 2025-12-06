@@ -14,6 +14,7 @@ const answerEl = document.getElementById('answer');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const shuffleBtn = document.getElementById('shuffle-btn');
+const flipBtn = document.getElementById('flip-btn');
 const categorySelect = document.getElementById('category-select');
 const currentEl = document.getElementById('current');
 const totalEl = document.getElementById('total');
@@ -27,8 +28,8 @@ function initApp() {
     // Load all flashcards
     loadAllFlashcards();
 
-    // Display first card
-    displayCard();
+    // Shuffle on startup so you don't see the same card first every time
+    shuffleCards();
 }
 
 // Populate category dropdown
@@ -167,6 +168,7 @@ flashcard.addEventListener('click', flipCard);
 prevBtn.addEventListener('click', prevCard);
 nextBtn.addEventListener('click', nextCard);
 shuffleBtn.addEventListener('click', shuffleCards);
+flipBtn.addEventListener('click', flipCard);
 categorySelect.addEventListener('change', handleCategoryChange);
 
 // Keyboard navigation

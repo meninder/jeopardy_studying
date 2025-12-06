@@ -55,11 +55,17 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .category-selector label {
-            display: block;
+        .category-selector-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 10px;
+        }
+
+        .category-selector label {
             font-weight: 600;
             color: #555;
+            margin: 0;
         }
 
         #category-select {
@@ -290,7 +296,10 @@
         </header>
 
         <div class="category-selector">
-            <label for="category-select">Choose a category:</label>
+            <div class="category-selector-header">
+                <label for="category-select">Choose a category:</label>
+                <button id="shuffle-btn" class="btn btn-accent">🔀 Shuffle</button>
+            </div>
             <select id="category-select">
                 <option value="all">All Categories (Mixed)</option>
             </select>
@@ -317,7 +326,7 @@
 
         <div class="controls">
             <button id="prev-btn" class="btn btn-secondary">← Previous</button>
-            <button id="shuffle-btn" class="btn btn-accent">🔀 Shuffle</button>
+            <button id="flip-btn" class="btn btn-accent">Answer</button>
             <button id="next-btn" class="btn btn-primary">Next →</button>
         </div>
 
