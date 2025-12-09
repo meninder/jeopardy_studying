@@ -1,6 +1,63 @@
 # Jeopardy Game Scraper & Quiz App
 
-A complete system to scrape Jeopardy games from J-Archive and quiz yourself with a beautiful web interface.
+A complete system to scrape Jeopardy games from [J-Archive](https://j-archive.com/) and quiz yourself with a beautiful web interface.
+
+## 🚀 Quick Start (3 Steps)
+
+### Step 1: Install Dependencies
+```bash
+# Install with uv (recommended):
+uv sync
+
+# Or with pip:
+pip install -r requirements.txt
+```
+
+### Step 2: Scrape Some Games (Optional - 4 games already loaded!)
+```bash
+# You already have 4 games with 240 clues!
+# But if you want more games from J-Archive:
+uv run python scraper/run_scraper.py 9310-9320 --stats
+```
+
+### Step 3: Open the Quiz App
+```bash
+# Open the HTML file directly in your browser:
+open quiz-app/public/index.html
+
+# Or start the Flask server and browse to http://localhost:8001:
+./start_quiz.sh
+```
+
+---
+
+## Features
+
+### Scraper
+- ✅ Scrape single or multiple Jeopardy games from J-Archive
+- ✅ Store data in SQLite database
+- ✅ Save JSON files for debugging
+- ✅ Batch scraping with configurable delays
+- ✅ Skip already-scraped games
+- ✅ Extract categories, clues, answers, and Daily Doubles
+
+### Quiz App
+- ✅ Random clue selection from database
+- ✅ Click-to-reveal answer functionality
+- ✅ Beautiful Jeopardy-themed interface
+- ✅ Display category, value, and round information
+- ✅ Track database statistics
+- ✅ Daily Double indicators
+
+### Static Flashcards
+- ✅ Works without any server (perfect for GitHub Pages)
+- ✅ Edit flashcards in JSON format
+- ✅ Auto-generate static JavaScript bundle
+- ✅ Category filtering and shuffle mode
+- ✅ AI-powered question assistance (optional OpenAI integration)
+- ✅ Keyboard navigation support
+
+---
 
 ## Project Structure
 
@@ -18,79 +75,91 @@ jeopardy/
 │   ├── api.py                    # Flask API server
 │   └── public/
 │       └── index.html            # Quiz web interface
+├── docs/                         # Static flashcards for GitHub Pages
+│   ├── build_static.py           # Converts JSON to JS
+│   ├── local_server/
+│   │   └── flashcards-enhanced.json  # Edit your flashcards here
+│   └── static/
+│       ├── flashcards.html       # Static flashcard app
+│       └── flashcards-data.js    # Auto-generated (don't edit)
 ├── requirements.txt              # Python dependencies
 └── README.md                     # This file
 ```
 
-## Installation
-
-1. **Install Python dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+---
 
 ## Usage
 
-### 1. Scrape Jeopardy Games
-
-The scraper is agnostic to game IDs and can scrape single games, ranges, or specific games.
+### Scraping Games from J-Archive
 
 **Scrape a single game:**
 ```bash
-python scraper/run_scraper.py 9302
+uv run python scraper/run_scraper.py 9302
 ```
 
 **Scrape a range of games:**
 ```bash
-python scraper/run_scraper.py 9300-9310
+uv run python scraper/run_scraper.py 9300-9310
 ```
 
 **Scrape specific games:**
 ```bash
-python scraper/run_scraper.py 9300,9302,9304
+uv run python scraper/run_scraper.py 9300,9302,9304
 ```
 
 **Advanced options:**
 ```bash
-# Custom delay between requests (be respectful!)
-python scraper/run_scraper.py 9300-9305 --delay 2.0
+# Custom delay between requests (be respectful to J-Archive!)
+uv run python scraper/run_scraper.py 9300-9305 --delay 2.0
 
 # Skip JSON files (database only)
-python scraper/run_scraper.py 9302 --no-json
+uv run python scraper/run_scraper.py 9302 --no-json
 
 # Show database statistics after scraping
-python scraper/run_scraper.py 9302 --stats
+uv run python scraper/run_scraper.py 9302 --stats
 ```
 
-### 2. Run the Quiz App
+### Using the Quiz
 
-Start the Flask server:
+1. Open the HTML file directly: `open quiz-app/public/index.html`
+2. Click anywhere on the card to reveal the answer
+3. Click "Next Question" for a new random clue
+
+**Alternative (with server):**
+1. Start the server: `uv run python quiz-app/api.py`
+2. Open browser to: `http://localhost:8001`
+
+### Building Static Flashcards for GitHub Pages
+
+The project includes a static flashcard system that works without a server:
+
+**Step 1: Edit your flashcards**
 ```bash
-python quiz-app/api.py
+# Edit the JSON file with your study questions:
+# docs/local_server/flashcards-enhanced.json
 ```
 
-Then open your browser to:
+**Step 2: Build the static version**
+```bash
+cd docs
+uv run python build_static.py
 ```
-http://localhost:8001
+
+**Step 3: View locally**
+```bash
+open static/flashcards.html
 ```
 
-## Features
+**Step 4: Deploy to GitHub Pages (optional)**
+```bash
+git add docs/static/
+git commit -m "Update flashcards"
+git push
+```
 
-### Scraper
-- ✅ Scrape single or multiple Jeopardy games
-- ✅ Store data in SQLite database
-- ✅ Save JSON files for debugging
-- ✅ Batch scraping with configurable delays
-- ✅ Skip already-scraped games
-- ✅ Extract categories, clues, answers, and Daily Doubles
+The build script converts your JSON flashcards into a JavaScript file that gets embedded in the static HTML, making it work without any backend server. Perfect for GitHub Pages hosting!
 
-### Quiz App
-- ✅ Random clue selection from database
-- ✅ Click-to-reveal answer functionality
-- ✅ Beautiful Jeopardy-themed interface
-- ✅ Display category, value, and round information
-- ✅ Track database statistics
-- ✅ Daily Double indicators
+---
 
 ## Database Schema
 
@@ -111,6 +180,8 @@ http://localhost:8001
 - `answer`
 - `daily_double`
 
+---
+
 ## API Endpoints
 
 ### Get Random Clue
@@ -130,6 +201,8 @@ Returns database statistics (total games, clues, categories)
 GET /api/health
 ```
 Returns API health status
+
+---
 
 ## Development
 
@@ -164,12 +237,25 @@ with JeopardyDatabase() as db:
     db.insert_game(game_data)
 ```
 
+---
+
+## Pro Tips
+
+1. **Use uv**: `uv sync` and `uv run` are faster and more reliable than pip
+2. **Scrape Responsibly**: Use `--delay` to add pauses between requests to J-Archive (default is 1 second)
+3. **JSON Debugging**: All games are saved as JSON in `data/json/` for debugging purposes
+4. **Database Queries**: Import `JeopardyDatabase` for custom queries
+5. **Already Scraped**: The scraper automatically skips already-scraped games
+6. **Old Files**: `main.py` and `inspect_*.py` are kept for reference
+
+---
+
 ## Notes
 
+- All Jeopardy game data is scraped from [J-Archive](https://j-archive.com/), a fan-created archive of Jeopardy! games
 - The scraper includes a default 1-second delay between requests to be respectful to J-Archive
-- JSON files are saved in `data/json/` for debugging purposes
 - The database will automatically create the schema on first run
-- Already-scraped games are automatically skipped
+- All data is stored locally in `data/jeopardy.db`
 
 ## License
 
