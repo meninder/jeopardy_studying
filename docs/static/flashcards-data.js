@@ -6,7 +6,7 @@ const FLASHCARD_DATA = {
   "metadata": {
     "title": "Jeopardy Study Flashcards - Enhanced Edition",
     "description": "Comprehensive flashcard set with enriched answers and context",
-    "totalCards": 206,
+    "totalCards": 286,
     "categories": 15
   },
   "categories": [
@@ -15,35 +15,55 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What is the 'little brain' about the size of a fist located at the back of the head?",
-          "answer": "The cerebellum\n\n• Coordinates voluntary movements like balance and posture\n• Contains more neurons than the rest of the brain combined\n• Damage causes ataxia (loss of coordination) and tremors\n• Latin name means 'little brain'"
+          "answer": "The cerebellum\n\n\u2022 Coordinates voluntary movements like balance and posture\n\u2022 Contains more neurons than the rest of the brain combined\n\u2022 Damage causes ataxia (loss of coordination) and tremors\n\u2022 Latin name means 'little brain'"
         },
         {
           "question": "What part of the brain plays a big role in controlling respiration?",
-          "answer": "The medulla oblongata\n\n• Located at the base of the brainstem\n• Controls autonomic functions: breathing, heart rate, blood pressure\n• Contains the respiratory center that regulates breathing rhythm\n• Damage here is usually fatal"
+          "answer": "The medulla oblongata\n\n\u2022 Located at the base of the brainstem\n\u2022 Controls autonomic functions: breathing, heart rate, blood pressure\n\u2022 Contains the respiratory center that regulates breathing rhythm\n\u2022 Damage here is usually fatal"
         },
         {
           "question": "What are the junctions where chemical and electrical messages pass between billions of neurons?",
-          "answer": "Synapses\n\n• Each neuron has 1,000-10,000 synaptic connections\n• Use neurotransmitters (dopamine, serotonin, etc.) to transmit signals\n• Synaptic plasticity is the basis of learning and memory\n• Can be excitatory (stimulating) or inhibitory (dampening)"
+          "answer": "Synapses\n\n\u2022 Each neuron has 1,000-10,000 synaptic connections\n\u2022 Use neurotransmitters (dopamine, serotonin, etc.) to transmit signals\n\u2022 Synaptic plasticity is the basis of learning and memory\n\u2022 Can be excitatory (stimulating) or inhibitory (dampening)"
         },
         {
           "question": "What is a mild traumatic brain injury caused by a blow that moves the brain around in the head?",
-          "answer": "A concussion\n\n• Causes temporary loss of brain function\n• Symptoms: headache, confusion, dizziness, memory problems\n• Multiple concussions increase risk of CTE (chronic traumatic encephalopathy)\n• Recovery usually takes 7-10 days but can vary"
+          "answer": "A concussion\n\n\u2022 Causes temporary loss of brain function\n\u2022 Symptoms: headache, confusion, dizziness, memory problems\n\u2022 Multiple concussions increase risk of CTE (chronic traumatic encephalopathy)\n\u2022 Recovery usually takes 7-10 days but can vary"
         },
         {
           "question": "What is the swelling of the brain that can occur when the immune system attacks healthy brain tissue?",
-          "answer": "Encephalitis\n\n• Can be caused by viruses (HSV, West Nile), bacteria, or autoimmune disorders\n• Symptoms: fever, headache, behavioral changes, seizures\n• Can lead to permanent brain damage if untreated\n• Famous case: after-effects inspired the book/movie 'Awakenings'"
+          "answer": "Encephalitis\n\n\u2022 Can be caused by viruses (HSV, West Nile), bacteria, or autoimmune disorders\n\u2022 Symptoms: fever, headache, behavioral changes, seizures\n\u2022 Can lead to permanent brain damage if untreated\n\u2022 Famous case: after-effects inspired the book/movie 'Awakenings'"
         },
         {
           "question": "What chamber of the heart pumps blood into the lungs for oxygenation?",
-          "answer": "The right ventricle\n\n• Part of pulmonary circulation loop\n• Pumps deoxygenated blood to lungs via pulmonary artery\n• Has thinner walls than left ventricle (lower pressure needed)\n• Tricuspid valve prevents backflow from ventricle to atrium"
+          "answer": "The right ventricle\n\n\u2022 Part of pulmonary circulation loop\n\u2022 Pumps deoxygenated blood to lungs via pulmonary artery\n\u2022 Has thinner walls than left ventricle (lower pressure needed)\n\u2022 Tricuspid valve prevents backflow from ventricle to atrium"
         },
         {
           "question": "What is the 2-letter abbreviation for tuberculosis, known as consumption in the 19th century?",
-          "answer": "TB (Tuberculosis)\n\n• Bacterial infection caused by Mycobacterium tuberculosis\n• Called 'consumption' because it seemed to consume people from within\n• Killed famous figures: Keats, Chopin, Doc Holliday, Eleanor Roosevelt\n• Still kills 1.5 million people annually worldwide"
+          "answer": "TB (Tuberculosis)\n\n\u2022 Bacterial infection caused by Mycobacterium tuberculosis\n\u2022 Called 'consumption' because it seemed to consume people from within\n\u2022 Killed famous figures: Keats, Chopin, Doc Holliday, Eleanor Roosevelt\n\u2022 Still kills 1.5 million people annually worldwide"
         },
         {
           "question": "What type of drug was used to beat near-fatal Pemphigus vulgaris?",
-          "answer": "A steroid (prednisone)\n\n• Corticosteroids suppress immune system responses\n• Pemphigus vulgaris causes severe blistering of skin and mucous membranes\n• Chris Stein of Blondie nearly died from this condition\n• Long-term steroid use has serious side effects"
+          "answer": "A steroid (prednisone)\n\n\u2022 Corticosteroids suppress immune system responses\n\u2022 Pemphigus vulgaris causes severe blistering of skin and mucous membranes\n\u2022 Chris Stein of Blondie nearly died from this condition\n\u2022 Long-term steroid use has serious side effects"
+        },
+        {
+          "question": "It's what the C-E-F originally stood for in UNICEF",
+          "answer": "Children's Emergency Fund"
+        },
+        {
+          "question": "An early pioneer of the birth control movement, Margaret Sanger founded what today is this organization",
+          "answer": "Planned Parenthood"
+        },
+        {
+          "question": "After seeing the living conditions in pre-state Israel, Henrietta Szold founded this U.S. organization of Jewish women",
+          "answer": "Hadassah"
+        },
+        {
+          "question": "Part of a network that includes food banks & meal programs, it's the nation's largest domestic hunger-relief organization",
+          "answer": "Feeding America"
+        },
+        {
+          "question": "Founded in 1980, it's recently gotten companies to stop offering camel & horse rides at the Giza pyramids due to animal abuse",
+          "answer": "PETA"
         }
       ]
     },
@@ -52,43 +72,83 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What was the 1980s scandal involving illegal Mideast arms sales with money funneled to Central America?",
-          "answer": "Iran-Contra\n\n• Reagan administration secretly sold arms to Iran despite embargo\n• Profits illegally funded Contra rebels in Nicaragua\n• Oliver North was convicted, later overturned on technicality\n• Revealed in 1986, damaged Reagan's second term"
+          "answer": "Iran-Contra\n\n\u2022 Reagan administration secretly sold arms to Iran despite embargo\n\u2022 Profits illegally funded Contra rebels in Nicaragua\n\u2022 Oliver North was convicted, later overturned on technicality\n\u2022 Revealed in 1986, damaged Reagan's second term"
         },
         {
           "question": "What cold-blooded murder of 7 members of a rival gang in Chicago became known as a holiday bloodletting?",
-          "answer": "The St. Valentine's Day Massacre\n\n• February 14, 1929 in Lincoln Park neighborhood\n• Al Capone's gang killed Bugs Moran's men\n• Gunmen disguised as police officers\n• Turned public opinion against gangsters, led to Capone's downfall"
+          "answer": "The St. Valentine's Day Massacre\n\n\u2022 February 14, 1929 in Lincoln Park neighborhood\n\u2022 Al Capone's gang killed Bugs Moran's men\n\u2022 Gunmen disguised as police officers\n\u2022 Turned public opinion against gangsters, led to Capone's downfall"
         },
         {
           "question": "What drug revolutionizing treatment of depression was made available by Eli Lilly in 1988?",
-          "answer": "Prozac\n\n• First major SSRI (Selective Serotonin Reuptake Inhibitor)\n• Generic name: fluoxetine\n• Became cultural phenomenon, over 40 million users by 2000\n• Inspired book 'Listening to Prozac' about personality changes"
+          "answer": "Prozac\n\n\u2022 First major SSRI (Selective Serotonin Reuptake Inhibitor)\n\u2022 Generic name: fluoxetine\n\u2022 Became cultural phenomenon, over 40 million users by 2000\n\u2022 Inspired book 'Listening to Prozac' about personality changes"
         },
         {
           "question": "What historical day, also known as Emancipation Day and Black Independence Day, became a federal holiday in 2021?",
-          "answer": "Juneteenth\n\n• June 19, 1865: Union troops arrived in Galveston, Texas\n• Announced that all enslaved people were free (2.5 years after Emancipation Proclamation)\n• Celebrates end of slavery in United States\n• Became 11th federal holiday"
+          "answer": "Juneteenth\n\n\u2022 June 19, 1865: Union troops arrived in Galveston, Texas\n\u2022 Announced that all enslaved people were free (2.5 years after Emancipation Proclamation)\n\u2022 Celebrates end of slavery in United States\n\u2022 Became 11th federal holiday"
         },
         {
           "question": "Where did Elvis live and die, which was designated a national historic landmark in 2006?",
-          "answer": "Graceland\n\n• Located in Memphis, Tennessee\n• Elvis bought it in 1957 for $102,500 at age 22\n• Died there August 16, 1977 at age 42\n• Second most-visited house in America (after White House)"
+          "answer": "Graceland\n\n\u2022 Located in Memphis, Tennessee\n\u2022 Elvis bought it in 1957 for $102,500 at age 22\n\u2022 Died there August 16, 1977 at age 42\n\u2022 Second most-visited house in America (after White House)"
         },
         {
           "question": "What Anglican bishop from South Africa was honored with a Nobel Peace Prize in 1984?",
-          "answer": "Desmond Tutu\n\n• First Black Anglican Archbishop of Cape Town\n• Led anti-apartheid movement alongside Nelson Mandela\n• Coined term 'Rainbow Nation' for post-apartheid South Africa\n• Later chaired Truth and Reconciliation Commission"
+          "answer": "Desmond Tutu\n\n\u2022 First Black Anglican Archbishop of Cape Town\n\u2022 Led anti-apartheid movement alongside Nelson Mandela\n\u2022 Coined term 'Rainbow Nation' for post-apartheid South Africa\n\u2022 Later chaired Truth and Reconciliation Commission"
         },
         {
           "question": "What Upper South state was next to last to secede, contributing 1/5 of the entire Confederate Army?",
-          "answer": "North Carolina\n\n• Seceded May 20, 1861 (only Tennessee was later)\n• Provided 125,000+ Confederate soldiers\n• Site of Bennett Place surrender (largest troop surrender of Civil War)\n• More Confederate soldiers from NC than any other state"
+          "answer": "North Carolina\n\n\u2022 Seceded May 20, 1861 (only Tennessee was later)\n\u2022 Provided 125,000+ Confederate soldiers\n\u2022 Site of Bennett Place surrender (largest troop surrender of Civil War)\n\u2022 More Confederate soldiers from NC than any other state"
         },
         {
           "question": "In what city did some 1000 people die in 1863 anti-draft riots?",
-          "answer": "New York City\n\n• July 13-16, 1863, during Civil War\n• Protesters angry about military draft and $300 exemption fee\n• Targeted Black New Yorkers and abolitionists\n• Worst civil insurrection in American history"
+          "answer": "New York City\n\n\u2022 July 13-16, 1863, during Civil War\n\u2022 Protesters angry about military draft and $300 exemption fee\n\u2022 Targeted Black New Yorkers and abolitionists\n\u2022 Worst civil insurrection in American history"
         },
         {
           "question": "What was the 1980s California Air Force base that served as a landing spot for space shuttles?",
-          "answer": "Edwards Air Force Base\n\n• Located in Mojave Desert\n• Backup landing site for NASA Space Shuttle program\n• Used when weather prevented landing at Kennedy Space Center\n• Also used for testing of experimental aircraft"
+          "answer": "Edwards Air Force Base\n\n\u2022 Located in Mojave Desert\n\u2022 Backup landing site for NASA Space Shuttle program\n\u2022 Used when weather prevented landing at Kennedy Space Center\n\u2022 Also used for testing of experimental aircraft"
         },
         {
           "question": "Who served as top Union commander before Grant in the Civil War?",
-          "answer": "Winfield Scott, George McClellan & Henry Halleck\n\n• Scott: Anaconda Plan architect, too old for field command\n• McClellan: Overly cautious, fired twice by Lincoln\n• Halleck: Administrative role, chief of staff\n• Grant became General-in-Chief March 1864"
+          "answer": "Winfield Scott, George McClellan & Henry Halleck\n\n\u2022 Scott: Anaconda Plan architect, too old for field command\n\u2022 McClellan: Overly cautious, fired twice by Lincoln\n\u2022 Halleck: Administrative role, chief of staff\n\u2022 Grant became General-in-Chief March 1864"
+        },
+        {
+          "question": "He wrote the opinion for Myers v. U.S., saying a president could fire executive officers with or without Congress' OK",
+          "answer": "Taft"
+        },
+        {
+          "question": "(Grover presents the clue.) The star of Grover Cleveland's 1892 campaign, the first successful one by an ex-president, was not the candidate or even his wife, but their cute & adorable one-year-old daughter called \"Baby\" this name",
+          "answer": "(Baby) Ruth"
+        },
+        {
+          "question": "(Grover presents the clue.) Grover Cleveland is the only president born in the great state of New Jersey; his birthplace used to be a manse, which means that his father had this job in the lovely town of Caldwell",
+          "answer": "a minister"
+        },
+        {
+          "question": "(Grover presents the clue.) You can say I am cute & very fuzzy, just like this rival who both beat Cleveland & lost to him; he was the last president to sport a full beard",
+          "answer": "Benjamin Harrison"
+        },
+        {
+          "question": "He served as a guest announcer for the first inning of the 1989 Major League Baseball All-Star Game",
+          "answer": "(Ronald) Reagan"
+        },
+        {
+          "question": "(Grover presents the clue.) Aw, imagine being there on October 28, 1896 when President Cleveland spoke to dedicate the Statue of Liberty; first, the president had to wait until this, in red, white & blue, was pulled from Lady Liberty's face",
+          "answer": "French flag"
+        },
+        {
+          "question": "He suffered a stroke on the floor of the House of Reps., where he'd been serving, & passed away in the Capitol 2 days later",
+          "answer": "Quincy Adams"
+        },
+        {
+          "question": "At a 1965 ceremony, Harry Truman became the first beneficiary of this new federal program & applied for Part B",
+          "answer": "Medicare"
+        },
+        {
+          "question": "In 1875 he became the 1st ex-prez to serve in the Senate but unlike another pres. of the same name didn't become \"master of\" it",
+          "answer": "Andrew Johnson"
+        },
+        {
+          "question": "(Grover presents the clue.) Grover Cleveland did not enter politics in Cleveland but in this other Lake Erie city &, in one of his most quoted letters, he longs for a plate of herring & Swiss cheese from a favorite restaurant there",
+          "answer": "Buffalo"
         }
       ]
     },
@@ -97,51 +157,99 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What 1,700-mile river forms part of the border between Colombia and Venezuela on its way to the Atlantic?",
-          "answer": "The Orinoco\n\n• Third-longest river in South America (after Amazon and Paraná)\n• Angel Falls (world's highest waterfall) is in Orinoco basin\n• Name comes from Guarani word meaning 'a place to paddle'\n• Major commercial waterway for both countries"
+          "answer": "The Orinoco\n\n\u2022 Third-longest river in South America (after Amazon and Paran\u00e1)\n\u2022 Angel Falls (world's highest waterfall) is in Orinoco basin\n\u2022 Name comes from Guarani word meaning 'a place to paddle'\n\u2022 Major commercial waterway for both countries"
         },
         {
           "question": "What capital city was founded in 1822, divided into 2 sections - one for freed American slaves and one for locals?",
-          "answer": "Monrovia\n\n• Capital of Liberia, West Africa\n• Named after U.S. President James Monroe\n• Founded by American Colonization Society\n• Only African capital named after a U.S. president"
+          "answer": "Monrovia\n\n\u2022 Capital of Liberia, West Africa\n\u2022 Named after U.S. President James Monroe\n\u2022 Founded by American Colonization Society\n\u2022 Only African capital named after a U.S. president"
         },
         {
           "question": "What island 2,200 miles off the coast of Chile forms the eastern extent of Polynesia?",
-          "answer": "Easter Island\n\n• Called Rapa Nui by native Polynesians\n• Famous for 887 moai (giant stone head statues)\n• Annexed by Chile in 1888\n• Most remote inhabited island in the world"
+          "answer": "Easter Island\n\n\u2022 Called Rapa Nui by native Polynesians\n\u2022 Famous for 887 moai (giant stone head statues)\n\u2022 Annexed by Chile in 1888\n\u2022 Most remote inhabited island in the world"
         },
         {
           "question": "What Belgian city was over 1,100 years old when the treaty ending the War of 1812 was signed there?",
-          "answer": "Ghent\n\n• Treaty of Ghent signed December 24, 1814\n• Ended War of 1812 between U.S. and Britain\n• Medieval city, capital of East Flanders\n• Known for textiles and universities"
+          "answer": "Ghent\n\n\u2022 Treaty of Ghent signed December 24, 1814\n\u2022 Ended War of 1812 between U.S. and Britain\n\u2022 Medieval city, capital of East Flanders\n\u2022 Known for textiles and universities"
         },
         {
           "question": "What strait linking the Atlantic and Mediterranean is slowly closing thanks to tectonic activity?",
-          "answer": "The Strait of Gibraltar\n\n• Separates Spain from Morocco (only 8 miles wide at narrowest)\n• African and Eurasian tectonic plates converging\n• Will close completely in 600,000 years\n• Named after Rock of Gibraltar"
+          "answer": "The Strait of Gibraltar\n\n\u2022 Separates Spain from Morocco (only 8 miles wide at narrowest)\n\u2022 African and Eurasian tectonic plates converging\n\u2022 Will close completely in 600,000 years\n\u2022 Named after Rock of Gibraltar"
         },
         {
           "question": "About 20% of the world's oil supply (20 million barrels daily) passes through what strait?",
-          "answer": "The Strait of Hormuz\n\n• Between Persian Gulf and Gulf of Oman\n• Iran on north side, UAE and Oman on south\n• Only 21 miles wide at narrowest point\n• Called world's most important oil chokepoint"
+          "answer": "The Strait of Hormuz\n\n\u2022 Between Persian Gulf and Gulf of Oman\n\u2022 Iran on north side, UAE and Oman on south\n\u2022 Only 21 miles wide at narrowest point\n\u2022 Called world's most important oil chokepoint"
         },
         {
           "question": "What Korean peninsula strait was the site of a great naval battle during the Russo-Japanese War?",
-          "answer": "The Tsushima Strait\n\n• Battle of Tsushima, May 27-28, 1905\n• Japanese fleet defeated Russian Baltic Fleet\n• One of most decisive naval battles in history\n• Located between Korea and Japan"
+          "answer": "The Tsushima Strait\n\n\u2022 Battle of Tsushima, May 27-28, 1905\n\u2022 Japanese fleet defeated Russian Baltic Fleet\n\u2022 One of most decisive naval battles in history\n\u2022 Located between Korea and Japan"
         },
         {
           "question": "What country dropped 'Western' from its name in 1997 after being part of New Zealand?",
-          "answer": "Samoa\n\n• Formerly Western Samoa, independent since 1962\n• Changed name July 4, 1997\n• Not to be confused with American Samoa\n• First country to see each new day (International Date Line)"
+          "answer": "Samoa\n\n\u2022 Formerly Western Samoa, independent since 1962\n\u2022 Changed name July 4, 1997\n\u2022 Not to be confused with American Samoa\n\u2022 First country to see each new day (International Date Line)"
         },
         {
-          "question": "What 220-square-mile Alpine lake formed by the Rhone River is also known as Lac Léman?",
-          "answer": "Lake Geneva\n\n• Shared by Switzerland (60%) and France (40%)\n• One of largest lakes in Western Europe\n• Geneva and Lausanne on its shores\n• Jet d'Eau fountain shoots water 460 feet high"
+          "question": "What 220-square-mile Alpine lake formed by the Rhone River is also known as Lac L\u00e9man?",
+          "answer": "Lake Geneva\n\n\u2022 Shared by Switzerland (60%) and France (40%)\n\u2022 One of largest lakes in Western Europe\n\u2022 Geneva and Lausanne on its shores\n\u2022 Jet d'Eau fountain shoots water 460 feet high"
         },
         {
-          "question": "What capital city, birthplace of Simón Bolívar, has borders that spill into the state of Miranda?",
-          "answer": "Caracas\n\n• Capital of Venezuela since 1577\n• Founded by Spanish in 1567\n• Bolívar born here July 24, 1783\n• One of most dangerous cities in world (high crime rate)"
+          "question": "What capital city, birthplace of Sim\u00f3n Bol\u00edvar, has borders that spill into the state of Miranda?",
+          "answer": "Caracas\n\n\u2022 Capital of Venezuela since 1577\n\u2022 Founded by Spanish in 1567\n\u2022 Bol\u00edvar born here July 24, 1783\n\u2022 One of most dangerous cities in world (high crime rate)"
         },
         {
           "question": "What is the capital city of Australia's Northern Territory?",
-          "answer": "Darwin\n\n• Named after Charles Darwin (ship HMS Beagle visited in 1839)\n• Northernmost major city in Australia\n• Heavily bombed by Japan in WWII (February 19, 1942)\n• Gateway to Kakadu National Park"
+          "answer": "Darwin\n\n\u2022 Named after Charles Darwin (ship HMS Beagle visited in 1839)\n\u2022 Northernmost major city in Australia\n\u2022 Heavily bombed by Japan in WWII (February 19, 1942)\n\u2022 Gateway to Kakadu National Park"
         },
         {
           "question": "What lake in Northwest Territories shares its name with a constellation and is the largest entirely within Canada?",
-          "answer": "Great Bear Lake\n\n• Fourth-largest lake in North America\n• Covers 12,028 square miles\n• Water so clear you can see 40 feet down\n• Freezes solid for 8 months each year"
+          "answer": "Great Bear Lake\n\n\u2022 Fourth-largest lake in North America\n\u2022 Covers 12,028 square miles\n\u2022 Water so clear you can see 40 feet down\n\u2022 Freezes solid for 8 months each year"
+        },
+        {
+          "question": "With the same name as a constellation, this lake in the Northwest Territories is the largest entirely within Canada",
+          "answer": "Great Bear"
+        },
+        {
+          "question": "This city followed Chester, Philadelphia, & Lancaster as its state's capital",
+          "answer": "Harrisburg"
+        },
+        {
+          "question": "Featuring the 45 most famous accountants, the ever-popular Accounting Hall of Fame is in this Ohio capital",
+          "answer": "Columbus"
+        },
+        {
+          "question": "After its founding in 1822, this capital was divided into 2 sections, one for freed American slaves & one for locals",
+          "answer": "Monrovia"
+        },
+        {
+          "question": "One of this nation's oldest cities, Ghent was over 1,100 years old when the treaty ending the War of 1812 was signed there",
+          "answer": "Belgium"
+        },
+        {
+          "question": "2,200 miles off the coast of Chile, this island forms the eastern extent of Polynesia",
+          "answer": "Easter Island"
+        },
+        {
+          "question": "Cleveland is situated where this river enters Lake Erie",
+          "answer": "the Cuyahoga"
+        },
+        {
+          "question": "Sail away on this 1,700-mile river that forms part of the border between Colombia & Venezuela on its way to the Atlantic",
+          "answer": "the Orinoco"
+        },
+        {
+          "question": "The eastern part of this principality includes foothills of the Alps & the west is in a floodplain of the Rhine River",
+          "answer": "Liechtenstein"
+        },
+        {
+          "question": "5 million square miles in Africa are this type of grassland; it begins south of the Sahara & includes the Serengeti plains",
+          "answer": "savanna"
+        },
+        {
+          "question": "A SoCal beach town isn't El Primero but this, as it was the site of the second Standard Oil refinery on the West Coast",
+          "answer": "El Segundo"
+        },
+        {
+          "question": "Darwin is the capital city of this part of Australia",
+          "answer": "the Northern Territory"
         }
       ]
     },
@@ -150,51 +258,99 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What Dylan Thomas poem warns 'Do not go gentle into' this?",
-          "answer": "That good night\n\n• Written in 1947 as father was dying\n• Villanelle form (19 lines, 2 rhymes, repeating refrains)\n• Famous line: 'Rage, rage against the dying of the light'\n• One of most famous poems in English"
+          "answer": "That good night\n\n\u2022 Written in 1947 as father was dying\n\u2022 Villanelle form (19 lines, 2 rhymes, repeating refrains)\n\u2022 Famous line: 'Rage, rage against the dying of the light'\n\u2022 One of most famous poems in English"
         },
         {
           "question": "To whom did Melville dedicate 'Moby Dick' in token for admiration of his genius?",
-          "answer": "Nathaniel Hawthorne\n\n• Dedication: 'In token of my admiration for his genius'\n• Hawthorne and Melville were neighbors in Berkshires\n• Met in 1850, became close friends\n• Hawthorne wrote 'The Scarlet Letter'"
+          "answer": "Nathaniel Hawthorne\n\n\u2022 Dedication: 'In token of my admiration for his genius'\n\u2022 Hawthorne and Melville were neighbors in Berkshires\n\u2022 Met in 1850, became close friends\n\u2022 Hawthorne wrote 'The Scarlet Letter'"
         },
         {
           "question": "What narrator in 'Great Expectations' says 'my hair had been caught by the fire, but not my head or face'?",
-          "answer": "Pip (Philip Pirrip)\n\n• Full name: Philip Pirrip\n• Dickens novel published 1860-61\n• Raised by sister and Joe Gargery (blacksmith)\n• Gets mysterious fortune, learns harsh lessons about social class"
+          "answer": "Pip (Philip Pirrip)\n\n\u2022 Full name: Philip Pirrip\n\u2022 Dickens novel published 1860-61\n\u2022 Raised by sister and Joe Gargery (blacksmith)\n\u2022 Gets mysterious fortune, learns harsh lessons about social class"
         },
         {
           "question": "What author wrote about Lady Chatterley and Michaelis sitting on opposite sides of the fire?",
-          "answer": "D.H. Lawrence\n\n• 'Lady Chatterley's Lover' published 1928\n• Banned for obscenity in many countries until 1960s\n• Famous British obscenity trial in 1960\n• Lawrence died of tuberculosis in 1930 at age 44"
+          "answer": "D.H. Lawrence\n\n\u2022 'Lady Chatterley's Lover' published 1928\n\u2022 Banned for obscenity in many countries until 1960s\n\u2022 Famous British obscenity trial in 1960\n\u2022 Lawrence died of tuberculosis in 1930 at age 44"
         },
         {
           "question": "In what 1954 novel does Ralph realize rescue will be impossible without keeping a fire going?",
-          "answer": "Lord of the Flies\n\n• Written by William Golding\n• Boys stranded on island, civilization breaks down\n• Won Nobel Prize in Literature 1983\n• Fire symbolizes hope for rescue and civilization"
+          "answer": "Lord of the Flies\n\n\u2022 Written by William Golding\n\u2022 Boys stranded on island, civilization breaks down\n\u2022 Won Nobel Prize in Literature 1983\n\u2022 Fire symbolizes hope for rescue and civilization"
         },
         {
           "question": "What Edgar Allan Poe story features a loopy narrator who kills an old man but still hears part of his victim beating?",
-          "answer": "The Tell-Tale Heart\n\n• Published 1843\n• Narrator driven mad by old man's 'vulture eye'\n• Hears heartbeat beneath floorboards (guilt manifested)\n• Classic example of unreliable narrator"
+          "answer": "The Tell-Tale Heart\n\n\u2022 Published 1843\n\u2022 Narrator driven mad by old man's 'vulture eye'\n\u2022 Hears heartbeat beneath floorboards (guilt manifested)\n\u2022 Classic example of unreliable narrator"
         },
         {
           "question": "What rhyming-titled chronicle by prosecutor Vincent Bugliosi is subtitled 'The True Story of the Manson Murders'?",
-          "answer": "Helter Skelter\n\n• Published 1974, became bestselling true crime book ever\n• Bugliosi prosecuted Charles Manson\n• Title from Beatles song Manson was obsessed with\n• Details Tate-LaBianca murders of 1969"
+          "answer": "Helter Skelter\n\n\u2022 Published 1974, became bestselling true crime book ever\n\u2022 Bugliosi prosecuted Charles Manson\n\u2022 Title from Beatles song Manson was obsessed with\n\u2022 Details Tate-LaBianca murders of 1969"
         },
         {
           "question": "What Nordic horror tale features a boy who befriends a vampire to defeat bullies?",
-          "answer": "Let the Right One In\n\n• Swedish novel by John Ajvide Lindqvist (2004)\n• Swedish title: 'Låt den rätte komma in'\n• Set in Stockholm suburb in 1980s\n• Adapted into acclaimed Swedish film (2008) and American remake"
+          "answer": "Let the Right One In\n\n\u2022 Swedish novel by John Ajvide Lindqvist (2004)\n\u2022 Swedish title: 'L\u00e5t den r\u00e4tte komma in'\n\u2022 Set in Stockholm suburb in 1980s\n\u2022 Adapted into acclaimed Swedish film (2008) and American remake"
         },
         {
           "question": "What brilliant quadriplegic detective was introduced in 1997's 'The Bone Collector'?",
-          "answer": "Lincoln Rhyme\n\n• Created by Jeffery Deaver\n• Former NYPD detective paralyzed from neck down\n• Solves crimes using forensic analysis\n• Played by Denzel Washington in 1999 film"
+          "answer": "Lincoln Rhyme\n\n\u2022 Created by Jeffery Deaver\n\u2022 Former NYPD detective paralyzed from neck down\n\u2022 Solves crimes using forensic analysis\n\u2022 Played by Denzel Washington in 1999 film"
         },
         {
           "question": "What author famously declined the Pulitzer Prize for 'Arrowsmith'?",
-          "answer": "Sinclair Lewis\n\n• Declined 1926 Pulitzer for 'Arrowsmith'\n• Felt he was robbed of 1921 Pulitzer for 'Main Street'\n• Later became first American to win Nobel Prize in Literature (1930)\n• Known for satirical novels about American culture"
+          "answer": "Sinclair Lewis\n\n\u2022 Declined 1926 Pulitzer for 'Arrowsmith'\n\u2022 Felt he was robbed of 1921 Pulitzer for 'Main Street'\n\u2022 Later became first American to win Nobel Prize in Literature (1930)\n\u2022 Known for satirical novels about American culture"
         },
         {
           "question": "What author began writing 'The Secret History' while attending Vermont's Bennington College?",
-          "answer": "Donna Tartt\n\n• Published 1992, her debut novel\n• About classics students who commit murder\n• Took 10 years between first and second novels\n• Also wrote 'The Goldfinch' (Pulitzer winner 2014)"
+          "answer": "Donna Tartt\n\n\u2022 Published 1992, her debut novel\n\u2022 About classics students who commit murder\n\u2022 Took 10 years between first and second novels\n\u2022 Also wrote 'The Goldfinch' (Pulitzer winner 2014)"
         },
         {
           "question": "Whose short stories include 'Where Are You Going, Where Have You Been?'?",
-          "answer": "Joyce Carol Oates\n\n• One of America's most prolific writers\n• Written 58+ novels, won many awards\n• That story based on serial killer 'Pied Piper of Tucson'\n• Professor emerita at Princeton"
+          "answer": "Joyce Carol Oates\n\n\u2022 One of America's most prolific writers\n\u2022 Written 58+ novels, won many awards\n\u2022 That story based on serial killer 'Pied Piper of Tucson'\n\u2022 Professor emerita at Princeton"
+        },
+        {
+          "question": "\"The Other Bennet Sister\" reworks \"Pride & Prejudice\" through the eyes of this preachy middle girl in the family",
+          "answer": "Mary"
+        },
+        {
+          "question": "This novel by Winston Groom describes the title character as 6'6\", 242 pounds & with an IQ of nearly 70",
+          "answer": "Forrest Gump"
+        },
+        {
+          "question": "Evelyn Waugh's 1948 novel \"The Loved One\" is a satire of these professionals partly from Latin for \"death\"",
+          "answer": "morticians"
+        },
+        {
+          "question": "\"The Beautiful And Damned\" are detailed at the dawn of the Jazz Age in New York City courtesy of this returning champion",
+          "answer": "Fitzgerald"
+        },
+        {
+          "question": "\"In token for my admiration of his genius\", Melville dedicated \"Moby Dick\" to this New England author",
+          "answer": "Nathaniel Hawthorne"
+        },
+        {
+          "question": "This inquisitive primate who debuted early in the decade \"Takes a Job\" in a later book, from cleaning windows to acting in a movie",
+          "answer": "Curious George"
+        },
+        {
+          "question": "\"Something Happened\" in 1974, but there's a \"Catch\"--the second novel from this man came 13 long years after his opening triumph",
+          "answer": "Heller"
+        },
+        {
+          "question": "Jewish author Howard Jacobson put a spin on \"The Merchant of Venice\" with this disputed character \"Is My Name\"",
+          "answer": "Shylock"
+        },
+        {
+          "question": "\"In this island we arrived, and here have I, thy schoolmaster, made thee more profit than other princes can\" is in this play",
+          "answer": "The Tempest"
+        },
+        {
+          "question": "Weird Tales supplemented stories by H.P. Lovecraft et al. with classics like this poet's \"La Belle Dame sans Merci\"",
+          "answer": "John Keats"
+        },
+        {
+          "question": "The 1609 first printing of these Shakespeare poems is dedicated to a mysterious \"Mr. W.H.\"",
+          "answer": "the sonnets"
+        },
+        {
+          "question": "A bronze statue in this Hanseatic city honors its unlikely town musicians made famous by the Brothers Grimm",
+          "answer": "Bremen"
         }
       ]
     },
@@ -203,35 +359,67 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "Who placed a big glass pyramid in front of the Louvre in 1989, causing controversy?",
-          "answer": "I.M. Pei\n\n• Chinese-American architect (1917-2019)\n• Pyramid is 71 feet tall, made of 673 glass panes\n• Initially criticized, now beloved landmark\n• Also designed Rock and Roll Hall of Fame, National Gallery East Building"
+          "answer": "I.M. Pei\n\n\u2022 Chinese-American architect (1917-2019)\n\u2022 Pyramid is 71 feet tall, made of 673 glass panes\n\u2022 Initially criticized, now beloved landmark\n\u2022 Also designed Rock and Roll Hall of Fame, National Gallery East Building"
         },
         {
           "question": "What wall hanging is about 230 feet long with dozens of scenes, including Bishop Odo wielding a club?",
-          "answer": "The Bayeux Tapestry\n\n• Actually an embroidered cloth, not woven tapestry\n• Depicts events leading to Norman Conquest of England (1066)\n• Probably commissioned by Bishop Odo (William the Conqueror's half-brother)\n• Displayed in Bayeux, Normandy, France"
+          "answer": "The Bayeux Tapestry\n\n\u2022 Actually an embroidered cloth, not woven tapestry\n\u2022 Depicts events leading to Norman Conquest of England (1066)\n\u2022 Probably commissioned by Bishop Odo (William the Conqueror's half-brother)\n\u2022 Displayed in Bayeux, Normandy, France"
         },
         {
           "question": "What artist painted 'The Milkmaid' featuring a table of baked goods?",
-          "answer": "Vermeer (Johannes Vermeer)\n\n• Dutch Golden Age painter (1632-1675)\n• Painted circa 1658-1661\n• Known for mastery of light and domestic interior scenes\n• Only 34 paintings attributed to him survive"
+          "answer": "Vermeer (Johannes Vermeer)\n\n\u2022 Dutch Golden Age painter (1632-1675)\n\u2022 Painted circa 1658-1661\n\u2022 Known for mastery of light and domestic interior scenes\n\u2022 Only 34 paintings attributed to him survive"
         },
         {
           "question": "Whose collection in Venice includes a version of Magritte's 'Empire of Light'?",
-          "answer": "Peggy Guggenheim\n\n• American art collector (1898-1979)\n• Collection in Palazzo Venier dei Leoni on Grand Canal\n• Championed modern artists: Pollock, Rothko, Kandinsky\n• Niece of Solomon R. Guggenheim"
+          "answer": "Peggy Guggenheim\n\n\u2022 American art collector (1898-1979)\n\u2022 Collection in Palazzo Venier dei Leoni on Grand Canal\n\u2022 Championed modern artists: Pollock, Rothko, Kandinsky\n\u2022 Niece of Solomon R. Guggenheim"
         },
         {
           "question": "What Rothschild estate has featured artists from Kandinsky to Koons on wine labels?",
-          "answer": "Château Mouton Rothschild\n\n• Premier cru wine estate in Pauillac, Bordeaux\n• Since 1945, commissioned artists for labels each vintage\n• Artists include Picasso, Chagall, Warhol, Bacon\n• Baron Philippe de Rothschild started tradition"
+          "answer": "Ch\u00e2teau Mouton Rothschild\n\n\u2022 Premier cru wine estate in Pauillac, Bordeaux\n\u2022 Since 1945, commissioned artists for labels each vintage\n\u2022 Artists include Picasso, Chagall, Warhol, Bacon\n\u2022 Baron Philippe de Rothschild started tradition"
         },
         {
           "question": "In 2013, 'Spray Art' at a Central Park stall went for $60 each. Who was the elusive artist?",
-          "answer": "Banksy\n\n• British street artist, identity unknown\n• Set up stall selling original works for $60\n• Pieces normally worth $30,000+\n• Only sold a few pieces; documented in video"
+          "answer": "Banksy\n\n\u2022 British street artist, identity unknown\n\u2022 Set up stall selling original works for $60\n\u2022 Pieces normally worth $30,000+\n\u2022 Only sold a few pieces; documented in video"
         },
         {
           "question": "What artist worked 14 hours a day painting the House of Representatives in 1821, then turned to inventing?",
-          "answer": "Morse (Samuel F.B. Morse)\n\n• Painted 'The House of Representatives' (1821-1822)\n• Disappointed by lack of success as painter\n• Invented Morse code and telegraph in 1830s-40s\n• 'What hath God wrought' - first telegraph message (1844)"
+          "answer": "Morse (Samuel F.B. Morse)\n\n\u2022 Painted 'The House of Representatives' (1821-1822)\n\u2022 Disappointed by lack of success as painter\n\u2022 Invented Morse code and telegraph in 1830s-40s\n\u2022 'What hath God wrought' - first telegraph message (1844)"
         },
         {
-          "question": "What American created 'Laocoön' in 1947, a piece with a mobile part that rotates 360 degrees?",
-          "answer": "Calder (Alexander Calder)\n\n• Inventor of the mobile (kinetic sculpture)\n• Also created 'stabiles' (stationary sculptures)\n• Originally trained as mechanical engineer\n• First artist to have solo show at MoMA (1943)"
+          "question": "What American created 'Laoco\u00f6n' in 1947, a piece with a mobile part that rotates 360 degrees?",
+          "answer": "Calder (Alexander Calder)\n\n\u2022 Inventor of the mobile (kinetic sculpture)\n\u2022 Also created 'stabiles' (stationary sculptures)\n\u2022 Originally trained as mechanical engineer\n\u2022 First artist to have solo show at MoMA (1943)"
+        },
+        {
+          "question": "A fire-breather from Greek myth, it's now a word for any mish-mosh of a creation",
+          "answer": "chimera"
+        },
+        {
+          "question": "Adjective meaning composed of numbers & letters",
+          "answer": "alphanumeric"
+        },
+        {
+          "question": "A style of this martial art goes back to China's Shaolin Temple, where monks used it to complement meditation",
+          "answer": "kung fu"
+        },
+        {
+          "question": "Their B-side \"Ruby Tuesday\" hit No. 1 after the A-side, \"Let's Spend The Night Together\", proved too hot for 1960s radio",
+          "answer": "The Rolling Stones"
+        },
+        {
+          "question": "How many days without an accident? The Occupational Safety & Health Administration should know",
+          "answer": "Labor"
+        },
+        {
+          "question": "\"(I'm Not Your) Steppin' Stone\" was the much less starry-eyed B-side of their 1966 chart-topper \"I'm A Believer\"",
+          "answer": "The Monkees"
+        },
+        {
+          "question": "The year they were married, Jean-Luc Goddard directed Anna Karina in \"Une femme est une femme\", titled this in English",
+          "answer": "A Woman Is a Woman"
+        },
+        {
+          "question": "A table of baked goods is featured in \"The Milkmaid\", a masterpiece by this 17th century painter",
+          "answer": "Vermeer"
         }
       ]
     },
@@ -239,48 +427,88 @@ const FLASHCARD_DATA = {
       "name": "Food, Drink & Cuisine",
       "flashcards": [
         {
-          "question": "What layered shooter contains Kahlúa, Baileys, and Grand Marnier?",
-          "answer": "A B-52\n\n• Named after B-52 Stratofortress bomber\n• Layers: Kahlúa (bottom), Baileys (middle), Grand Marnier (top)\n• Can be set on fire for 'flaming B-52'\n• Created in 1970s at Banff Springs Hotel, Alberta"
+          "question": "What layered shooter contains Kahl\u00faa, Baileys, and Grand Marnier?",
+          "answer": "A B-52\n\n\u2022 Named after B-52 Stratofortress bomber\n\u2022 Layers: Kahl\u00faa (bottom), Baileys (middle), Grand Marnier (top)\n\u2022 Can be set on fire for 'flaming B-52'\n\u2022 Created in 1970s at Banff Springs Hotel, Alberta"
         },
         {
           "question": "What summery cocktail of peach and Prosecco is named for Venetian artist Giovanni?",
-          "answer": "Bellini\n\n• Invented by Giuseppe Cipriani at Harry's Bar, Venice (1948)\n• Named after painter Giovanni Bellini (pink color like his paintings)\n• Traditional: white peach purée and Prosecco\n• Originally seasonal (only when white peaches available)"
+          "answer": "Bellini\n\n\u2022 Invented by Giuseppe Cipriani at Harry's Bar, Venice (1948)\n\u2022 Named after painter Giovanni Bellini (pink color like his paintings)\n\u2022 Traditional: white peach pur\u00e9e and Prosecco\n\u2022 Originally seasonal (only when white peaches available)"
         },
         {
           "question": "What cake's name refers to the brand of chocolate used, not its country of origin?",
-          "answer": "German chocolate cake\n\n• Named after Sam German who developed chocolate for Baker's in 1852\n• Recipe published by Dallas newspaper in 1957\n• Signature coconut-pecan frosting\n• Not from Germany!"
+          "answer": "German chocolate cake\n\n\u2022 Named after Sam German who developed chocolate for Baker's in 1852\n\u2022 Recipe published by Dallas newspaper in 1957\n\u2022 Signature coconut-pecan frosting\n\u2022 Not from Germany!"
         },
         {
           "question": "What cake is covered with a green layer of sweetened almond paste?",
-          "answer": "Princess cake (with marzipan)\n\n• Swedish: Prinsesstårta\n• Created by Jenny Åkerström in 1920s\n• Layers: sponge, pastry cream, raspberry jam, whipped cream\n• Green marzipan dome with pink marzipan rose on top"
+          "answer": "Princess cake (with marzipan)\n\n\u2022 Swedish: Prinsesst\u00e5rta\n\u2022 Created by Jenny \u00c5kerstr\u00f6m in 1920s\n\u2022 Layers: sponge, pastry cream, raspberry jam, whipped cream\n\u2022 Green marzipan dome with pink marzipan rose on top"
         },
         {
           "question": "What spiral-shaped sponge cake gets its name from its shape and filling?",
-          "answer": "Jelly roll\n\n• Also called Swiss roll or roulade\n• Thin sponge cake rolled with filling (usually jam)\n• Technique dates to Renaissance\n• American name references the rolled 'jelly' inside"
+          "answer": "Jelly roll\n\n\u2022 Also called Swiss roll or roulade\n\u2022 Thin sponge cake rolled with filling (usually jam)\n\u2022 Technique dates to Renaissance\n\u2022 American name references the rolled 'jelly' inside"
         },
         {
           "question": "What cake with signature ganache core was invented by Michel Bras?",
-          "answer": "Lava cake (molten chocolate cake)\n\n• French: mi-cuit au chocolat ('half-cooked chocolate')\n• Bras invented it in 1981, inspired by après-ski hot chocolate\n• Liquid center flows out when cut\n• Also called chocolate fondant"
+          "answer": "Lava cake (molten chocolate cake)\n\n\u2022 French: mi-cuit au chocolat ('half-cooked chocolate')\n\u2022 Bras invented it in 1981, inspired by apr\u00e8s-ski hot chocolate\n\u2022 Liquid center flows out when cut\n\u2022 Also called chocolate fondant"
         },
         {
           "question": "What WWII rationing led bakers to use beetroot juice in this colorful cake?",
-          "answer": "Red velvet cake\n\n• Originally subtle red from cocoa reaction with buttermilk\n• WWII: beets used for coloring (sugar rationed)\n• Now made with red food coloring\n• Signature cream cheese frosting"
+          "answer": "Red velvet cake\n\n\u2022 Originally subtle red from cocoa reaction with buttermilk\n\u2022 WWII: beets used for coloring (sugar rationed)\n\u2022 Now made with red food coloring\n\u2022 Signature cream cheese frosting"
         },
         {
           "question": "What French apple brandy is named after a department in Normandy?",
-          "answer": "Calvados\n\n• AOC-protected (must be from Normandy region)\n• Aged in oak barrels minimum 2 years\n• Can be made from pears (called Pommeau)\n• Named after département in Lower Normandy"
+          "answer": "Calvados\n\n\u2022 AOC-protected (must be from Normandy region)\n\u2022 Aged in oak barrels minimum 2 years\n\u2022 Can be made from pears (called Pommeau)\n\u2022 Named after d\u00e9partement in Lower Normandy"
         },
         {
           "question": "What caffeinated coffee cocktail saw a resurgence in 2021?",
-          "answer": "Espresso martini\n\n• Created by Dick Bradsell in London, 1980s\n• Recipe: vodka, coffee liqueur, fresh espresso\n• Model requested 'something to wake me up and f*** me up'\n• Experiencing major revival in 2020s"
+          "answer": "Espresso martini\n\n\u2022 Created by Dick Bradsell in London, 1980s\n\u2022 Recipe: vodka, coffee liqueur, fresh espresso\n\u2022 Model requested 'something to wake me up and f*** me up'\n\u2022 Experiencing major revival in 2020s"
         },
         {
           "question": "What cocktail of rum, ginger beer, and lime shares its name with a type of night?",
-          "answer": "Dark & Stormy\n\n• Trademarked by Gosling's Brothers (Bermuda)\n• Must use Gosling's Black Seal rum to use name legally\n• Ginger beer (not ale) and lime juice\n• Bermuda's national drink"
+          "answer": "Dark & Stormy\n\n\u2022 Trademarked by Gosling's Brothers (Bermuda)\n\u2022 Must use Gosling's Black Seal rum to use name legally\n\u2022 Ginger beer (not ale) and lime juice\n\u2022 Bermuda's national drink"
         },
         {
           "question": "What Chicago restaurant inspired TV's 'The Bear'?",
-          "answer": "Mr. Beef\n\n• Italian beef sandwich shop on Orleans Street\n• Opened 1979 by Joe Zucchero\n• Sandwich traditionally 'dipped' in jus (not drizzled)\n• Show creator Christopher Storer based it on his experiences"
+          "answer": "Mr. Beef\n\n\u2022 Italian beef sandwich shop on Orleans Street\n\u2022 Opened 1979 by Joe Zucchero\n\u2022 Sandwich traditionally 'dipped' in jus (not drizzled)\n\u2022 Show creator Christopher Storer based it on his experiences"
+        },
+        {
+          "question": "The Reposado type of this liquor is aged from 2 months to one year, while the A\u00f1ejo type is one to 3 years",
+          "answer": "tequila"
+        },
+        {
+          "question": "A department in France's Normandy region gives its name to this apple brandy that's sometimes made from pears as well",
+          "answer": "Calvados"
+        },
+        {
+          "question": "After a dinner of \"rock lobster\", serve this layered shooter of Kahl\u00faa, Baileys & Grand Marnier",
+          "answer": "a B-52"
+        },
+        {
+          "question": "In 2021 the New York Times wrote about the resurgence of this caffeinated coffee cocktail, a favorite on \"Below Deck\"",
+          "answer": "an espresso martini"
+        },
+        {
+          "question": "It was a this type of night, so I made myself the same-named cocktail of rum, ginger beer & fresh lime juice",
+          "answer": "a dark & stormy"
+        },
+        {
+          "question": "World War II rationing meant bakers used beetroot juice for this colorful cake that's now made with food coloring",
+          "answer": "red velvet cake"
+        },
+        {
+          "question": "Though it sounds European, the name of this cake refers to the brand of chocolate used, not its country of origin",
+          "answer": "German chocolate cake"
+        },
+        {
+          "question": "Michel Bras was inspired by an apr\u00e8s-ski hot cocoa when he invented his version of this cake with its signature ganache core",
+          "answer": "a lava cake (molten chocolate cake)"
+        },
+        {
+          "question": "The spiral shape of the sponge cake & what it's filled with are big hints to the name of this treat",
+          "answer": "jelly roll"
+        },
+        {
+          "question": "Jenny \u00c5kerstr\u00f6m created princess cake, which is covered with a green layer of this sweetened almond paste",
+          "answer": "marzipan"
         }
       ]
     },
@@ -289,39 +517,75 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What 1957 hit for Jerry Lee Lewis comes from the 'Great' American songbook?",
-          "answer": "Great Balls of Fire\n\n• Released October 1957, peaked at #2\n• Written by Otis Blackwell and Jack Hammer\n• Famous piano-pounding performance style\n• Lewis initially reluctant (thought it was too worldly/sinful)"
+          "answer": "Great Balls of Fire\n\n\u2022 Released October 1957, peaked at #2\n\u2022 Written by Otis Blackwell and Jack Hammer\n\u2022 Famous piano-pounding performance style\n\u2022 Lewis initially reluctant (thought it was too worldly/sinful)"
         },
         {
           "question": "What band had a No. 1 hit for 8 weeks in 1983 singing about being a creepy stalker?",
-          "answer": "The Police\n\n• Song: 'Every Breath You Take'\n• From album 'Synchronicity' (1983)\n• Often misinterpreted as romantic (actually about obsession)\n• Sting wrote it during divorce"
+          "answer": "The Police\n\n\u2022 Song: 'Every Breath You Take'\n\u2022 From album 'Synchronicity' (1983)\n\u2022 Often misinterpreted as romantic (actually about obsession)\n\u2022 Sting wrote it during divorce"
         },
         {
           "question": "According to Hanson, what nonsense title reflects the inexorable passing of time?",
-          "answer": "MMMBop\n\n• Released April 1997, brothers aged 11, 14, 16\n• Topped charts in 27 countries\n• About how relationships come and go quickly\n• 'Mmmbop' represents a short period of time"
+          "answer": "MMMBop\n\n\u2022 Released April 1997, brothers aged 11, 14, 16\n\u2022 Topped charts in 27 countries\n\u2022 About how relationships come and go quickly\n\u2022 'Mmmbop' represents a short period of time"
         },
         {
           "question": "What 1998 duet by Brandy and Monica sounds like a duel as much as a duet?",
-          "answer": "The Boy Is Mine\n\n• Topped Billboard Hot 100 for 13 weeks\n• Two singers arguing over same man\n• Fueled by real-life rivalry rumors\n• Best R&B Performance Grammy 1999"
+          "answer": "The Boy Is Mine\n\n\u2022 Topped Billboard Hot 100 for 13 weeks\n\u2022 Two singers arguing over same man\n\u2022 Fueled by real-life rivalry rumors\n\u2022 Best R&B Performance Grammy 1999"
         },
         {
           "question": "What fictional building was the setting for the party in 'Die Hard'?",
-          "answer": "Nakatomi Plaza\n\n• Actually Fox Plaza in Century City, LA\n• Film shot while building still under construction (1988)\n• 35-story high-rise\n• Still owned by Fox (now Disney)"
+          "answer": "Nakatomi Plaza\n\n\u2022 Actually Fox Plaza in Century City, LA\n\u2022 Film shot while building still under construction (1988)\n\u2022 35-story high-rise\n\u2022 Still owned by Fox (now Disney)"
         },
         {
           "question": "What 2024 sequel has Lydia Deetz getting hitched on Halloween?",
-          "answer": "Beetlejuice Beetlejuice\n\n• Sequel to 1988 'Beetlejuice'\n• Winona Ryder and Michael Keaton return\n• Directed again by Tim Burton\n• Say the name three times to summon him"
+          "answer": "Beetlejuice Beetlejuice\n\n\u2022 Sequel to 1988 'Beetlejuice'\n\u2022 Winona Ryder and Michael Keaton return\n\u2022 Directed again by Tim Burton\n\u2022 Say the name three times to summon him"
         },
         {
           "question": "What sitcom set at fictional Hillman College reunited its cast in 2024?",
-          "answer": "A Different World\n\n• Aired 1987-1993, 'Cosby Show' spinoff\n• Historically Black college setting\n• Addressed serious issues: racism, AIDS, apartheid\n• Featured Jasmine Guy, Kadeem Hardison, Lisa Bonet"
+          "answer": "A Different World\n\n\u2022 Aired 1987-1993, 'Cosby Show' spinoff\n\u2022 Historically Black college setting\n\u2022 Addressed serious issues: racism, AIDS, apartheid\n\u2022 Featured Jasmine Guy, Kadeem Hardison, Lisa Bonet"
         },
         {
           "question": "What show is set in fictional town of Kier, named for Lumon's founder?",
-          "answer": "Severance\n\n• Apple TV+ series (2022-present)\n• Employees surgically split work/personal memories\n• Stars Adam Scott, Patricia Arquette\n• Mind-bending thriller about work-life balance"
+          "answer": "Severance\n\n\u2022 Apple TV+ series (2022-present)\n\u2022 Employees surgically split work/personal memories\n\u2022 Stars Adam Scott, Patricia Arquette\n\u2022 Mind-bending thriller about work-life balance"
         },
         {
           "question": "What actor/director helmed 'Belfast' based on his childhood in Northern Ireland?",
-          "answer": "Branagh (Kenneth Branagh)\n\n• Film released 2021, set in 1969\n• Based on his childhood during The Troubles\n• Black and white, won Oscar for screenplay\n• Also directed/starred in Shakespeare adaptations"
+          "answer": "Branagh (Kenneth Branagh)\n\n\u2022 Film released 2021, set in 1969\n\u2022 Based on his childhood during The Troubles\n\u2022 Black and white, won Oscar for screenplay\n\u2022 Also directed/starred in Shakespeare adaptations"
+        },
+        {
+          "question": "Joey Santiago gouges away at lead guitar on albums like \"Doolittle\" & \"Surfer Rosa\" for this quintessential alt-rock group",
+          "answer": "Pixies"
+        },
+        {
+          "question": "A hurtin' Billy Ray Cyrus line-dancing number melds with a Blondie hit & makes something extra fragile",
+          "answer": "an \"Achy Breaky Heart Of Glass\""
+        },
+        {
+          "question": "An \"L\" stuck with vowels, in isolation, goes to Kauai for this celebration",
+          "answer": "luau"
+        },
+        {
+          "question": "During a stop in Manila on her \"GUTS\" tour, this singer told her fans \"Pinoy Ako\" (I'm Filipino)",
+          "answer": "(Olivia) Rodrigo"
+        },
+        {
+          "question": "Many classic pop songs go verse, chorus, verse, chorus, this section with a connective name, then back to the chorus again",
+          "answer": "bridge"
+        },
+        {
+          "question": "This hit was written for a British singer & originally had lyrics like \"hopped off the plane at LAX / with my tea & my cardigan\"",
+          "answer": "\"Party In The U.S.A.\""
+        },
+        {
+          "question": "Robert Plant was said to have read \"The Magic Arts in Celtic Britain\" before penning this song that mentions the May Queen",
+          "answer": "\"Stairway To Heaven\""
+        },
+        {
+          "question": "This artist was \"pronoun\"-ced as winner of a 2020 Oscar for Best Original Song from the movie \"Judas & the Black Messiah\"",
+          "answer": "H.E.R."
+        },
+        {
+          "question": "No big stretch--she played aspiring country musician Abby on Season 5 of \"Yellowstone\"",
+          "answer": "Lainey Wilson"
         }
       ]
     },
@@ -330,43 +594,83 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What do sloths have the lowest of among all non-hibernating mammals?",
-          "answer": "Metabolism\n\n• Metabolic rate 40-45% of expected for their size\n• Allows survival on nutrient-poor leaf diet\n• Takes 30 days to digest a single leaf\n• Body temperature as low as 68°F"
+          "answer": "Metabolism\n\n\u2022 Metabolic rate 40-45% of expected for their size\n\u2022 Allows survival on nutrient-poor leaf diet\n\u2022 Takes 30 days to digest a single leaf\n\u2022 Body temperature as low as 68\u00b0F"
         },
         {
           "question": "What mammal's mound deposits are laced with whiffs of castoreum?",
-          "answer": "The beaver\n\n• Castoreum: secretion from castor sacs near tail\n• Used to mark territory (smells like vanilla/musk)\n• Historically used in perfumes and food flavoring\n• FDA-approved food additive (rarely used now)"
+          "answer": "The beaver\n\n\u2022 Castoreum: secretion from castor sacs near tail\n\u2022 Used to mark territory (smells like vanilla/musk)\n\u2022 Historically used in perfumes and food flavoring\n\u2022 FDA-approved food additive (rarely used now)"
         },
         {
           "question": "What is the loudest of all monkeys?",
-          "answer": "The howler monkey\n\n• Calls can be heard 3 miles away through dense forest\n• Hyoid bone amplifies sound like megaphone\n• Males howl to defend territory and attract mates\n• Found in Central and South American forests"
+          "answer": "The howler monkey\n\n\u2022 Calls can be heard 3 miles away through dense forest\n\u2022 Hyoid bone amplifies sound like megaphone\n\u2022 Males howl to defend territory and attract mates\n\u2022 Found in Central and South American forests"
         },
         {
           "question": "What birds fly in synchronous groups called murmurations?",
-          "answer": "Starlings\n\n• Flocks of thousands move in coordinated patterns\n• Each bird coordinates with 6-7 neighbors\n• Protects from predators (safety in numbers, confuses hawks)\n• Most spectacular at dusk in autumn/winter"
+          "answer": "Starlings\n\n\u2022 Flocks of thousands move in coordinated patterns\n\u2022 Each bird coordinates with 6-7 neighbors\n\u2022 Protects from predators (safety in numbers, confuses hawks)\n\u2022 Most spectacular at dusk in autumn/winter"
         },
         {
           "question": "What is a group of jellyfish called?",
-          "answer": "A smack\n\n• Also called a bloom or swarm\n• Not actually fish (invertebrates, 95% water)\n• Been around 500+ million years\n• No brain, no heart, no blood"
+          "answer": "A smack\n\n\u2022 Also called a bloom or swarm\n\u2022 Not actually fish (invertebrates, 95% water)\n\u2022 Been around 500+ million years\n\u2022 No brain, no heart, no blood"
         },
         {
           "question": "What is the state mammal of Wyoming and official national mammal?",
-          "answer": "Bison\n\n• Nearly extinct in 1800s (fewer than 1,000 left)\n• Now about 500,000 in North America\n• Can weigh up to 2,000 pounds\n• Designated national mammal in 2016"
+          "answer": "Bison\n\n\u2022 Nearly extinct in 1800s (fewer than 1,000 left)\n\u2022 Now about 500,000 in North America\n\u2022 Can weigh up to 2,000 pounds\n\u2022 Designated national mammal in 2016"
         },
         {
           "question": "What is the largest sea turtle in the world?",
-          "answer": "The leatherback\n\n• Can grow over 6 feet long, weigh 2,000 pounds\n• Named for tough, rubbery skin instead of shell\n• Can dive deeper than 4,000 feet\n• Diet: mostly jellyfish"
+          "answer": "The leatherback\n\n\u2022 Can grow over 6 feet long, weigh 2,000 pounds\n\u2022 Named for tough, rubbery skin instead of shell\n\u2022 Can dive deeper than 4,000 feet\n\u2022 Diet: mostly jellyfish"
         },
         {
           "question": "Who proposed the Big Bang theory, which was mockingly named by Fred Hoyle?",
-          "answer": "Georges Lemaître\n\n• Belgian Catholic priest and physicist\n• Proposed theory in 1927\n• Fred Hoyle coined 'Big Bang' derisively in 1949 radio broadcast\n• Name stuck despite being meant as insult"
+          "answer": "Georges Lema\u00eetre\n\n\u2022 Belgian Catholic priest and physicist\n\u2022 Proposed theory in 1927\n\u2022 Fred Hoyle coined 'Big Bang' derisively in 1949 radio broadcast\n\u2022 Name stuck despite being meant as insult"
         },
         {
           "question": "What type of RNA directs protein synthesis within a cell?",
-          "answer": "Messenger RNA (mRNA)\n\n• Discovered around 1961\n• Carries genetic code from DNA to ribosomes\n• Template for protein production\n• Basis for COVID-19 vaccines (synthetic mRNA)"
+          "answer": "Messenger RNA (mRNA)\n\n\u2022 Discovered around 1961\n\u2022 Carries genetic code from DNA to ribosomes\n\u2022 Template for protein production\n\u2022 Basis for COVID-19 vaccines (synthetic mRNA)"
         },
         {
           "question": "What substances speed up reactions without undergoing change themselves?",
-          "answer": "Catalysts\n\n• Enzymes are biological catalysts\n• Lower activation energy needed for reactions\n• Can be reused many times\n• Platinum catalyst in catalytic converters reduces emissions"
+          "answer": "Catalysts\n\n\u2022 Enzymes are biological catalysts\n\u2022 Lower activation energy needed for reactions\n\u2022 Can be reused many times\n\u2022 Platinum catalyst in catalytic converters reduces emissions"
+        },
+        {
+          "question": "Though rarely used, a chemical name of this substance is dihydrogen monoxide",
+          "answer": "water"
+        },
+        {
+          "question": "The narrator of this story puts a \"drop of oil on the quartz rod\" of his title device, hops in the saddle & hours just zoom by",
+          "answer": "the time machine"
+        },
+        {
+          "question": "Enzymes are naturally occurring these, substances that speed up a reaction without undergoing a change themselves",
+          "answer": "catalysts"
+        },
+        {
+          "question": "Clams' main food are these mostly microscopic drifting organisms whose name means \"wandering\"",
+          "answer": "plankton"
+        },
+        {
+          "question": "A diatomic one of these consists of 2 chemically bonded atoms",
+          "answer": "a molecule"
+        },
+        {
+          "question": "The steersmen in \"Dune\" have to use this drug in order to allow them to navigate space",
+          "answer": "the spice"
+        },
+        {
+          "question": "A chemical property is one associated with change of one type of matter into another, like this \"-ability\" of wood & acetone",
+          "answer": "flammability"
+        },
+        {
+          "question": "Physicist Rudolf Clausius came up with this concept, a measure of the amount of energy not available to do work",
+          "answer": "entropy"
+        },
+        {
+          "question": "A sophon is a proton-sized supercomputer used by the Trisolarans in this book released in the U.S. in 2014",
+          "answer": "The Three-Body Problem"
+        },
+        {
+          "question": "Georges Lema\u00eetre proposed that the universe began with an explosion; Fred Hoyle gave this derisive name to the theory & it stuck",
+          "answer": "the Big Bang"
         }
       ]
     },
@@ -375,35 +679,67 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What is the chemical symbol for mercury?",
-          "answer": "Hg\n\n• From Latin 'hydrargyrum' meaning 'liquid silver'\n• Only metal that's liquid at room temperature\n• Extremely toxic (causes neurological damage)\n• Used in thermometers until banned in many countries"
+          "answer": "Hg\n\n\u2022 From Latin 'hydrargyrum' meaning 'liquid silver'\n\u2022 Only metal that's liquid at room temperature\n\u2022 Extremely toxic (causes neurological damage)\n\u2022 Used in thermometers until banned in many countries"
         },
         {
           "question": "What 2-letter radio spectrum was allocated for hobbyists in 1975?",
-          "answer": "CB (Citizens Band)\n\n• Citizens Band radio\n• Peak popularity in 1970s (trucker culture)\n• Channel 9 reserved for emergencies\n• Popularized slang like '10-4', 'breaker breaker'"
+          "answer": "CB (Citizens Band)\n\n\u2022 Citizens Band radio\n\u2022 Peak popularity in 1970s (trucker culture)\n\u2022 Channel 9 reserved for emergencies\n\u2022 Popularized slang like '10-4', 'breaker breaker'"
         },
         {
           "question": "What word meaning left-handed boxer comes from a direction and animal paw?",
-          "answer": "Southpaw\n\n• Left-handed people in general, especially boxers\n• Term from baseball: left-handed pitchers face south\n• Famous southpaws: Marvin Hagler, Manny Pacquiao\n• Advantage: most fighters train against righties"
+          "answer": "Southpaw\n\n\u2022 Left-handed people in general, especially boxers\n\u2022 Term from baseball: left-handed pitchers face south\n\u2022 Famous southpaws: Marvin Hagler, Manny Pacquiao\n\u2022 Advantage: most fighters train against righties"
         },
         {
           "question": "What 11-letter title describes someone selling men's hats and accessories?",
-          "answer": "Haberdasher\n\n• From Middle English (origin uncertain)\n• Traditionally sold men's hats, ties, handkerchiefs\n• Harry Truman owned haberdashery before politics\n• Now mostly refers to high-end men's accessories"
+          "answer": "Haberdasher\n\n\u2022 From Middle English (origin uncertain)\n\u2022 Traditionally sold men's hats, ties, handkerchiefs\n\u2022 Harry Truman owned haberdashery before politics\n\u2022 Now mostly refers to high-end men's accessories"
         },
         {
           "question": "What economic theory says tax breaks for rich will benefit lower ranks?",
-          "answer": "Trickle-down economics\n\n• Also called supply-side economics\n• Theory: wealth 'trickles down' through economy\n• Associated with Reagan's economic policies (1980s)\n• Controversial, many economists dispute effectiveness"
+          "answer": "Trickle-down economics\n\n\u2022 Also called supply-side economics\n\u2022 Theory: wealth 'trickles down' through economy\n\u2022 Associated with Reagan's economic policies (1980s)\n\u2022 Controversial, many economists dispute effectiveness"
         },
         {
           "question": "What 3-word phrase means maintaining aloof silence as expression of anger?",
-          "answer": "The silent treatment\n\n• Form of emotional manipulation/passive aggression\n• Psychologists consider it form of emotional abuse\n• Also called 'stonewalling'\n• Can be damaging to relationships"
+          "answer": "The silent treatment\n\n\u2022 Form of emotional manipulation/passive aggression\n\u2022 Psychologists consider it form of emotional abuse\n\u2022 Also called 'stonewalling'\n\u2022 Can be damaging to relationships"
         },
         {
           "question": "What word means both a fruit seed and dots on dice?",
-          "answer": "Pip\n\n• Small seed in fruit (apple pips)\n• Dots on dice, dominos, playing cards\n• Also: short for Philip (Great Expectations)\n• British slang: just beat narrowly ('pipped at the post')"
+          "answer": "Pip\n\n\u2022 Small seed in fruit (apple pips)\n\u2022 Dots on dice, dominos, playing cards\n\u2022 Also: short for Philip (Great Expectations)\n\u2022 British slang: just beat narrowly ('pipped at the post')"
         },
         {
           "question": "What's the homophone pair for 'changed opinion' and 'napped leather'?",
-          "answer": "Swayed and suede\n\n• Swayed: convinced someone, rocked back and forth\n• Suede: leather with napped finish\n• Suede from French 'gants de Suède' (Swedish gloves)\n• Both pronounced /sweɪd/"
+          "answer": "Swayed and suede\n\n\u2022 Swayed: convinced someone, rocked back and forth\n\u2022 Suede: leather with napped finish\n\u2022 Suede from French 'gants de Su\u00e8de' (Swedish gloves)\n\u2022 Both pronounced /swe\u026ad/"
+        },
+        {
+          "question": "From their uniforms, British soldiers during the Revolutionary War were called these",
+          "answer": "Redcoats"
+        },
+        {
+          "question": "If you're a noctivagant, it means you're used to ambling about during this",
+          "answer": "nighttime"
+        },
+        {
+          "question": "A popular meme shows Jean-Luc Picard doing this gesture of exasperation",
+          "answer": "facepalm"
+        },
+        {
+          "question": "It can mean both the good fortune of a person & financial assistance to an individual by the government",
+          "answer": "welfare"
+        },
+        {
+          "question": "Cacography refers to bad this; doctors are said to have it",
+          "answer": "handwriting"
+        },
+        {
+          "question": "Per Bart Simpson, Heywood U. Cuddleme might be a good this, a fictitious sobriquet used to conceal your identity",
+          "answer": "a pseudonym"
+        },
+        {
+          "question": "Latin gives us this word for the philosophy of law",
+          "answer": "jurisprudence"
+        },
+        {
+          "question": "It's the name of a thick-shelled clam, or Peter Griffin's hometown",
+          "answer": "quahog"
         }
       ]
     },
@@ -412,39 +748,75 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "Who holds the NHL record with 50 hat tricks?",
-          "answer": "Wayne Gretzky\n\n• 'The Great One' - greatest hockey player ever\n• Also holds record for goals (894) and assists (1,963)\n• Retired all 4 teams' #99 jerseys league-wide\n• Only player with more assists than any other player has total points"
+          "answer": "Wayne Gretzky\n\n\u2022 'The Great One' - greatest hockey player ever\n\u2022 Also holds record for goals (894) and assists (1,963)\n\u2022 Retired all 4 teams' #99 jerseys league-wide\n\u2022 Only player with more assists than any other player has total points"
         },
         {
           "question": "What NFL team plays at Lucas Oil Stadium?",
-          "answer": "The Indianapolis Colts\n\n• Stadium opened 2008, seats 67,000\n• Retractable roof\n• Home to Peyton Manning era, Andrew Luck\n• Hosted Super Bowl XLVI (2012)"
+          "answer": "The Indianapolis Colts\n\n\u2022 Stadium opened 2008, seats 67,000\n\u2022 Retractable roof\n\u2022 Home to Peyton Manning era, Andrew Luck\n\u2022 Hosted Super Bowl XLVI (2012)"
         },
         {
           "question": "What Eagles and Packers legend was called 'Minister of Defense'?",
-          "answer": "Reggie White\n\n• Ordained Baptist minister while playing\n• 198 career sacks (3rd all-time when retired)\n• Defensive Player of Year twice\n• Died 2004 at age 43"
+          "answer": "Reggie White\n\n\u2022 Ordained Baptist minister while playing\n\u2022 198 career sacks (3rd all-time when retired)\n\u2022 Defensive Player of Year twice\n\u2022 Died 2004 at age 43"
         },
         {
           "question": "What Super Bowl winning team had NYC ticker-tape parade in 2012?",
-          "answer": "The New York (Football) Giants\n\n• Won Super Bowl XLVI vs Patriots (February 2012)\n• Eli Manning MVP\n• Also won in 2008 vs undefeated Patriots\n• Fifth team to win multiple Super Bowls as wild card"
+          "answer": "The New York (Football) Giants\n\n\u2022 Won Super Bowl XLVI vs Patriots (February 2012)\n\u2022 Eli Manning MVP\n\u2022 Also won in 2008 vs undefeated Patriots\n\u2022 Fifth team to win multiple Super Bowls as wild card"
         },
         {
           "question": "What is Maryland's state reptile and UMD mascot?",
-          "answer": "The diamondback terrapin\n\n• Only turtle adapted to brackish water\n• Found in Chesapeake Bay\n• Nearly hunted to extinction for soup (early 1900s)\n• Now protected in Maryland"
+          "answer": "The diamondback terrapin\n\n\u2022 Only turtle adapted to brackish water\n\u2022 Found in Chesapeake Bay\n\u2022 Nearly hunted to extinction for soup (early 1900s)\n\u2022 Now protected in Maryland"
         },
         {
           "question": "Who ran for president against LBJ in 1964?",
-          "answer": "Goldwater (Barry Goldwater)\n\n• Conservative Republican senator from Arizona\n• Lost in landslide (won only 6 states)\n• Campaign slogan: 'In your heart, you know he's right'\n• Laid groundwork for Reagan revolution"
+          "answer": "Goldwater (Barry Goldwater)\n\n\u2022 Conservative Republican senator from Arizona\n\u2022 Lost in landslide (won only 6 states)\n\u2022 Campaign slogan: 'In your heart, you know he's right'\n\u2022 Laid groundwork for Reagan revolution"
         },
         {
           "question": "What Korean martial art became Olympic medal sport at 2000 Sydney Games?",
-          "answer": "Taekwondo\n\n• Korean martial art emphasizing kicks\n• Name means 'way of foot and fist'\n• Developed in 1940s-50s\n• Over 70 million practitioners worldwide"
+          "answer": "Taekwondo\n\n\u2022 Korean martial art emphasizing kicks\n\u2022 Name means 'way of foot and fist'\n\u2022 Developed in 1940s-50s\n\u2022 Over 70 million practitioners worldwide"
         },
         {
           "question": "What Brazilian martial art was disguised as a dance by enslaved people?",
-          "answer": "Capoeira\n\n• Combines dance, acrobatics, music\n• Developed by enslaved Africans in Brazil (16th century)\n• Masters called 'mestres'\n• Music integral part (berimbau instrument)"
+          "answer": "Capoeira\n\n\u2022 Combines dance, acrobatics, music\n\u2022 Developed by enslaved Africans in Brazil (16th century)\n\u2022 Masters called 'mestres'\n\u2022 Music integral part (berimbau instrument)"
         },
         {
           "question": "What Japanese fencing style derives from samurai fighting methods?",
-          "answer": "Kendo\n\n• 'Way of the sword'\n• Uses bamboo swords (shinai) and protective armor\n• Based on samurai two-handed sword techniques\n• Emphasizes discipline and respect"
+          "answer": "Kendo\n\n\u2022 'Way of the sword'\n\u2022 Uses bamboo swords (shinai) and protective armor\n\u2022 Based on samurai two-handed sword techniques\n\u2022 Emphasizes discipline and respect"
+        },
+        {
+          "question": "No running near the pool! Save your energy for this swimming stroke with an insect name; you'll need your legs to dolphin kick",
+          "answer": "the butterfly"
+        },
+        {
+          "question": "Jesse Owens' 4 Olympic gold medal wins in Berlin in 1936 included victories in these 2 shortest sprint distances",
+          "answer": "100 & 200 meters"
+        },
+        {
+          "question": "A rare archery feat in which one arrow splits another that's already lodged in the target is named after this storied outlaw",
+          "answer": "Robin Hood"
+        },
+        {
+          "question": "olympics.com describes this sport as \"formerly the world's major form of long-distance trade and transport\"",
+          "answer": "sailing"
+        },
+        {
+          "question": "Smaller than half a square inch, the triple 20 is the highest-value subsection of the board in this sport",
+          "answer": "darts"
+        },
+        {
+          "question": "It's the oldest trophy awarded in North American pro sports; one early winning team was the Vancouver Millionaires",
+          "answer": "the Stanley Cup"
+        },
+        {
+          "question": "Pine & fir were once used in this sport also called birling, but red cedar was found to spin faster & float higher in the water",
+          "answer": "logrolling"
+        },
+        {
+          "question": "Raise a Red Bull, his team, for this Belgian-born driver who has won four consecutive Formula 1 season championships",
+          "answer": "Max Verstappen"
+        },
+        {
+          "question": "2024 Olympics fans went nuts for Yusuf Dike\u00e7, a silver medalist in shooting from this country",
+          "answer": "Turkey"
         }
       ]
     },
@@ -453,39 +825,75 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What Sun King took the throne at age four?",
-          "answer": "Louis XIV\n\n• King of France 1643-1715 (72 years - longest of any sovereign)\n• Called Sun King (Le Roi Soleil)\n• Built Palace of Versailles\n• Absolute monarchy: 'L'état, c'est moi' (I am the state)"
+          "answer": "Louis XIV\n\n\u2022 King of France 1643-1715 (72 years - longest of any sovereign)\n\u2022 Called Sun King (Le Roi Soleil)\n\u2022 Built Palace of Versailles\n\u2022 Absolute monarchy: 'L'\u00e9tat, c'est moi' (I am the state)"
         },
         {
           "question": "What country's Queen Christina killed fleas with a tiny cannon?",
-          "answer": "Sweden\n\n• Reigned 1632-1654\n• Highly educated, corresponded with Descartes\n• Abdicated, converted to Catholicism, moved to Rome\n• Miniature cannons loaded with tiny cannonballs for fleas"
+          "answer": "Sweden\n\n\u2022 Reigned 1632-1654\n\u2022 Highly educated, corresponded with Descartes\n\u2022 Abdicated, converted to Catholicism, moved to Rome\n\u2022 Miniature cannons loaded with tiny cannonballs for fleas"
         },
         {
           "question": "What Falklands veteran married Sarah Ferguson?",
-          "answer": "Prince Andrew\n\n• Second son of Queen Elizabeth II\n• Helicopter pilot in Falklands War (1982)\n• Married Sarah Ferguson 1986, divorced 1996\n• Currently stripped of royal duties (Jeffrey Epstein scandal)"
+          "answer": "Prince Andrew\n\n\u2022 Second son of Queen Elizabeth II\n\u2022 Helicopter pilot in Falklands War (1982)\n\u2022 Married Sarah Ferguson 1986, divorced 1996\n\u2022 Currently stripped of royal duties (Jeffrey Epstein scandal)"
         },
         {
           "question": "In what country did queens abdicate in 1948 and 1980?",
-          "answer": "The Netherlands\n\n• 1948: Queen Wilhelmina → daughter Juliana\n• 1980: Queen Juliana → daughter Beatrix\n• 2013: Queen Beatrix → son Willem-Alexander\n• Tradition of abdication in favor of next generation"
+          "answer": "The Netherlands\n\n\u2022 1948: Queen Wilhelmina \u2192 daughter Juliana\n\u2022 1980: Queen Juliana \u2192 daughter Beatrix\n\u2022 2013: Queen Beatrix \u2192 son Willem-Alexander\n\u2022 Tradition of abdication in favor of next generation"
         },
         {
           "question": "What family ruled Milan in 15th century?",
-          "answer": "Sforza\n\n• Francesco Sforza became Duke of Milan 1450\n• Galeazzo Maria Sforza ruled 1466-1476 (assassinated)\n• Commissioned Leonardo da Vinci\n• Lost power to France in 1499"
+          "answer": "Sforza\n\n\u2022 Francesco Sforza became Duke of Milan 1450\n\u2022 Galeazzo Maria Sforza ruled 1466-1476 (assassinated)\n\u2022 Commissioned Leonardo da Vinci\n\u2022 Lost power to France in 1499"
         },
         {
           "question": "What South African wrote about wanting Winnie Nomzamo as his wife?",
-          "answer": "Mandela (Nelson Mandela)\n\n• Married Winnie Madikizela in 1958\n• She campaigned for his release during 27-year imprisonment\n• Divorced 1996 (married 38 years)\n• Later married Graça Machel on 80th birthday"
+          "answer": "Mandela (Nelson Mandela)\n\n\u2022 Married Winnie Madikizela in 1958\n\u2022 She campaigned for his release during 27-year imprisonment\n\u2022 Divorced 1996 (married 38 years)\n\u2022 Later married Gra\u00e7a Machel on 80th birthday"
         },
         {
           "question": "Where did Mary Todd Lincoln die in 1882?",
-          "answer": "Springfield\n\n• Springfield, Illinois\n• Died July 16, 1882 at age 63\n• Lived with sister after mental health struggles\n• Buried next to Abraham in Oak Ridge Cemetery"
+          "answer": "Springfield\n\n\u2022 Springfield, Illinois\n\u2022 Died July 16, 1882 at age 63\n\u2022 Lived with sister after mental health struggles\n\u2022 Buried next to Abraham in Oak Ridge Cemetery"
         },
         {
           "question": "What woman made Marie Antoinette's death mask and opened a wax museum?",
-          "answer": "Madame Tussaud\n\n• Born Anna Maria Grosholtz, 1761\n• Learned wax modeling from physician\n• Forced to make death masks during French Revolution\n• Opened permanent London exhibition 1835"
+          "answer": "Madame Tussaud\n\n\u2022 Born Anna Maria Grosholtz, 1761\n\u2022 Learned wax modeling from physician\n\u2022 Forced to make death masks during French Revolution\n\u2022 Opened permanent London exhibition 1835"
         },
         {
           "question": "What ancient queen's needles can be found in London or New York?",
-          "answer": "Cleopatra\n\n• Cleopatra's Needles: ancient Egyptian obelisks\n• Actually from reign of Thutmose III (1,500 years before Cleopatra)\n• One in London (1878), one in NYC's Central Park (1881)\n• Third remains in Paris"
+          "answer": "Cleopatra\n\n\u2022 Cleopatra's Needles: ancient Egyptian obelisks\n\u2022 Actually from reign of Thutmose III (1,500 years before Cleopatra)\n\u2022 One in London (1878), one in NYC's Central Park (1881)\n\u2022 Third remains in Paris"
+        },
+        {
+          "question": "A smack is a group of these invertebrate sea creatures, like the lion's mane or Pacific sea nettle",
+          "answer": "jellyfish"
+        },
+        {
+          "question": "Though you can bake them year-round, coconut macaroons are a traditional unleavened treat during this Jewish holiday",
+          "answer": "Passover"
+        },
+        {
+          "question": "Not big on diversity, equity or inclusion, in 1685 this king revoked the religiously tolerant Edict of Nantes",
+          "answer": "Louis XIV"
+        },
+        {
+          "question": "In 1948, the queen of this country abdicated in favor of her eldest daughter, who, in 1980, did the same",
+          "answer": "the Netherlands"
+        },
+        {
+          "question": "This woman was forced to make Marie Antoinette's death mask; now it's in her wax museum",
+          "answer": "Madame Tussaud"
+        },
+        {
+          "question": "(Dame Prue Leith presents the clue.) It's been described as a cross between a pancake & a popover. And despite its name, there's nothing little about it. And it's not from the Netherlands; actually, a diner in Seattle gets the credit for it",
+          "answer": "a Dutch baby"
+        },
+        {
+          "question": "You might say \"Do I detect vanilla with hints of oak?\" near mound deposits laced with whiffs of castoreum from this mammal",
+          "answer": "the beaver"
+        },
+        {
+          "question": "Mental disturbances afflicting Henry VI ended up being a cause of these civil wars that lasted from 1455 to 1485",
+          "answer": "the Wars of the Roses"
+        },
+        {
+          "question": "Moms of this North American species with many a quill can hardly chill--they can spend 7 months preggo & 4 months nursing",
+          "answer": "porcupine"
         }
       ]
     },
@@ -494,23 +902,43 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What Broadway show features Maria singing 'My Favorite Things'?",
-          "answer": "The Sound of Music\n\n• Music by Rodgers and Hammerstein (1959)\n• Based on von Trapp family story\n• Julie Andrews in 1965 film version\n• Song includes: 'Raindrops on roses and whiskers on kittens'"
+          "answer": "The Sound of Music\n\n\u2022 Music by Rodgers and Hammerstein (1959)\n\u2022 Based on von Trapp family story\n\u2022 Julie Andrews in 1965 film version\n\u2022 Song includes: 'Raindrops on roses and whiskers on kittens'"
         },
         {
           "question": "What show features 'The Impossible Dream'?",
-          "answer": "Man of La Mancha\n\n• Musical about Don Quixote (1965)\n• Music by Mitch Leigh, lyrics by Joe Darion\n• Set as play-within-a-play (Cervantes in prison)\n• Full song title: 'The Impossible Dream (The Quest)'"
+          "answer": "Man of La Mancha\n\n\u2022 Musical about Don Quixote (1965)\n\u2022 Music by Mitch Leigh, lyrics by Joe Darion\n\u2022 Set as play-within-a-play (Cervantes in prison)\n\u2022 Full song title: 'The Impossible Dream (The Quest)'"
         },
         {
           "question": "What show has two sharpshooters singing 'Anything You Can Do'?",
-          "answer": "Annie Get Your Gun\n\n• Music and lyrics by Irving Berlin (1946)\n• Based on sharpshooter Annie Oakley\n• Song is competitive duet with Frank Butler\n• 'Anything you can do, I can do better'"
+          "answer": "Annie Get Your Gun\n\n\u2022 Music and lyrics by Irving Berlin (1946)\n\u2022 Based on sharpshooter Annie Oakley\n\u2022 Song is competitive duet with Frank Butler\n\u2022 'Anything you can do, I can do better'"
         },
         {
           "question": "What show features Curly singing 'Oh, What A Beautiful Mornin''?",
-          "answer": "Oklahoma!\n\n• Rodgers and Hammerstein's first collaboration (1943)\n• Revolutionary: integrated songs into plot\n• Based on 'Green Grow the Lilacs'\n• State song of Oklahoma"
+          "answer": "Oklahoma!\n\n\u2022 Rodgers and Hammerstein's first collaboration (1943)\n\u2022 Revolutionary: integrated songs into plot\n\u2022 Based on 'Green Grow the Lilacs'\n\u2022 State song of Oklahoma"
         },
         {
           "question": "What musical revived in 2025 features 'One Night In Bangkok'?",
-          "answer": "Chess\n\n• Music by ABBA's Benny Andersson and Björn Ulvaeus (1984)\n• About Cold War chess championship\n• 'One Night in Bangkok' was pop hit\n• Lyrics by Tim Rice"
+          "answer": "Chess\n\n\u2022 Music by ABBA's Benny Andersson and Bj\u00f6rn Ulvaeus (1984)\n\u2022 About Cold War chess championship\n\u2022 'One Night in Bangkok' was pop hit\n\u2022 Lyrics by Tim Rice"
+        },
+        {
+          "question": "Revived in 2025:\"A Whole New Board Game\" &\"One Night In Bangkok\"",
+          "answer": "Chess"
+        },
+        {
+          "question": "Pepe Romero plays a mean classical guitar but is also good on this type, lighter & often with a golpeador or tap plate",
+          "answer": "flamenco guitar"
+        },
+        {
+          "question": "In 2023 piano virtuoso Sir Andras Schiff made his first record on this period instrument, from Latin for \"key\" & \"string\"",
+          "answer": "a clavichord"
+        },
+        {
+          "question": "\"Oh, What A Beautiful Mornin\"' it is with Curly belting one out in this production",
+          "answer": "Oklahoma!"
+        },
+        {
+          "question": "\"Movin' Out\" features over 2 dozen of his greatest hits",
+          "answer": "Billy Joel"
         }
       ]
     },
@@ -519,35 +947,67 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What Chinese sage's 2,565th birthday was celebrated by Xi Jinping in 2014?",
-          "answer": "Confucius\n\n• Born 551 BCE in Lu state (now Shandong)\n• Philosopher, created Confucianism\n• Emphasized filial piety, ritual, humaneness\n• Analects compiled by disciples after his death"
+          "answer": "Confucius\n\n\u2022 Born 551 BCE in Lu state (now Shandong)\n\u2022 Philosopher, created Confucianism\n\u2022 Emphasized filial piety, ritual, humaneness\n\u2022 Analects compiled by disciples after his death"
         },
         {
           "question": "What city did Cato the Elder say 'must be destroyed'?",
-          "answer": "Carthage\n\n• Carthage: Phoenician city-state in North Africa (Tunisia)\n• Rome's rival in Punic Wars\n• Cato ended every speech with 'Carthago delenda est'\n• Finally destroyed in Third Punic War (146 BCE)"
+          "answer": "Carthage\n\n\u2022 Carthage: Phoenician city-state in North Africa (Tunisia)\n\u2022 Rome's rival in Punic Wars\n\u2022 Cato ended every speech with 'Carthago delenda est'\n\u2022 Finally destroyed in Third Punic War (146 BCE)"
         },
         {
           "question": "What queen's beauty was 'not altogether incomparable' but her conversation had 'irresistible charm'?",
-          "answer": "Cleopatra\n\n• Last active pharaoh of Egypt (69-30 BCE)\n• Plutarch emphasized her intellect over looks\n• Spoke 9 languages\n• Relationships with Julius Caesar and Mark Antony"
+          "answer": "Cleopatra\n\n\u2022 Last active pharaoh of Egypt (69-30 BCE)\n\u2022 Plutarch emphasized her intellect over looks\n\u2022 Spoke 9 languages\n\u2022 Relationships with Julius Caesar and Mark Antony"
         },
         {
           "question": "Who was court physician to gladiators before treating the Roman emperor?",
-          "answer": "Galen\n\n• Greek physician (129-c.216 CE)\n• Physician to gladiators in Pergamon\n• Later physician to Emperor Marcus Aurelius\n• His medical writings dominated medicine for 1,300 years"
+          "answer": "Galen\n\n\u2022 Greek physician (129-c.216 CE)\n\u2022 Physician to gladiators in Pergamon\n\u2022 Later physician to Emperor Marcus Aurelius\n\u2022 His medical writings dominated medicine for 1,300 years"
         },
         {
           "question": "What Roman emperor's ashes were placed in his column after death in 117?",
-          "answer": "Trajan\n\n• Roman emperor 98-117 CE\n• Expanded empire to greatest extent\n• Trajan's Column in Rome depicts Dacian Wars\n• 125 feet tall, completed 113 CE"
+          "answer": "Trajan\n\n\u2022 Roman emperor 98-117 CE\n\u2022 Expanded empire to greatest extent\n\u2022 Trajan's Column in Rome depicts Dacian Wars\n\u2022 125 feet tall, completed 113 CE"
         },
         {
           "question": "What trio of Greek goddesses spin the threads of human destiny?",
-          "answer": "The Fates\n\n• Clotho: spins thread of life\n• Lachesis: measures thread (determines lifespan)\n• Atropos: cuts thread (death)\n• Even Zeus couldn't overrule their decisions"
+          "answer": "The Fates\n\n\u2022 Clotho: spins thread of life\n\u2022 Lachesis: measures thread (determines lifespan)\n\u2022 Atropos: cuts thread (death)\n\u2022 Even Zeus couldn't overrule their decisions"
         },
         {
           "question": "What temple in Western Turkey had only fragments remaining?",
-          "answer": "Temple of Artemis\n\n• One of Seven Wonders of Ancient World\n• Located in Ephesus (now Turkey)\n• Destroyed and rebuilt multiple times\n• Finally destroyed by Goths in 268 CE"
+          "answer": "Temple of Artemis\n\n\u2022 One of Seven Wonders of Ancient World\n\u2022 Located in Ephesus (now Turkey)\n\u2022 Destroyed and rebuilt multiple times\n\u2022 Finally destroyed by Goths in 268 CE"
         },
         {
           "question": "What ancient Mesopotamian city had bulls and dragons on the Ishtar Gate?",
-          "answer": "Babylon\n\n• Ancient city in Mesopotamia (Iraq)\n• Ishtar Gate built during Nebuchadnezzar II's reign (c. 575 BCE)\n• Gate reconstructed in Pergamon Museum, Berlin\n• Babylon also site of Hanging Gardens (another Wonder)"
+          "answer": "Babylon\n\n\u2022 Ancient city in Mesopotamia (Iraq)\n\u2022 Ishtar Gate built during Nebuchadnezzar II's reign (c. 575 BCE)\n\u2022 Gate reconstructed in Pergamon Museum, Berlin\n\u2022 Babylon also site of Hanging Gardens (another Wonder)"
+        },
+        {
+          "question": "NASA director Abe Silverstein said he chose this name because the image of riding a chariot across the Sun seemed appropriate",
+          "answer": "Apollo"
+        },
+        {
+          "question": "Fearing its rise again after the Second Punic war, Cato the Elder ended speeches with this city \"must be destroyed\"",
+          "answer": "Carthage"
+        },
+        {
+          "question": "Before serving as court physician to the Roman emperor, Galen was chief physician to a group of these trained fighters",
+          "answer": "gladiators"
+        },
+        {
+          "question": "Plutarch wrote that this queen's beauty was \"not altogether incomparable\", but to converse \"with her had an irresistible charm\"",
+          "answer": "Cleopatra"
+        },
+        {
+          "question": "Considered China's greatest sage, he's gotten new endorsement from Xi Jinping, who spoke on his 2,565th birthday in 2014",
+          "answer": "Confucius"
+        },
+        {
+          "question": "Images of bulls & dragons line the magnificent Ishtar Gate of this ancient Mesopotamian city",
+          "answer": "Babylon"
+        },
+        {
+          "question": "This shoe company named for a Greek goddess is valued at... $100 billion? You have gotta be kidding!",
+          "answer": "Nike"
+        },
+        {
+          "question": "The U.S. Air Force's first operational ballistic missile had this Nordic name, appropriate for bringing thunder from the skies",
+          "answer": "Thor"
         }
       ]
     },
@@ -556,23 +1016,43 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What skirt-like garment is part of Scotland's national costume with the plaid?",
-          "answer": "A kilt\n\n• Traditionally made from tartan (clan patterns)\n• Worn by men at formal events, weddings\n• Pleated in back, flat in front\n• Traditionally worn without underwear"
+          "answer": "A kilt\n\n\u2022 Traditionally made from tartan (clan patterns)\n\u2022 Worn by men at formal events, weddings\n\u2022 Pleated in back, flat in front\n\u2022 Traditionally worn without underwear"
         },
         {
           "question": "What knitted accessories were popularized by ballet and 'Flashdance'?",
-          "answer": "Leg warmers\n\n• Peaked in popularity 1980s\n• Originally worn by dancers to keep muscles warm\n• 'Flashdance' (1983) made them mainstream fashion\n• Usually worn scrunched down on calves"
+          "answer": "Leg warmers\n\n\u2022 Peaked in popularity 1980s\n\u2022 Originally worn by dancers to keep muscles warm\n\u2022 'Flashdance' (1983) made them mainstream fashion\n\u2022 Usually worn scrunched down on calves"
         },
         {
           "question": "What Bavarian leather shorts are worn with suspenders at Oktoberfest?",
-          "answer": "Lederhosen\n\n• German: 'leather trousers'\n• Traditional Bavarian/Austrian attire\n• Short version for summer, long for winter\n• Often decorated with embroidery"
+          "answer": "Lederhosen\n\n\u2022 German: 'leather trousers'\n\u2022 Traditional Bavarian/Austrian attire\n\u2022 Short version for summer, long for winter\n\u2022 Often decorated with embroidery"
         },
         {
           "question": "What dress length hits below knee and above ankle, named for afternoon events?",
-          "answer": "Tea length\n\n• Typically 2-3 inches below knee\n• Named for afternoon tea parties where worn\n• Popular for vintage-style weddings\n• Between cocktail length and floor length"
+          "answer": "Tea length\n\n\u2022 Typically 2-3 inches below knee\n\u2022 Named for afternoon tea parties where worn\n\u2022 Popular for vintage-style weddings\n\u2022 Between cocktail length and floor length"
         },
         {
           "question": "What are the 18-inch hats worn by London palace guards made of?",
-          "answer": "Bearskin\n\n• Made from Canadian brown bear fur\n• Weigh about 1.5 pounds\n• Tradition since Battle of Waterloo (1815)\n• PETA campaigns against them, promotes fake alternatives"
+          "answer": "Bearskin\n\n\u2022 Made from Canadian brown bear fur\n\u2022 Weigh about 1.5 pounds\n\u2022 Tradition since Battle of Waterloo (1815)\n\u2022 PETA campaigns against them, promotes fake alternatives"
+        },
+        {
+          "question": "The national costume of Scotland includes the plaid, which is a length of cloth worn over the shoulder, & this skirt-like garment",
+          "answer": "a kilt"
+        },
+        {
+          "question": "Note to cosplayers: \"Arrows must have their tips removed & be... zip-tied to a quiver\" at this San Diego convention",
+          "answer": "Comic-Con"
+        },
+        {
+          "question": "If you are heading to Oktoberfest, you might don suspenders with these leather shorts, a Bavarian tradition",
+          "answer": "Lederhosen"
+        },
+        {
+          "question": "Per the website of this fitness chain, \"All riders are required to wear a shirt &... shoes that can clip into the pedals\"",
+          "answer": "SoulCycle"
+        },
+        {
+          "question": "The ballet world & the movie \"Flashdance\" helped popularize these knitted accessories, cozier & longer than socks",
+          "answer": "leg warmers"
         }
       ]
     },
@@ -581,27 +1061,51 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What peak in Yosemite with vertical walls was called 'Rock Chief' by Native Americans?",
-          "answer": "El Capitan\n\n• Vertical rock formation rising 3,000 feet\n• Granite monolith formed by glacial activity\n• Famous for rock climbing (The Nose route)\n• Alex Honnold free soloed it in 2017 (no ropes)"
+          "answer": "El Capitan\n\n\u2022 Vertical rock formation rising 3,000 feet\n\u2022 Granite monolith formed by glacial activity\n\u2022 Famous for rock climbing (The Nose route)\n\u2022 Alex Honnold free soloed it in 2017 (no ropes)"
         },
         {
           "question": "What three peaks preside over Jenny Lake near Jackson Hole?",
-          "answer": "Grand Teton (South, Middle & Grand)\n\n• Grand Teton: 13,775 feet (second highest in Wyoming)\n• Part of Teton Range in Wyoming\n• French trappers named them ('tetons' = breasts)\n• Jenny Lake named after Shoshone wife of trapper"
+          "answer": "Grand Teton (South, Middle & Grand)\n\n\u2022 Grand Teton: 13,775 feet (second highest in Wyoming)\n\u2022 Part of Teton Range in Wyoming\n\u2022 French trappers named them ('tetons' = breasts)\n\u2022 Jenny Lake named after Shoshone wife of trapper"
         },
         {
           "question": "What sacred mountain has Arabic name Jabal Musa meaning 'Mount of Moses'?",
-          "answer": "Mount Sinai\n\n• In Sinai Peninsula, Egypt\n• Where Moses received the Ten Commandments\n• Sacred to Judaism, Christianity, Islam\n• St. Catherine's Monastery at its base (founded 548 CE)"
+          "answer": "Mount Sinai\n\n\u2022 In Sinai Peninsula, Egypt\n\u2022 Where Moses received the Ten Commandments\n\u2022 Sacred to Judaism, Christianity, Islam\n\u2022 St. Catherine's Monastery at its base (founded 548 CE)"
         },
         {
           "question": "What Ecuadorian mountain's summit is highest spot from Earth's center?",
-          "answer": "Mount Chimborazo (in the Andes)\n\n• 20,564 feet elevation\n• Due to equatorial bulge, farthest point from Earth's center\n• 1.5 miles farther from center than Everest's summit\n• Inactive volcano, last erupted around 550 CE"
+          "answer": "Mount Chimborazo (in the Andes)\n\n\u2022 20,564 feet elevation\n\u2022 Due to equatorial bulge, farthest point from Earth's center\n\u2022 1.5 miles farther from center than Everest's summit\n\u2022 Inactive volcano, last erupted around 550 CE"
         },
         {
           "question": "What pair of Swiss peaks tower over Grindelwald Valley?",
-          "answer": "The Eiger & Mettenberg (in Switzerland)\n\n• Eiger: 13,015 feet, famous for North Face (murderous wall)\n• Part of Bernese Alps\n• Grindelwald: famous ski resort\n• Eiger North Face first climbed 1938 (many deaths)"
+          "answer": "The Eiger & Mettenberg (in Switzerland)\n\n\u2022 Eiger: 13,015 feet, famous for North Face (murderous wall)\n\u2022 Part of Bernese Alps\n\u2022 Grindelwald: famous ski resort\n\u2022 Eiger North Face first climbed 1938 (many deaths)"
         },
         {
-          "question": "What ancient Maya city near Pisté has the pyramid El Castillo?",
-          "answer": "Chichén Itzá\n\n• In Yucatán, Mexico\n• El Castillo (Temple of Kukulkan): step pyramid\n• One of New Seven Wonders of World\n• Equinox phenomenon: shadow forms serpent on steps"
+          "question": "What ancient Maya city near Pist\u00e9 has the pyramid El Castillo?",
+          "answer": "Chich\u00e9n Itz\u00e1\n\n\u2022 In Yucat\u00e1n, Mexico\n\u2022 El Castillo (Temple of Kukulkan): step pyramid\n\u2022 One of New Seven Wonders of World\n\u2022 Equinox phenomenon: shadow forms serpent on steps"
+        },
+        {
+          "question": "Considered sacred, it also has the Arabic name Jabal Musa, meaning \"Mount of Moses\"",
+          "answer": "Mount Sinai"
+        },
+        {
+          "question": "We hope you never need it, but you should know that CPR stands for this",
+          "answer": "cardiopulmonary resuscitation"
+        },
+        {
+          "question": "Jenny Lake near Jackson Hole is presided over by 3 peaks named South,  Middle & Grand this",
+          "answer": "Teton"
+        },
+        {
+          "question": "Mainly affecting the face, the name of this inflammatory skin disorder refers to the redness & flushing that it causes",
+          "answer": "rosacea"
+        },
+        {
+          "question": "The Eiger & Mettenberg are a pair of peaks towering over this country's Grindelwald Valley",
+          "answer": "Switzerland"
+        },
+        {
+          "question": "A thrombus is one of these & it can lead to serious consequences",
+          "answer": "a blood clot"
         }
       ]
     },
@@ -610,31 +1114,59 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What toy from Pop Mart with pointy ears is sold in blind boxes?",
-          "answer": "A Labubu\n\n• Created by Thai artist Kasing Lung\n• Characterized by serrated teeth and elf-like ears\n• Blind box: don't know which design until opened\n• Became viral sensation in 2024"
+          "answer": "A Labubu\n\n\u2022 Created by Thai artist Kasing Lung\n\u2022 Characterized by serrated teeth and elf-like ears\n\u2022 Blind box: don't know which design until opened\n\u2022 Became viral sensation in 2024"
         },
         {
           "question": "What 'Sesame Street' toy caused a 1996 craze, selling out by 10 a.m. Black Friday?",
-          "answer": "Tickle Me Elmo\n\n• Laughs and vibrates when squeezed\n• Made by Tyco Toys\n• Caused shopping frenzies, riots\n• Rosie O'Donnell threw them to audience, sparked demand"
+          "answer": "Tickle Me Elmo\n\n\u2022 Laughs and vibrates when squeezed\n\u2022 Made by Tyco Toys\n\u2022 Caused shopping frenzies, riots\n\u2022 Rosie O'Donnell threw them to audience, sparked demand"
         },
         {
           "question": "What once-bankrupt chain was revamped in 2025, adding seafood boil bags?",
-          "answer": "Red Lobster\n\n• Founded 1968 in Lakeland, Florida\n• Filed bankruptcy May 2024\n• CEO Damola Adamolekun took over\n• Famous for Cheddar Bay Biscuits"
+          "answer": "Red Lobster\n\n\u2022 Founded 1968 in Lakeland, Florida\n\u2022 Filed bankruptcy May 2024\n\u2022 CEO Damola Adamolekun took over\n\u2022 Famous for Cheddar Bay Biscuits"
         },
         {
           "question": "What U.S. mint where dies for all coins are made was the first U.S. mint?",
-          "answer": "Philadelphia\n\n• Established 1792 by Coinage Act\n• First federal building under Constitution\n• Still produces all coin dies\n• Coins without mint mark from Philadelphia"
+          "answer": "Philadelphia\n\n\u2022 Established 1792 by Coinage Act\n\u2022 First federal building under Constitution\n\u2022 Still produces all coin dies\n\u2022 Coins without mint mark from Philadelphia"
         },
         {
           "question": "What transport hub under Madison Square Garden serves 500,000+ daily?",
-          "answer": "Penn Station\n\n• Pennsylvania Station, New York City\n• Busiest train station in Western Hemisphere\n• Serves Amtrak, NJ Transit, Long Island Rail Road\n• Original beautiful station demolished 1963 (sparked preservation movement)"
+          "answer": "Penn Station\n\n\u2022 Pennsylvania Station, New York City\n\u2022 Busiest train station in Western Hemisphere\n\u2022 Serves Amtrak, NJ Transit, Long Island Rail Road\n\u2022 Original beautiful station demolished 1963 (sparked preservation movement)"
         },
         {
           "question": "What tech school in Lubbock opened in 1925 with 914 students?",
-          "answer": "Texas Tech\n\n• Located in Lubbock, Texas\n• Opened with 6 buildings\n• Now has 40,000+ students\n• Mascot: Raider Red"
+          "answer": "Texas Tech\n\n\u2022 Located in Lubbock, Texas\n\u2022 Opened with 6 buildings\n\u2022 Now has 40,000+ students\n\u2022 Mascot: Raider Red"
         },
         {
           "question": "What Massachusetts tech school has over 100 affiliated Nobel Prize winners?",
-          "answer": "MIT (Massachusetts Institute of Technology)\n\n• Founded 1861 in Cambridge\n• 101 Nobel laureates affiliated\n• Known for engineering, computer science\n• 2024 Economics Prize winners from MIT"
+          "answer": "MIT (Massachusetts Institute of Technology)\n\n\u2022 Founded 1861 in Cambridge\n\u2022 101 Nobel laureates affiliated\n\u2022 Known for engineering, computer science\n\u2022 2024 Economics Prize winners from MIT"
+        },
+        {
+          "question": "Used to prepare animal hides, much of this acid comes from South American quebracho trees",
+          "answer": "tannic acid"
+        },
+        {
+          "question": "The economic policy of free trade also goes by this French term",
+          "answer": "laissez-faire"
+        },
+        {
+          "question": "Before serving as court physician to the Roman emperor, Galen was chief physician to a group of these trained fighters",
+          "answer": "gladiators"
+        },
+        {
+          "question": "A reimagining of \"Peter Pan\", \"Lost Boy\" is an alternate take on this character's backstory including how he lost his hand",
+          "answer": "Captain Hook"
+        },
+        {
+          "question": "Without an accent aigu, it means \"to continue\"; with one, it helps you get a job",
+          "answer": "resume (r\u00e9sum\u00e9)"
+        },
+        {
+          "question": "Character who says, \"I'm ruler... of all that I see. But I don't see enough. That's the trouble with me\"",
+          "answer": "Yertle the Turtle"
+        },
+        {
+          "question": "(James Gunn presents the clue.) When I take the director's chair, I always seem to find myself working with Michael Rooker & this actor who is no \"Rookie\" to a Gunn film; he first appeared in my directorial debut, \"Slither\", & now rocks a bowl cut as Green Lantern in \"Superman\"",
+          "answer": "Nathan Fillion"
         }
       ]
     },
@@ -643,23 +1175,43 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "In what Keats ode is love depicted 'for ever warm and still to be enjoy'd'?",
-          "answer": "Ode on a Grecian Urn\n\n• Written 1819, published 1820\n• Meditates on ancient Greek urn depicting pastoral scenes\n• Famous ending: 'Beauty is truth, truth beauty'\n• One of six Great Odes of 1819"
+          "answer": "Ode on a Grecian Urn\n\n\u2022 Written 1819, published 1820\n\u2022 Meditates on ancient Greek urn depicting pastoral scenes\n\u2022 Famous ending: 'Beauty is truth, truth beauty'\n\u2022 One of six Great Odes of 1819"
         },
         {
           "question": "What poet was in psychiatric wing of Mass General after 1953 suicide attempt?",
-          "answer": "Sylvia Plath\n\n• American poet (1932-1963)\n• Hospitalized after first suicide attempt age 20\n• Married Ted Hughes 1956\n• Died by suicide 1963, month after 'The Bell Jar' published"
+          "answer": "Sylvia Plath\n\n\u2022 American poet (1932-1963)\n\u2022 Hospitalized after first suicide attempt age 20\n\u2022 Married Ted Hughes 1956\n\u2022 Died by suicide 1963, month after 'The Bell Jar' published"
         },
         {
           "question": "What poet wrote 'The Flea', 'The Good-Morrow' & 'Death Be Not Proud'?",
-          "answer": "John Donne\n\n• English poet (1572-1631)\n• Leader of Metaphysical Poets\n• Became Anglican priest despite Catholic upbringing\n• 'No man is an island' from his Meditation XVII"
+          "answer": "John Donne\n\n\u2022 English poet (1572-1631)\n\u2022 Leader of Metaphysical Poets\n\u2022 Became Anglican priest despite Catholic upbringing\n\u2022 'No man is an island' from his Meditation XVII"
         },
         {
           "question": "What ancient poet's name began with psi in the Aeolic dialect?",
-          "answer": "Sappho\n\n• Ancient Greek lyric poet (c. 630-570 BCE)\n• From island of Lesbos (source of word 'lesbian')\n• Most work lost, survives in fragments\n• Considered one of greatest lyric poets"
+          "answer": "Sappho\n\n\u2022 Ancient Greek lyric poet (c. 630-570 BCE)\n\u2022 From island of Lesbos (source of word 'lesbian')\n\u2022 Most work lost, survives in fragments\n\u2022 Considered one of greatest lyric poets"
         },
         {
           "question": "Who wrote 'But still, like dust, I'll rise'?",
-          "answer": "Maya Angelou\n\n• American poet, memoirist (1928-2014)\n• Poem: 'Still I Rise' (1978)\n• Also wrote 'I Know Why the Caged Bird Sings'\n• Recited poem at Clinton's 1993 inauguration"
+          "answer": "Maya Angelou\n\n\u2022 American poet, memoirist (1928-2014)\n\u2022 Poem: 'Still I Rise' (1978)\n\u2022 Also wrote 'I Know Why the Caged Bird Sings'\n\u2022 Recited poem at Clinton's 1993 inauguration"
+        },
+        {
+          "question": "In an ode, Keats says the love depicted on this title object is \"for ever warm and still to be enjoy'd\"",
+          "answer": "a Grecian Urn"
+        },
+        {
+          "question": "In the Aeolic dialect of Greek that she spoke, the name of this ancient poet began with psi, not sigma",
+          "answer": "Sappho"
+        },
+        {
+          "question": "His often anthologized poems include \"The Flea\", \"The Good-Morrow\" &, of course, \"Death Be Not Proud\"",
+          "answer": "John Donne"
+        },
+        {
+          "question": "After a 1953 suicide attempt, she was in the psychiatric wing of Mass. General, where she later worked after she got married",
+          "answer": "Sylvia Plath"
+        },
+        {
+          "question": "She wrote, \"You may trod me in the very dirt / But still, like dust, I'll rise\"",
+          "answer": "Maya Angelou"
         }
       ]
     },
@@ -668,15 +1220,27 @@ const FLASHCARD_DATA = {
       "flashcards": [
         {
           "question": "What song says 'The men will cheer, the boys will shout, the ladies they will all turn out'?",
-          "answer": "When Johnny Comes Marching Home\n\n• Written 1863 by Patrick Gilmore\n• Popular Union Army song\n• Also sung by Confederates with different lyrics\n• Used in many wars since"
+          "answer": "When Johnny Comes Marching Home\n\n\u2022 Written 1863 by Patrick Gilmore\n\u2022 Popular Union Army song\n\u2022 Also sung by Confederates with different lyrics\n\u2022 Used in many wars since"
         },
         {
           "question": "What position did Jefferson Davis hold in Pierce's cabinet?",
-          "answer": "Secretary of War\n\n• Served 1853-1857 under Franklin Pierce\n• Expanded U.S. Army, introduced new weapons\n• Later became Confederate President (1861-1865)\n• Only person to serve in both U.S. and Confederate cabinets"
+          "answer": "Secretary of War\n\n\u2022 Served 1853-1857 under Franklin Pierce\n\u2022 Expanded U.S. Army, introduced new weapons\n\u2022 Later became Confederate President (1861-1865)\n\u2022 Only person to serve in both U.S. and Confederate cabinets"
         },
         {
           "question": "What three Union commanders served before Grant?",
-          "answer": "Winfield Scott, George McClellan & Henry Halleck\n\n• Scott: general-in-chief until Nov 1861 (age 75)\n• McClellan: Nov 1861-March 1862, overly cautious\n• Halleck: July 1862-March 1864, administrative role\n• Grant: March 1864-end of war"
+          "answer": "Winfield Scott, George McClellan & Henry Halleck\n\n\u2022 Scott: general-in-chief until Nov 1861 (age 75)\n\u2022 McClellan: Nov 1861-March 1862, overly cautious\n\u2022 Halleck: July 1862-March 1864, administrative role\n\u2022 Grant: March 1864-end of war"
+        },
+        {
+          "question": "A college of social work at the University of Illinois, Chicago honors this social worker & co-founder of Hull House",
+          "answer": "(Jane) Addams"
+        },
+        {
+          "question": "\"The men will cheer, the boys will shout, the ladies they will all turn out\" when this happens",
+          "answer": "\"When Johnny Comes Marching Home\""
+        },
+        {
+          "question": "He received more than a thousand U.S. patents--the first, in 1869, was for an electrographic vote recorder",
+          "answer": "Edison"
         }
       ]
     }
