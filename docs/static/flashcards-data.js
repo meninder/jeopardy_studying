@@ -101,33 +101,11 @@ const FLASHCARD_DATA = {
       ]
     },
     {
-      "name": "Sports & Games",
-      "flashcards": [
-        {
-          "question": "What is spurs?",
-          "answer": "Spurs\n\n• The San Antonio Spurs are an NBA team based in San Antonio, Texas.\n• In a different context, 'spurs' refers to metal tools used by riders to direct their horses.\n• Spurs can also mean motivations or incentives to prompt action.\n• Spurs have been part of cowboy and equestrian culture for centuries.\n• The San Antonio Spurs have won multiple NBA championships."
-        }
-      ]
-    },
-    {
       "name": "Visual Arts & Music",
       "flashcards": [
         {
           "question": "Who is the composer born near Warsaw who composed 'Twelve Études', Opus 10, in 1833?",
           "answer": "Frédéric Chopin\n\n• Frédéric Chopin was a Polish composer known for his piano compositions.\n• He was born in Żelazowa Wola, near Warsaw, in 1810.\n• 'Twelve Études', Opus 10, is a set of solo piano pieces that are both technically challenging and expressively rich.\n• Chopin spent much of his professional life in Paris, where he gained fame as a virtuoso pianist and composer.\n• He is considered one of the leading figures of the Romantic era in music."
-        }
-      ]
-    },
-    {
-      "name": "World Geography",
-      "flashcards": [
-        {
-          "question": "What is Park Avenue?",
-          "answer": "Park Avenue\n\n• Park Avenue is a major thoroughfare in the borough of Manhattan in New York City.\n• Originally called 4th Avenue, it was renamed Park Avenue in 1860.\n• The name change reflected the transformation of the area into a more residential and upscale neighborhood.\n• Park Avenue is known for its affluent residences and iconic architectural landmarks.\n• It runs through several neighborhoods, including the Upper East Side and Midtown."
-        },
-        {
-          "question": "What is the city in New Zealand that was originally named Canterbury?",
-          "answer": "Christchurch\n\n• Christchurch is the largest city in the South Island of New Zealand.\n• It was named after Christ Church, Oxford, by the Canterbury Association.\n• The city is known for its English heritage and beautiful gardens, earning it the nickname 'The Garden City'.\n• Christchurch suffered significant damage during the earthquakes of 2010 and 2011.\n• It is a gateway to Antarctica, hosting the International Antarctic Centre."
         }
       ]
     },

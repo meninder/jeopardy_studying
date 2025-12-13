@@ -290,9 +290,17 @@ def generate_flashcard(clue_data, existing_categories):
 
     system_message = f"""You are a flashcard generator for Jeopardy-style trivia questions.
 Your job is to:
-1. Create a clear, standalone question based on the Jeopardy clue
-2. Provide the answer followed by 4-5 related educational bullet points
+1. Create a clear, standalone jeopardy style question based on the Jeopardy clue. The question should be specific and informative.
+2. Provide the answer followed by 3-5 related educational bullet points
 3. Assign the flashcard to an existing category OR create a new medium-specificity category
+
+IMPORTANT - Avoid vague questions:
+- DO NOT create simple "What is X?" questions that just identify a name or term (e.g., "What is Park Avenue?")
+- DO NOT create ambiguous questions where the answer could refer to multiple things without context (e.g., "What is spurs?" - team vs. riding equipment)
+- DO ensure questions include enough context from the original clue to make them educational and specific
+- DO make questions that test knowledge of facts, events, or concepts, not just definitions
+- GOOD example: "What New York street, originally called 4th Avenue, was renamed in 1860 and became known for affluent residences?"
+- BAD example: "What is Park Avenue?"
 
 Format your response as JSON:
 {{
