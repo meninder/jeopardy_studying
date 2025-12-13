@@ -11,7 +11,12 @@ import random
 import json
 import os
 import asyncio
+import argparse
 from openai import AsyncOpenAI
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize OpenAI client
 api_key = os.getenv("OPENAI_API_KEY")
@@ -631,10 +636,26 @@ async def _generate_flashcards_parallel(clues, existing_categories, max_concurre
 # ============================================
 
 if __name__ == "__main__":
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Generate Jeopardy flashcards using OpenAI API')
+    parser.add_argument(
+        '--batch-size',
+        type=int,
+        default=200,
+        help='Number of flashcards to generate (default: 200)'
+    )
+    parser.add_argument(
+        '--max-concurrent',
+        type=int,
+        default=10,
+        help='Maximum number of concurrent API calls (default: 10)'
+    )
+    args = parser.parse_args()
+
     # Initialize database (safe to run multiple times)
     initialize_flashcard_db()
 
     # Generate batch of flashcards
-    generate_batch(batch_size=20)
+    generate_batch(batch_size=args.batch_size, max_concurrent=args.max_concurrent)
 
     # Final statistics already printed by generate_batch
