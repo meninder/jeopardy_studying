@@ -13,7 +13,7 @@ from pathlib import Path
 
 def main():
     # Database path
-    db_path = Path(__file__).parent / "flashcards.db"
+    db_path = Path(__file__).parent.parent / "data" / "flashcards.db"
 
     # Output file path
     output_path = Path(__file__).parent.parent / "docs" / "static" / "flashcards-data.js"

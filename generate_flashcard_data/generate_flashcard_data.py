@@ -10,7 +10,8 @@ import sqlite3
 import random
 import json
 import os
-from openai import OpenAI
+import asyncio
+from openai import AsyncOpenAI
 
 # Initialize OpenAI client
 api_key = os.getenv("OPENAI_API_KEY")
@@ -21,7 +22,7 @@ if not api_key:
     print("\nOr add it to your shell profile (~/.zshrc or ~/.bashrc)")
     exit(1)
 
-client = OpenAI(api_key=api_key)
+client = AsyncOpenAI(api_key=api_key)
 
 # PATHS
 JEOPARDY_DB = "./data/jeopardy.db"
@@ -263,11 +264,77 @@ def is_clue_processed(clue_id):
     conn.close()
     return count > 0
 
+def get_batch_unprocessed_clues(batch_size):
+    """
+    Gets a batch of random unprocessed clues from jeopardy.db
+
+    Args:
+        batch_size (int): Number of clues to fetch
+
+    Returns:
+        list of dict: List of clue data dictionaries, each containing:
+            {
+                'clue_id': int,
+                'jeopardy_category': str,
+                'clue': str,
+                'answer': str,
+                'value': str
+            }
+    """
+
+    # Connect to jeopardy.db
+    jeopardy_conn = sqlite3.connect(JEOPARDY_DB)
+    jeopardy_cursor = jeopardy_conn.cursor()
+
+    # Connect to flashcard.db to check processed clues
+    flashcard_conn = sqlite3.connect(FLASHCARD_DB)
+    flashcard_cursor = flashcard_conn.cursor()
+
+    # Get all processed clue ids
+    flashcard_cursor.execute("SELECT clue_id FROM processed_clues")
+    processed_ids = {row[0] for row in flashcard_cursor.fetchall()}
+
+    # Get all clue ids from jeopardy.db
+    jeopardy_cursor.execute("SELECT id FROM clues")
+    all_ids = [row[0] for row in jeopardy_cursor.fetchall()]
+
+    # Find unprocessed ids
+    unprocessed_ids = [clue_id for clue_id in all_ids if clue_id not in processed_ids]
+
+    if not unprocessed_ids:
+        jeopardy_conn.close()
+        flashcard_conn.close()
+        return []
+
+    # Randomly select batch
+    selected_ids = random.sample(unprocessed_ids, min(batch_size, len(unprocessed_ids)))
+
+    # Fetch full clue data for selected ids
+    clues = []
+    for clue_id in selected_ids:
+        jeopardy_cursor.execute(
+            "SELECT id, category, clue, answer, value FROM clues WHERE id = ?",
+            (clue_id,)
+        )
+        row = jeopardy_cursor.fetchone()
+        clues.append({
+            'clue_id': row[0],
+            'jeopardy_category': row[1],
+            'clue': row[2],
+            'answer': row[3],
+            'value': row[4]
+        })
+
+    jeopardy_conn.close()
+    flashcard_conn.close()
+
+    return clues
+
 # ============================================
 # LLM FLASHCARD GENERATION
 # ============================================
 
-def generate_flashcard(clue_data, existing_categories):
+async def generate_flashcard(clue_data, existing_categories):
     """
     Uses OpenAI API to generate enriched flashcard content
 
@@ -320,7 +387,7 @@ Clue: {clue_data['clue']}
 Answer: {clue_data['answer']}
 Value: {clue_data['value']}"""
 
-    response = client.chat.completions.create(
+    response = await client.chat.completions.create(
         model="gpt-4o",
         messages=[
             {"role": "system", "content": system_message},
@@ -443,12 +510,13 @@ def get_stats():
 # MAIN PIPELINE
 # ============================================
 
-def generate_batch(batch_size=20):
+def generate_batch(batch_size=20, max_concurrent=10):
     """
     Main function to generate a batch of flashcards
 
     Args:
         batch_size (int): Number of flashcards to generate
+        max_concurrent (int): Maximum number of concurrent API calls (default: 10)
     """
 
     print(f"\n{'='*50}")
@@ -464,27 +532,35 @@ def generate_batch(batch_size=20):
     print(f"  Remaining clues: {stats['remaining_clues']}")
     print()
 
+    # Fetch batch of unprocessed clues
+    clues = get_batch_unprocessed_clues(batch_size)
+
+    if not clues:
+        print(f"\n⚠ No more unprocessed clues available!")
+        return
+
+    print(f"Fetched {len(clues)} clues to process")
+    print(f"Using up to {max_concurrent} concurrent API calls\n")
+
+    # Get existing categories once (shared across all generations)
+    existing_categories = get_all_categories()
+
+    # Run async generation
+    flashcards = asyncio.run(_generate_flashcards_parallel(clues, existing_categories, max_concurrent))
+
+    # Write results to database sequentially
     generated_count = 0
-
-    for i in range(batch_size):
-        # Get random unprocessed clue
-        clue_data = get_random_unprocessed_clue()
-
-        if clue_data is None:
-            print(f"\n⚠ No more unprocessed clues available!")
-            break
-
-        print(f"[{i+1}/{batch_size}] Processing clue #{clue_data['clue_id']}...")
+    for i, (clue_data, flashcard) in enumerate(zip(clues, flashcards)):
+        print(f"[{i+1}/{len(clues)}] Processing clue #{clue_data['clue_id']}...")
         print(f"  Original category: {clue_data['jeopardy_category']}")
         print(f"  Clue: {clue_data['clue'][:80]}...")
 
-        # Get existing categories
-        existing_categories = get_all_categories()
+        if flashcard is None:
+            print(f"  ✗ Error generating flashcard")
+            print()
+            continue
 
-        # Generate flashcard using LLM
         try:
-            flashcard = generate_flashcard(clue_data, existing_categories)
-
             # Add to database
             add_flashcard(
                 flashcard['question'],
@@ -500,7 +576,7 @@ def generate_batch(batch_size=20):
             print()
 
         except Exception as e:
-            print(f"  ✗ Error generating flashcard: {e}")
+            print(f"  ✗ Error saving flashcard: {e}")
             print()
             continue
 
@@ -521,6 +597,34 @@ def generate_batch(batch_size=20):
     for cat, count in stats['flashcards_per_category']:
         if count > 0:
             print(f"  {cat}: {count}")
+
+async def _generate_flashcards_parallel(clues, existing_categories, max_concurrent):
+    """
+    Helper function to generate flashcards in parallel using async/await
+
+    Args:
+        clues (list): List of clue data dictionaries
+        existing_categories (list): List of existing category names
+        max_concurrent (int): Maximum number of concurrent API calls
+
+    Returns:
+        list: List of flashcard dicts (or None for errors)
+    """
+    semaphore = asyncio.Semaphore(max_concurrent)
+
+    async def generate_with_semaphore(clue_data):
+        async with semaphore:
+            try:
+                return await generate_flashcard(clue_data, existing_categories)
+            except Exception as e:
+                print(f"  ✗ Error generating flashcard for clue #{clue_data['clue_id']}: {e}")
+                return None
+
+    # Generate all flashcards in parallel (limited by semaphore)
+    print(f"Generating {len(clues)} flashcards in parallel...\n")
+    flashcards = await asyncio.gather(*[generate_with_semaphore(clue) for clue in clues])
+
+    return flashcards
 
 # ============================================
 # MAIN EXECUTION
