@@ -358,7 +358,7 @@ async function handleSubmitAIQuestion() {
                 'Authorization': `Bearer ${apiKey}`
             },
             body: JSON.stringify({
-                model: 'gpt-4o-mini',
+                model: 'gpt-5.2',
                 messages: [
                     {
                         role: 'system',
@@ -369,8 +369,7 @@ async function handleSubmitAIQuestion() {
                         content: `Here is the current Jeopardy clue I'm studying:\n\nQuestion: ${currentCard.question}\nAnswer: ${currentCard.answer}\nCategory: ${currentCard.category}\n\nMy question: ${userQuestion}`
                     }
                 ],
-                temperature: 0.7,
-                max_tokens: 500
+                temperature: 0.7
             })
         });
 

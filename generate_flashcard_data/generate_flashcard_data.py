@@ -393,7 +393,7 @@ Answer: {clue_data['answer']}
 Value: {clue_data['value']}"""
 
     response = await client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-5.2",
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": user_message}
