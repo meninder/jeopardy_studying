@@ -65,6 +65,7 @@ def initialize_flashcard_db():
       - question TEXT NOT NULL
       - answer TEXT NOT NULL
       - original_clue_id INTEGER NOT NULL
+      - jeopardy_category TEXT
       - created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       - FOREIGN KEY (category_id) REFERENCES categories(id)
 
@@ -93,6 +94,7 @@ def initialize_flashcard_db():
             question TEXT NOT NULL,
             answer TEXT NOT NULL,
             original_clue_id INTEGER NOT NULL,
+            jeopardy_category TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (category_id) REFERENCES categories(id)
         )
@@ -409,7 +411,7 @@ Value: {clue_data['value']}"""
 # FLASHCARD STORAGE
 # ============================================
 
-def add_flashcard(question, answer, category_name, original_clue_id):
+def add_flashcard(question, answer, category_name, original_clue_id, jeopardy_category=None):
     """
     Adds flashcard to database and marks clue as processed
 
@@ -418,6 +420,7 @@ def add_flashcard(question, answer, category_name, original_clue_id):
         answer (str): The answer with bullet points
         category_name (str): Category name (may start with "NEW: ")
         original_clue_id (int): ID from jeopardy.db
+        jeopardy_category (str, optional): Original Jeopardy category from the clue
     """
 
     # Handle new category
@@ -434,8 +437,8 @@ def add_flashcard(question, answer, category_name, original_clue_id):
     cursor = conn.cursor()
 
     cursor.execute(
-        "INSERT INTO flashcards (category_id, question, answer, original_clue_id) VALUES (?, ?, ?, ?)",
-        (category_id, question, answer, original_clue_id)
+        "INSERT INTO flashcards (category_id, question, answer, original_clue_id, jeopardy_category) VALUES (?, ?, ?, ?, ?)",
+        (category_id, question, answer, original_clue_id, jeopardy_category)
     )
 
     cursor.execute(
@@ -571,7 +574,8 @@ def generate_batch(batch_size=20, max_concurrent=10):
                 flashcard['question'],
                 flashcard['answer'],
                 flashcard['category'],
-                clue_data['clue_id']
+                clue_data['clue_id'],
+                clue_data['jeopardy_category']
             )
 
             generated_count += 1

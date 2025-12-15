@@ -42,17 +42,18 @@ def main():
     # For each category, get its flashcards
     for category_id, category_name in categories:
         cursor.execute("""
-            SELECT question, answer
+            SELECT question, answer, jeopardy_category
             FROM flashcards
             WHERE category_id = ?
             ORDER BY id
         """, (category_id,))
 
         flashcards = []
-        for question, answer in cursor.fetchall():
+        for question, answer, jeopardy_category in cursor.fetchall():
             flashcards.append({
                 "question": question,
-                "answer": answer
+                "answer": answer,
+                "jeopardyCategory": jeopardy_category
             })
             total_cards += 1
 
