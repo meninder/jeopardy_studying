@@ -93,6 +93,12 @@ function displayCard() {
         return;
     }
 
+    // Reset flip state FIRST, before updating content
+    if (isFlipped) {
+        flashcard.classList.remove('flipped');
+        isFlipped = false;
+    }
+
     const card = currentFlashcards[currentIndex];
     questionEl.textContent = card.question;
 
@@ -110,12 +116,6 @@ function displayCard() {
 
     currentEl.textContent = currentIndex + 1;
     categoryNameEl.textContent = card.category;
-
-    // Reset flip state
-    if (isFlipped) {
-        flashcard.classList.remove('flipped');
-        isFlipped = false;
-    }
 
     // Update button states
     prevBtn.disabled = currentIndex === 0;
