@@ -11,6 +11,7 @@ let isFlipped = false;
 const flashcard = document.getElementById('flashcard');
 const questionEl = document.getElementById('question');
 const answerEl = document.getElementById('answer');
+const jeopardyCategoryEl = document.getElementById('jeopardy-category');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const shuffleBtn = document.getElementById('shuffle-btn');
@@ -89,11 +90,21 @@ function displayCard() {
     if (currentFlashcards.length === 0) {
         questionEl.textContent = 'No flashcards available';
         answerEl.innerHTML = '';
+        jeopardyCategoryEl.textContent = '';
         return;
     }
 
     const card = currentFlashcards[currentIndex];
     questionEl.textContent = card.question;
+
+    // Display jeopardy category if available
+    if (card.jeopardyCategory) {
+        jeopardyCategoryEl.textContent = `Jeopardy Category: ${card.jeopardyCategory}`;
+        jeopardyCategoryEl.style.display = 'inline-block';
+    } else {
+        jeopardyCategoryEl.textContent = '';
+        jeopardyCategoryEl.style.display = 'none';
+    }
 
     // Format answer with line breaks and bullets preserved
     answerEl.innerHTML = formatAnswer(card.answer);
@@ -390,8 +401,13 @@ async function handleSubmitAIQuestion() {
         const data = await response.json();
         const aiAnswer = data.choices[0].message.content;
 
-        // Show response
-        aiResponse.textContent = aiAnswer;
+        // Parse markdown and show response
+        if (typeof marked !== 'undefined') {
+            aiResponse.innerHTML = marked.parse(aiAnswer);
+        } else {
+            // Fallback if marked.js fails to load
+            aiResponse.textContent = aiAnswer;
+        }
 
     } catch (error) {
         console.error('AI Error:', error);
