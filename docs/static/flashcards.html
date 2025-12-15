@@ -677,16 +677,6 @@
             </div>
         </header>
 
-        <div class="category-selector">
-            <div class="category-selector-header">
-                <label for="category-select">Choose a category:</label>
-                <button id="shuffle-btn" class="btn btn-accent">🔀 Shuffle</button>
-            </div>
-            <select id="category-select">
-                <option value="all">All Categories (Mixed)</option>
-            </select>
-        </div>
-
         <div class="flashcard-container">
             <div class="flashcard" id="flashcard">
                 <div class="flashcard-inner">
@@ -710,10 +700,19 @@
         </div>
 
         <div class="controls">
-            <button id="prev-btn" class="btn btn-secondary">← Previous</button>
-            <button id="flip-btn" class="btn btn-accent">Answer</button>
+            <button id="prev-btn" class="btn btn-primary">← Previous</button>
             <button id="ask-ai-btn" class="btn btn-primary">🤖 Ask AI</button>
             <button id="next-btn" class="btn btn-primary">Next →</button>
+        </div>
+
+        <div class="category-selector">
+            <div class="category-selector-header">
+                <label for="category-select">Choose a category:</label>
+                <button id="shuffle-btn" class="btn btn-accent">🔀 Shuffle</button>
+            </div>
+            <select id="category-select">
+                <option value="all">All Categories (Mixed)</option>
+            </select>
         </div>
 
         <div class="keyboard-hint">

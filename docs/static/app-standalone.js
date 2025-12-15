@@ -15,7 +15,6 @@ const jeopardyCategoryEl = document.getElementById('jeopardy-category');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const shuffleBtn = document.getElementById('shuffle-btn');
-const flipBtn = document.getElementById('flip-btn');
 const categorySelect = document.getElementById('category-select');
 const currentEl = document.getElementById('current');
 const totalEl = document.getElementById('total');
@@ -196,7 +195,6 @@ flashcard.addEventListener('click', flipCard);
 prevBtn.addEventListener('click', prevCard);
 nextBtn.addEventListener('click', nextCard);
 shuffleBtn.addEventListener('click', shuffleCards);
-flipBtn.addEventListener('click', flipCard);
 categorySelect.addEventListener('change', handleCategoryChange);
 
 // Keyboard navigation
