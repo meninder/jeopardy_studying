@@ -64,13 +64,17 @@ open quiz-app/public/index.html
 ```
 jeopardy/
 ├── data/                          # All data files
-│   ├── jeopardy.db               # SQLite database
+│   ├── jeopardy.db               # Raw scraped clues from J-Archive
+│   ├── flashcards.db             # AI-enhanced flashcards
 │   └── json/                     # Debug JSON files
 ├── scraper/                      # Scraping module
 │   ├── __init__.py
 │   ├── jarchive_scraper.py      # Core scraping logic
 │   ├── database.py               # SQLite operations
 │   └── run_scraper.py            # CLI to scrape games
+├── generate_flashcard_data/      # AI flashcard generation
+│   ├── generate_flashcard_data.py   # Converts clues to flashcards via OpenAI
+│   └── generate_flashcards_js.py    # Exports flashcards.db to JavaScript
 ├── quiz-app/                     # Quiz application
 │   ├── api.py                    # Flask API server
 │   └── public/
@@ -129,9 +133,42 @@ uv run python scraper/run_scraper.py 9302 --stats
 1. Start the server: `uv run python quiz-app/api.py`
 2. Open browser to: `http://localhost:8001`
 
-### Building Static Flashcards for GitHub Pages
+### Adding Questions to the Flashcard App (Full Pipeline)
 
-The project includes a static flashcard system that works without a server:
+This is the complete 3-step process to add new AI-enhanced flashcards:
+
+**Step 1: Scrape games from J-Archive**
+```bash
+# Scrape a range of games (e.g., 9331-9350)
+uv run python scraper/run_scraper.py 9331-9350 --stats
+```
+This saves raw Jeopardy clues to `data/jeopardy.db`.
+
+**Step 2: Generate flashcards using OpenAI**
+```bash
+# Process unprocessed clues into enriched flashcards
+uv run python generate_flashcard_data/generate_flashcard_data.py --batch-size 200
+```
+This:
+- Samples unprocessed clues from `jeopardy.db`
+- Sends them to OpenAI to create better questions with educational bullet points
+- Categorizes them into topics (Life Sciences, History, etc.)
+- Saves to `data/flashcards.db`
+- Tracks processed clues (won't reprocess the same clue twice)
+
+Requires `OPENAI_API_KEY` environment variable.
+
+**Step 3: Export to JavaScript for the static app**
+```bash
+uv run python generate_flashcard_data/generate_flashcards_js.py
+```
+This exports `flashcards.db` to a JavaScript file for the static flashcard app.
+
+---
+
+### Building Static Flashcards for GitHub Pages (Manual)
+
+For manually editing flashcards without the AI pipeline:
 
 **Step 1: Edit your flashcards**
 ```bash
