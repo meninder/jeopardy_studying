@@ -152,16 +152,34 @@ function flipCard() {
 // Navigate to previous card
 function prevCard() {
     if (currentIndex > 0) {
-        currentIndex--;
-        displayCard();
+        // If card is flipped, flip it back first, then navigate after animation
+        if (isFlipped) {
+            flipCard();
+            setTimeout(() => {
+                currentIndex--;
+                displayCard();
+            }, 600); // Wait for flip animation (0.6s)
+        } else {
+            currentIndex--;
+            displayCard();
+        }
     }
 }
 
 // Navigate to next card
 function nextCard() {
     if (currentIndex < currentFlashcards.length - 1) {
-        currentIndex++;
-        displayCard();
+        // If card is flipped, flip it back first, then navigate after animation
+        if (isFlipped) {
+            flipCard();
+            setTimeout(() => {
+                currentIndex++;
+                displayCard();
+            }, 600); // Wait for flip animation (0.6s)
+        } else {
+            currentIndex++;
+            displayCard();
+        }
     }
 }
 
