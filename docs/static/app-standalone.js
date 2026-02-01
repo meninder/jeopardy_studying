@@ -261,6 +261,53 @@ function clearAPIKey() {
     localStorage.removeItem(API_KEY_STORAGE_KEY);
 }
 
+// ============================================
+// MASTERED CARDS FUNCTIONALITY
+// ============================================
+
+const MASTERED_CARDS_STORAGE_KEY = 'jeopardy-mastered-cards';
+
+function getMasteredCards() {
+    const stored = localStorage.getItem(MASTERED_CARDS_STORAGE_KEY);
+    if (!stored) return { cardIds: [], lastReset: null };
+    try {
+        return JSON.parse(stored);
+    } catch {
+        return { cardIds: [], lastReset: null };
+    }
+}
+
+function saveMasteredCard(cardId) {
+    const data = getMasteredCards();
+    if (!data.cardIds.includes(cardId)) {
+        data.cardIds.push(cardId);
+        localStorage.setItem(MASTERED_CARDS_STORAGE_KEY, JSON.stringify(data));
+    }
+}
+
+function resetMasteredCards() {
+    localStorage.setItem(MASTERED_CARDS_STORAGE_KEY, JSON.stringify({
+        cardIds: [],
+        lastReset: new Date().toISOString()
+    }));
+}
+
+function generateCardId(card) {
+    // Simple hash from question + answer for stable ID
+    const str = card.question + '|' + card.answer;
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return 'card-' + Math.abs(hash).toString(36);
+}
+
+function getMasteredCount() {
+    return getMasteredCards().cardIds.length;
+}
+
 // Modal Management
 function openSettingsModal() {
     const storedKey = getStoredAPIKey();
