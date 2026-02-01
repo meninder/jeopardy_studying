@@ -19,6 +19,8 @@ const categorySelect = document.getElementById('category-select');
 const currentEl = document.getElementById('current');
 const totalEl = document.getElementById('total');
 const categoryNameEl = document.getElementById('category-name');
+const masteredBtnFront = document.getElementById('mastered-btn-front');
+const masteredBtnBack = document.getElementById('mastered-btn-back');
 
 // AI-related DOM Elements
 const settingsBtn = document.getElementById('settings-btn');
@@ -221,6 +223,8 @@ prevBtn.addEventListener('click', prevCard);
 nextBtn.addEventListener('click', nextCard);
 shuffleBtn.addEventListener('click', shuffleCards);
 categorySelect.addEventListener('change', handleCategoryChange);
+masteredBtnFront.addEventListener('click', markCurrentCardAsMastered);
+masteredBtnBack.addEventListener('click', markCurrentCardAsMastered);
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
@@ -339,6 +343,76 @@ function updateProgressDisplay() {
     } else {
         masteredSpan.textContent = '';
     }
+}
+
+function markCurrentCardAsMastered(event) {
+    event.stopPropagation(); // Prevent card flip
+
+    if (currentFlashcards.length === 0) return;
+
+    const card = currentFlashcards[currentIndex];
+
+    // Visual feedback
+    const btn = event.currentTarget;
+    btn.classList.add('clicked');
+
+    setTimeout(() => {
+        // Save to localStorage
+        saveMasteredCard(card.cardId);
+
+        // Remove from current deck
+        currentFlashcards.splice(currentIndex, 1);
+
+        // Check if deck is now empty
+        if (currentFlashcards.length === 0) {
+            btn.classList.remove('clicked');
+            handleAllCardsMastered();
+            return;
+        }
+
+        // Adjust index if we were at the end
+        if (currentIndex >= currentFlashcards.length) {
+            currentIndex = currentFlashcards.length - 1;
+        }
+
+        // Update display
+        updateProgressDisplay();
+        displayCard();
+
+        // Reset button state
+        btn.classList.remove('clicked');
+    }, 200);
+}
+
+function handleAllCardsMastered() {
+    showToast('All mastered! Deck reset.');
+    resetMasteredCards();
+
+    // Reload based on current category selection
+    const selectedValue = categorySelect.value;
+    if (selectedValue === 'all') {
+        loadAllFlashcards();
+    } else {
+        loadCategoryFlashcards(parseInt(selectedValue));
+    }
+
+    currentIndex = 0;
+    shuffleCards();
+}
+
+function showToast(message) {
+    // Remove existing toast if any
+    const existing = document.querySelector('.toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 2000);
 }
 
 // Modal Management
