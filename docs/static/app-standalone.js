@@ -38,6 +38,8 @@ const submitAIQuestionBtn = document.getElementById('submit-ai-question-btn');
 const aiLoading = document.getElementById('ai-loading');
 const aiResponse = document.getElementById('ai-response');
 const aiError = document.getElementById('ai-error');
+const masteredStatusEl = document.getElementById('mastered-status');
+const resetProgressBtn = document.getElementById('reset-progress-btn');
 
 // Initialize the app
 function initApp() {
@@ -431,6 +433,11 @@ function openSettingsModal() {
         apiKeyStatus.textContent = '';
         apiKeyStatus.className = 'api-key-status';
     }
+
+    // Update mastered count display
+    const masteredCount = getMasteredCount();
+    masteredStatusEl.textContent = `You've mastered ${masteredCount} card${masteredCount !== 1 ? 's' : ''} across all categories`;
+
     settingsModal.classList.add('show');
 }
 
@@ -509,6 +516,35 @@ function handleClearAPIKey() {
         clearAPIKey();
         apiKeyInput.value = '';
         showAPIKeyStatus('API key cleared', 'success');
+    }
+}
+
+function handleResetProgress() {
+    const masteredCount = getMasteredCount();
+    if (masteredCount === 0) {
+        showToast('No mastered cards to reset');
+        return;
+    }
+
+    if (confirm(`Are you sure? This will bring back all ${masteredCount} mastered cards.`)) {
+        resetMasteredCards();
+
+        // Reload current deck
+        const selectedValue = categorySelect.value;
+        if (selectedValue === 'all') {
+            loadAllFlashcards();
+        } else {
+            loadCategoryFlashcards(parseInt(selectedValue));
+        }
+
+        currentIndex = 0;
+        shuffleCards();
+
+        // Update modal display
+        masteredStatusEl.textContent = "You've mastered 0 cards across all categories";
+
+        showToast('Progress reset!');
+        closeSettingsModal();
     }
 }
 
@@ -603,6 +639,7 @@ settingsBtn.addEventListener('click', openSettingsModal);
 askAIBtn.addEventListener('click', openAskAIModal);
 saveApiKeyBtn.addEventListener('click', handleSaveAPIKey);
 clearApiKeyBtn.addEventListener('click', handleClearAPIKey);
+resetProgressBtn.addEventListener('click', handleResetProgress);
 toggleKeyVisibilityBtn.addEventListener('click', toggleAPIKeyVisibility);
 submitAIQuestionBtn.addEventListener('click', handleSubmitAIQuestion);
 
