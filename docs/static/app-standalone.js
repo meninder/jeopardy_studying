@@ -64,24 +64,31 @@ function loadAllFlashcards() {
     allFlashcards = [];
     flashcardsData.categories.forEach(category => {
         category.flashcards.forEach(card => {
-            allFlashcards.push({
+            const cardWithMeta = {
                 ...card,
                 category: category.name
-            });
+            };
+            cardWithMeta.cardId = generateCardId(cardWithMeta);
+            allFlashcards.push(cardWithMeta);
         });
     });
-    currentFlashcards = [...allFlashcards];
-    totalEl.textContent = currentFlashcards.length;
+    currentFlashcards = filterMasteredCards([...allFlashcards]);
+    updateProgressDisplay();
 }
 
 // Load flashcards for specific category
 function loadCategoryFlashcards(categoryIndex) {
     const category = flashcardsData.categories[categoryIndex];
-    currentFlashcards = category.flashcards.map(card => ({
-        ...card,
-        category: category.name
-    }));
-    totalEl.textContent = currentFlashcards.length;
+    const cardsWithMeta = category.flashcards.map(card => {
+        const cardWithMeta = {
+            ...card,
+            category: category.name
+        };
+        cardWithMeta.cardId = generateCardId(cardWithMeta);
+        return cardWithMeta;
+    });
+    currentFlashcards = filterMasteredCards(cardsWithMeta);
+    updateProgressDisplay();
 }
 
 // Display current card
@@ -306,6 +313,32 @@ function generateCardId(card) {
 
 function getMasteredCount() {
     return getMasteredCards().cardIds.length;
+}
+
+function filterMasteredCards(cards) {
+    const mastered = getMasteredCards();
+    return cards.filter(card => !mastered.cardIds.includes(card.cardId));
+}
+
+function updateProgressDisplay() {
+    const masteredCount = getMasteredCount();
+    totalEl.textContent = currentFlashcards.length;
+
+    // Update or create mastered count display
+    let masteredSpan = document.getElementById('mastered-count');
+    if (!masteredSpan) {
+        masteredSpan = document.createElement('span');
+        masteredSpan.id = 'mastered-count';
+        masteredSpan.style.opacity = '0.7';
+        masteredSpan.style.marginLeft = '8px';
+        document.getElementById('progress').appendChild(masteredSpan);
+    }
+
+    if (masteredCount > 0) {
+        masteredSpan.textContent = `(${masteredCount} mastered)`;
+    } else {
+        masteredSpan.textContent = '';
+    }
 }
 
 // Modal Management
