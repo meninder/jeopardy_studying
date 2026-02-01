@@ -246,6 +246,11 @@ document.addEventListener('keydown', (e) => {
             e.preventDefault();
             flipCard();
             break;
+        case 'm':
+        case 'M':
+            // Simulate click on front button (works regardless of flip state)
+            masteredBtnFront.click();
+            break;
     }
 });
 
