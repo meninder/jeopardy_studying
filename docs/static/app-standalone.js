@@ -49,6 +49,12 @@ function initApp() {
     // Load all flashcards
     loadAllFlashcards();
 
+    // Check if all cards are mastered on load
+    if (currentFlashcards.length === 0) {
+        handleAllCardsMastered();
+        return;
+    }
+
     // Shuffle on startup so you don't see the same card first every time
     shuffleCards();
 }
@@ -214,6 +220,12 @@ function handleCategoryChange() {
         loadAllFlashcards();
     } else {
         loadCategoryFlashcards(parseInt(selectedValue));
+    }
+
+    // Check if all cards in this category are mastered
+    if (currentFlashcards.length === 0) {
+        handleAllCardsMastered();
+        return;
     }
 
     displayCard();
