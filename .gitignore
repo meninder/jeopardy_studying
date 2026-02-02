@@ -64,6 +64,9 @@ logs/
 .cache/
 *.cache
 
+# Worktrees
+.worktrees/
+
 # Project specific
 data/*.json
 data/*.csv

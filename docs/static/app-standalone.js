@@ -7,6 +7,9 @@ let currentFlashcards = [];
 let currentIndex = 0;
 let isFlipped = false;
 
+// Storage keys
+const MASTERED_CARDS_STORAGE_KEY = 'jeopardy-mastered-cards';
+
 // DOM Elements
 const flashcard = document.getElementById('flashcard');
 const questionEl = document.getElementById('question');
@@ -19,6 +22,8 @@ const categorySelect = document.getElementById('category-select');
 const currentEl = document.getElementById('current');
 const totalEl = document.getElementById('total');
 const categoryNameEl = document.getElementById('category-name');
+const masteredBtnFront = document.getElementById('mastered-btn-front');
+const masteredBtnBack = document.getElementById('mastered-btn-back');
 
 // AI-related DOM Elements
 const settingsBtn = document.getElementById('settings-btn');
@@ -36,6 +41,8 @@ const submitAIQuestionBtn = document.getElementById('submit-ai-question-btn');
 const aiLoading = document.getElementById('ai-loading');
 const aiResponse = document.getElementById('ai-response');
 const aiError = document.getElementById('ai-error');
+const masteredStatusEl = document.getElementById('mastered-status');
+const resetProgressBtn = document.getElementById('reset-progress-btn');
 
 // Initialize the app
 function initApp() {
@@ -44,6 +51,12 @@ function initApp() {
 
     // Load all flashcards
     loadAllFlashcards();
+
+    // Check if all cards are mastered on load
+    if (currentFlashcards.length === 0) {
+        handleAllCardsMastered();
+        return;
+    }
 
     // Shuffle on startup so you don't see the same card first every time
     shuffleCards();
@@ -64,24 +77,31 @@ function loadAllFlashcards() {
     allFlashcards = [];
     flashcardsData.categories.forEach(category => {
         category.flashcards.forEach(card => {
-            allFlashcards.push({
+            const cardWithMeta = {
                 ...card,
                 category: category.name
-            });
+            };
+            cardWithMeta.cardId = generateCardId(cardWithMeta);
+            allFlashcards.push(cardWithMeta);
         });
     });
-    currentFlashcards = [...allFlashcards];
-    totalEl.textContent = currentFlashcards.length;
+    currentFlashcards = filterMasteredCards([...allFlashcards]);
+    updateProgressDisplay();
 }
 
 // Load flashcards for specific category
 function loadCategoryFlashcards(categoryIndex) {
     const category = flashcardsData.categories[categoryIndex];
-    currentFlashcards = category.flashcards.map(card => ({
-        ...card,
-        category: category.name
-    }));
-    totalEl.textContent = currentFlashcards.length;
+    const cardsWithMeta = category.flashcards.map(card => {
+        const cardWithMeta = {
+            ...card,
+            category: category.name
+        };
+        cardWithMeta.cardId = generateCardId(cardWithMeta);
+        return cardWithMeta;
+    });
+    currentFlashcards = filterMasteredCards(cardsWithMeta);
+    updateProgressDisplay();
 }
 
 // Display current card
@@ -205,6 +225,12 @@ function handleCategoryChange() {
         loadCategoryFlashcards(parseInt(selectedValue));
     }
 
+    // Check if all cards in this category are mastered
+    if (currentFlashcards.length === 0) {
+        handleAllCardsMastered();
+        return;
+    }
+
     displayCard();
 }
 
@@ -214,6 +240,8 @@ prevBtn.addEventListener('click', prevCard);
 nextBtn.addEventListener('click', nextCard);
 shuffleBtn.addEventListener('click', shuffleCards);
 categorySelect.addEventListener('change', handleCategoryChange);
+masteredBtnFront.addEventListener('click', markCurrentCardAsMastered);
+masteredBtnBack.addEventListener('click', markCurrentCardAsMastered);
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
@@ -234,6 +262,11 @@ document.addEventListener('keydown', (e) => {
         case ' ':
             e.preventDefault();
             flipCard();
+            break;
+        case 'm':
+        case 'M':
+            // Simulate click on front button (works regardless of flip state)
+            masteredBtnFront.click();
             break;
     }
 });
@@ -261,6 +294,147 @@ function clearAPIKey() {
     localStorage.removeItem(API_KEY_STORAGE_KEY);
 }
 
+// ============================================
+// MASTERED CARDS FUNCTIONALITY
+// ============================================
+
+function getMasteredCards() {
+    const stored = localStorage.getItem(MASTERED_CARDS_STORAGE_KEY);
+    if (!stored) return { cardIds: [], lastReset: null };
+    try {
+        return JSON.parse(stored);
+    } catch {
+        return { cardIds: [], lastReset: null };
+    }
+}
+
+function saveMasteredCard(cardId) {
+    const data = getMasteredCards();
+    if (!data.cardIds.includes(cardId)) {
+        data.cardIds.push(cardId);
+        localStorage.setItem(MASTERED_CARDS_STORAGE_KEY, JSON.stringify(data));
+    }
+}
+
+function resetMasteredCards() {
+    localStorage.setItem(MASTERED_CARDS_STORAGE_KEY, JSON.stringify({
+        cardIds: [],
+        lastReset: new Date().toISOString()
+    }));
+}
+
+function generateCardId(card) {
+    // Simple hash from question + answer for stable ID
+    const str = card.question + '|' + card.answer;
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return 'card-' + Math.abs(hash).toString(36);
+}
+
+function getMasteredCount() {
+    return getMasteredCards().cardIds.length;
+}
+
+function filterMasteredCards(cards) {
+    const mastered = getMasteredCards();
+    return cards.filter(card => !mastered.cardIds.includes(card.cardId));
+}
+
+function updateProgressDisplay() {
+    const masteredCount = getMasteredCount();
+    totalEl.textContent = currentFlashcards.length;
+
+    // Update or create mastered count display
+    let masteredSpan = document.getElementById('mastered-count');
+    if (!masteredSpan) {
+        masteredSpan = document.createElement('span');
+        masteredSpan.id = 'mastered-count';
+        masteredSpan.style.opacity = '0.7';
+        masteredSpan.style.marginLeft = '8px';
+        document.getElementById('progress').appendChild(masteredSpan);
+    }
+
+    if (masteredCount > 0) {
+        masteredSpan.textContent = `(${masteredCount} mastered)`;
+    } else {
+        masteredSpan.textContent = '';
+    }
+}
+
+function markCurrentCardAsMastered(event) {
+    event.stopPropagation(); // Prevent card flip
+
+    if (currentFlashcards.length === 0) return;
+
+    const card = currentFlashcards[currentIndex];
+
+    // Visual feedback
+    const btn = event.currentTarget;
+    btn.classList.add('clicked');
+
+    setTimeout(() => {
+        // Save to localStorage
+        saveMasteredCard(card.cardId);
+
+        // Remove from current deck
+        currentFlashcards.splice(currentIndex, 1);
+
+        // Check if deck is now empty
+        if (currentFlashcards.length === 0) {
+            btn.classList.remove('clicked');
+            handleAllCardsMastered();
+            return;
+        }
+
+        // Adjust index if we were at the end
+        if (currentIndex >= currentFlashcards.length) {
+            currentIndex = currentFlashcards.length - 1;
+        }
+
+        // Update display
+        updateProgressDisplay();
+        displayCard();
+
+        // Reset button state
+        btn.classList.remove('clicked');
+    }, 200);
+}
+
+function handleAllCardsMastered() {
+    showToast('All mastered! Deck reset.');
+    resetMasteredCards();
+
+    // Reload based on current category selection
+    const selectedValue = categorySelect.value;
+    if (selectedValue === 'all') {
+        loadAllFlashcards();
+    } else {
+        loadCategoryFlashcards(parseInt(selectedValue));
+    }
+
+    currentIndex = 0;
+    shuffleCards();
+}
+
+function showToast(message) {
+    // Remove existing toast if any
+    const existing = document.querySelector('.toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 2000);
+}
+
 // Modal Management
 function openSettingsModal() {
     const storedKey = getStoredAPIKey();
@@ -272,6 +446,11 @@ function openSettingsModal() {
         apiKeyStatus.textContent = '';
         apiKeyStatus.className = 'api-key-status';
     }
+
+    // Update mastered count display
+    const masteredCount = getMasteredCount();
+    masteredStatusEl.textContent = `You've mastered ${masteredCount} card${masteredCount !== 1 ? 's' : ''} across all categories`;
+
     settingsModal.classList.add('show');
 }
 
@@ -350,6 +529,35 @@ function handleClearAPIKey() {
         clearAPIKey();
         apiKeyInput.value = '';
         showAPIKeyStatus('API key cleared', 'success');
+    }
+}
+
+function handleResetProgress() {
+    const masteredCount = getMasteredCount();
+    if (masteredCount === 0) {
+        showToast('No mastered cards to reset');
+        return;
+    }
+
+    if (confirm(`Are you sure? This will bring back all ${masteredCount} mastered cards.`)) {
+        resetMasteredCards();
+
+        // Reload current deck
+        const selectedValue = categorySelect.value;
+        if (selectedValue === 'all') {
+            loadAllFlashcards();
+        } else {
+            loadCategoryFlashcards(parseInt(selectedValue));
+        }
+
+        currentIndex = 0;
+        shuffleCards();
+
+        // Update modal display
+        masteredStatusEl.textContent = "You've mastered 0 cards across all categories";
+
+        showToast('Progress reset!');
+        closeSettingsModal();
     }
 }
 
@@ -444,6 +652,7 @@ settingsBtn.addEventListener('click', openSettingsModal);
 askAIBtn.addEventListener('click', openAskAIModal);
 saveApiKeyBtn.addEventListener('click', handleSaveAPIKey);
 clearApiKeyBtn.addEventListener('click', handleClearAPIKey);
+resetProgressBtn.addEventListener('click', handleResetProgress);
 toggleKeyVisibilityBtn.addEventListener('click', toggleAPIKeyVisibility);
 submitAIQuestionBtn.addEventListener('click', handleSubmitAIQuestion);
 
