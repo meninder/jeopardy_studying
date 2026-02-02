@@ -665,6 +665,74 @@
                 width: 100%;
             }
         }
+
+.mastered-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(102, 126, 234, 0.2);
+    color: #667eea;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.mastered-btn:hover {
+    background: rgba(102, 126, 234, 0.4);
+    transform: scale(1.1);
+}
+
+.mastered-btn.clicked {
+    background: #28a745;
+    color: white;
+}
+
+.flashcard-back .mastered-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.flashcard-back .mastered-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.flashcard-back .mastered-btn.clicked {
+    background: #28a745;
+    color: white;
+}
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    z-index: 2000;
+    animation: toastFadeIn 0.3s ease-out;
+}
+
+@keyframes toastFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
     </style>
 </head>
 <body>
@@ -689,12 +757,14 @@
                             </div>
                         </div>
                         <div class="hint">Click card to reveal answer</div>
+                        <button class="mastered-btn" id="mastered-btn-front" title="Mark as mastered">✓</button>
                     </div>
                     <div class="flashcard-back">
                         <div class="card-content">
                             <div id="answer">Answer</div>
                         </div>
                         <div class="hint">Click card to see question</div>
+                        <button class="mastered-btn" id="mastered-btn-back" title="Mark as mastered">✓</button>
                     </div>
                 </div>
             </div>
@@ -717,7 +787,7 @@
         </div>
 
         <div class="keyboard-hint">
-            Use ← → arrow keys to navigate • Space to flip card
+            Use ← → arrow keys to navigate • Space to flip card • M to mark mastered
         </div>
     </div>
 
@@ -736,6 +806,14 @@
                     <button id="toggle-key-visibility" class="btn-small">👁️ Show</button>
                 </div>
                 <div id="api-key-status" class="api-key-status"></div>
+
+                <hr style="margin: 20px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+                <div class="form-group">
+                    <label>Study Progress</label>
+                    <p id="mastered-status" style="color: #666; margin-bottom: 10px;">You've mastered 0 cards across all categories</p>
+                    <button id="reset-progress-btn" class="btn btn-secondary" style="width: 100%;">Reset Progress</button>
+                </div>
             </div>
             <div class="modal-footer">
                 <button id="save-api-key-btn" class="btn btn-primary">Save Key</button>
