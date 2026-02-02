@@ -7,6 +7,9 @@ let currentFlashcards = [];
 let currentIndex = 0;
 let isFlipped = false;
 
+// Storage keys
+const MASTERED_CARDS_STORAGE_KEY = 'jeopardy-mastered-cards';
+
 // DOM Elements
 const flashcard = document.getElementById('flashcard');
 const questionEl = document.getElementById('question');
@@ -294,8 +297,6 @@ function clearAPIKey() {
 // ============================================
 // MASTERED CARDS FUNCTIONALITY
 // ============================================
-
-const MASTERED_CARDS_STORAGE_KEY = 'jeopardy-mastered-cards';
 
 function getMasteredCards() {
     const stored = localStorage.getItem(MASTERED_CARDS_STORAGE_KEY);
