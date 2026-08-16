@@ -73,3 +73,4 @@ data/*.csv
 data/json/*
 # Keep data directory structure
 !data/.gitkeep
+.claude/
